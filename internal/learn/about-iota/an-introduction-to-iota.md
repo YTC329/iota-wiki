@@ -7,21 +7,20 @@ description: A basic introduction to the IOTA DLT Technology. The use-cases and
 
 # IOTA 簡介
 
-**本主題簡要概述並描述了 IOTA 的 Tangle 和區塊鏈之間的一些主要區別。**
+**本主題簡要概述並描述了 IOTA 的 糾纏 (Tangle)和區塊鏈 (Blockchain)之間的一些主要區別。**
 
-區塊鏈和 Tangle 都屬於同一類別的分散式帳本技術(DLT)。
+區塊鏈和糾纏都屬於同一類別的分散式帳本技術(DLT)。
 
-區塊鏈和 Tangle 的主要區別如下：
+區塊鏈和糾纏的主要區別如下：
 
 - 在區塊鏈中，新交易只能附加到單個點（新塊）。該塊在先前生成的塊之後，並直接以密碼方式鏈接到該先前塊。區塊鏈中的交易只有被區塊生產者（PoW 區塊鏈中的礦工、PoS 區塊鏈中的質押者）包含在新發行的區塊中，才能成為分類帳（餘額和帳戶的記錄）的一部分。在幾乎所有的區塊鏈中，區塊生產者都可以決定他們喜歡在他們生產的區塊中包含和確認哪些新交易。這導致新發行的交易之間競爭成為新區塊的一部分。這些區塊鏈的基於費用的激勵結構有利於願意為交易支付更高費用的用戶，因為與提供較低費用的用戶相比，他們更有可能包含在新區塊中。
-- In the Tangle, there are no block producers, and therefore every user is free to issue new transactions and attach them on different Tangle parts without an entity that acts as middlemen. The Tangle is not a single chain of blocks that follow each other. It is a network of parallel processed transactions (so-called Tips). This parallel transactions form the "front" of the Tangle and offer many different points for new issued transactions to be attached, which dramatically speeds up the processing of transactions. Every node in the network is free to attach new transactions to the network at any time. No entity is needed to decide when and if those transactions get included. As long as they follow the basic rules of the protocol (valid signatures / no double spending of funds) those transactions will become part of the ledger by just issuing them to a node.
-- 在 Tangle 中，沒有區塊生產者，因此每個用戶都可以自由地發布新交易並將它們附加到不同的 Tangle 部分，而無需充當中間人的實體。Tangle不是一個相互跟隨的單一區塊鏈。它是一個平行處理的交易網絡（所謂的 Tips）。這種平行交易形成了 Tangle 的“前端”，並為附加新發行的交易提供了許多不同的點，從而大大加快了交易的處理速度。網絡中的每個節點都可以隨時自由地將新交易附加到網絡。不需要任何實體來決定何時以及是否包含這些交易。只要它們遵循協議的基本規則（有效簽名/沒有資金雙重支出），這些交易將成為分類帳的一部分，只需將它們發佈到節點即可。
+- 在糾纏中，沒有區塊生產者，因此每個用戶都可以自由地發布新交易並將它們附加到不同的糾纏部分，而無需充當中間人的實體。糾纏不是一個相互跟隨的單一區塊鏈。它是一個平行處理的交易網絡（所謂的 Tips）。這種平行交易形成了糾纏的“前端”，並為附加新發行的交易提供了許多不同的點，從而大大加快了交易的處理速度。網絡中的每個節點都可以隨時自由地將新交易附加到網絡。不需要任何實體來決定何時以及是否包含這些交易。只要它們遵循協議的基本規則（有效簽名/沒有資金雙重支出），這些交易將成為分類帳的一部分，只需將它們發佈到節點即可。
 - 與此相反，區塊鏈交易必須由區塊生產者包含在區塊中。這些實體收集新發行的交易、驗證它們並將它們包含在下一個區塊中。區塊鏈必須始終選擇一個領導者作為區塊生產者，以將新區塊附加到區塊鏈。只有這個單一的區塊生產者將獲得作為已發行區塊一部分的交易的所有費用，並獲得產生區塊的獎勵（以新創建的代幣的形式）。這也被視為區塊鏈中的一種中心化形式，因為您需要中間人來處理您的交易。普通用戶不允許直接寫入帳本。這導致了眾所周知的“礦工競賽”，其中只有具有最高計算處理能力的礦工，或擁有最高權益的質押者，才有合理的機會成為區塊生產者，並被允許附加一個新區塊，包括他們處理的區塊交易到帳本。其他礦工在解決密碼難題的競賽中使用的所有電力都被浪費了，因為他們嘗試的區塊永遠不會成為區塊鏈的一部分。
-- 相比之下，IOTA 是一個無領導者協議。它不需要任何中間人將交易包含在 Tangle 中。只要遵循協議的基本佈局設計，每個人都可以自由附加交易。無需選舉領導者，因為 Tangle 能夠在平行處理中實現新事務。因此，IOTA 是一個多執行緒的分類帳。這也是 IOTA 可以達到非常高的交易吞吐量並保持無手續費的原因之一。
+- 相比之下，IOTA 是一個無領導者協議。它不需要任何中間人將交易包含在 糾纏中。只要遵循協議的基本佈局設計，每個人都可以自由附加交易。無需選舉領導者，因為糾纏能夠在平行處理中實現新事務。因此，IOTA 是一個多執行緒的分類帳。這也是 IOTA 可以達到非常高的交易吞吐量並保持無手續費的原因之一。
 
-To explain these points, you need to understand the differences between the data structures and the consensus mechanisms in these DLTs.
+要解釋這些要點，您需要了解這些分散式帳本技術中數據結構和共識機制之間的差異。
 
-**Blockchain vs. Tangle**
+**區塊鏈與纏結**
 
 ![layer1-tangle](/img/learn/layer1-tangle.png)
 
