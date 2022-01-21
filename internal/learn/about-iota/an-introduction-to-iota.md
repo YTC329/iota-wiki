@@ -42,18 +42,19 @@ Tangle的資料結構是一個有向無環圖 (DAG)，其中每條消息都附�
 
 ![tangle-bottleneck](/img/learn/tangle-bottleneck.gif)
 
-Allowing parallel processing removes congestion.
+允許平行處理消除了擁塞。
 
-## Consensus in a blockchain
+## **區塊鏈中的共識**
 
-In blockchains, the network participants are divided into validators (miners, stakers) and users. Miners consume large amounts of computing power to complete the proof of work (PoW) required to chain the blocks together. Miners and stakers are incentivized to validate messages because of the following:
+在區塊鏈中，網絡參與者分為驗證者（礦工、質押者）和用戶。礦工消耗大量計​​算能力來完成將塊鏈接在一起所需的工作量證明（PoW）。由於以下原因，礦工和質押者被激勵驗證消息：
 
-- The fees that users are willing to pay to have their messages included in a block
-- The reward that the network pays out in the form of freshly created tokens to the validators for producing the new block.
+- 用戶願意為將他們的消息包含在區塊中而支付的費用
+- 網絡以新創建的代幣的形式向驗證者支付用於生成新塊的獎勵。
 
-The only way to reverse messages in a POW blockchain is to mine a new blockchain in the same amount of time it takes other miners to mine a single block. To do so, a miner would need 51% of the network's ability to do PoW, known as hash power. As a result, requiring validators to do PoW secures blockchain networks by making it difficult to attack, change, or stop. The more miners participate, the more secure the network is.
+在 POW 區塊鏈中反轉消息的唯一方法是在與其他礦工挖掘單個區塊所需的時間相同的時間內挖掘新的區塊鏈。為此，礦工需要 51% 的網絡執行 PoW 的能力，即哈希算力。因此，要求驗證者進行 PoW 使得區塊鏈網絡難以被攻擊、更改或停止，從而保護了區塊鏈網絡。參與的礦工越多，網絡就越安全。
 
-Producing blocks in a proof of stake (PoS) Blockchain usually requires a staker to own vast amounts of staked tokens. Often only a few selected or fixed Validators are granted to be block producers. These entities are pre-defined by the protocol's creators (a form of centralization) or emerge as validators holding the most significant stake of tokens. PoS blockchains do not require enormous amounts of energy wasted for PoW, but therefore only allow the wealthiest participants to write to the ledger and produce new blocks.
+\
+在權益證明 (PoS) 區塊鏈中生產區塊通常需要質押者擁有大量質押代幣。通常只有少數選定或固定的驗證者被授予成為區塊生產者。這些實體由協議的創建者（一種中心化形式）預先定義，或者作為持有最重要代幣權益的驗證者出現。 PoS 區塊鏈不需要為 PoW 浪費大量能源，因此只允許最富有的參與者寫入帳本並生成新區塊。
 
 ## Consensus in the Tangle
 
