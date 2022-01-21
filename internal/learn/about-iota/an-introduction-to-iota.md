@@ -56,20 +56,20 @@ Tangle的資料結構是一個有向無環圖 (DAG)，其中每條消息都附�
 \
 在權益證明 (PoS) 區塊鏈中生產區塊通常需要質押者擁有大量質押代幣。通常只有少數選定或固定的驗證者被授予成為區塊生產者。這些實體由協議的創建者（一種中心化形式）預先定義，或者作為持有最重要代幣權益的驗證者出現。 PoS 區塊鏈不需要為 PoW 浪費大量能源，因此只允許最富有的參與者寫入帳本並生成新區塊。
 
-## Consensus in the Tangle
+## **糾纏中的共識**
 
-Sending messages requires no fees in the Tangle because the network has no miners or stakers. In the Tangle, PoW is not used to secure the network. Instead, PoW is used only to discourage spam messages. All IOTA nodes validate messages and use different functions alongside messages in their confirmation to reach consensus. Currently, messages will only be considered valid if they reference a milestone. These milestones are issued by a special network node – the Coordinator.
+在糾纏中發送消息不需要任何費用，因為網絡沒有礦工或質押者。在糾纏中，PoW 不用於保護網絡。相反，PoW 僅用於阻止垃圾郵件。所有 IOTA 節點都會驗證消息，並在確認消息時使用不同的功能來達成共識。目前，只有引用里程碑的消息才會被視為有效。這些里程碑由一個特殊的網絡節點——協調器發布。
 
-## The Coordinator
+## **協調器**
 
-The Coordinator is a client that sends signed messages called milestones that nodes trust and use to confirm messages. This topic describes how nodes use milestones to determine which messages are confirmed.
+協調器是一個客戶端，它發送稱為里程碑，為被節點信任的簽名消息，並用於確認消息。本主題描述節點如何使用里程碑來確定確認哪些消息。
 
-The Coordinator is a temporary solution. IOTA will remove the Coordinator in the upcoming IOTA 2.0 network. The following text describes how the Coordinator is currently deployed within IOTA.
+協調器是一個臨時解決方案。 IOTA 將在即將到來的 IOTA 2.0 網絡中移除協調器。以下文本描述了協調器當前如何在 IOTA 中部署。
 
-Messages in the Tangle are considered for confirmation only when they are directly or indirectly referenced by a milestone that nodes have validated.
+只有當節點已驗證的里程碑直接或間接引用，糾纏中的消息才被考慮為確認。
 
-To allow the nodes to recognize valid milestones, all nodes that participate in the same IOTA network are configured with the Ed25519 signatures of a coordinator they trust. By knowing those signatures, nodes can validate the signatures in issued milestones to verify whether the trusted Coordinator did sign them.
+為了允許節點識別有效的里程碑，參與同一 IOTA 網絡的所有節點都配置有他們信任的協調器的 Ed25519 簽名。通過了解這些簽名，節點可以驗證已發布里程碑中的簽名，以驗證受信任的協調者是否確實簽署了它們。
 
-To ensure that new messages always have a chance of being confirmed, the Coordinator sends indexed milestones signed with those signatures regularly (every 10 seconds). This way ensures that nodes can compare the indexes of their milestones to check whether they are synchronized with the rest of the network.
+為確保新消息始終有機會得到確認，協調器定期（每 10 秒）發送使用這些簽名簽名的索引里程碑。這種方式確保節點可以比較其里程碑的索引，以檢查它們是否與網絡的其餘部分同步。
 
 ![coordinator](/img/learn/milestones.gif)
