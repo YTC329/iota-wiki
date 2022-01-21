@@ -24,21 +24,21 @@ description: A basic introduction to the IOTA DLT Technology. The use-cases and
 
 ![layer1-tangle](/img/learn/layer1-tangle.png)
 
-## The blockchain data structure
+## **區塊鏈的資料結構**
 
-The blockchain data structure consists of a chain of sequential blocks, where each block contains a limited number of messages. As a result, Validators can attach new messages to only one place: a block at the end of the chain. Due to this limitation, blockchain networks often experience slow confirmation times. This limitation is known as the blockchain bottleneck.
+區塊鏈資料結構由一系列順序塊組成，其中每個塊包含有限數量的消息。因此，驗證者只能將新消息附加到一個地方：鏈末端的一個塊。由於這一限制，區塊鍊網絡通常會經歷緩慢的確認時間。這種限制被稱為區塊鏈瓶頸。
 
-**Blockchain bottleneck**
+**區塊鏈的瓶頸**
 
 ![blockchain-bottleneck](/img/learn/blockchain-bottleneck.gif)
 
-All transactions in a blockchain have to wait until they are included in a block. Due to block size and block production time limitations, this creates congestion and waiting times for transactions.
+區塊鏈中的所有交易都必須等到它們被包含在一個塊中。由於塊大小和塊生產時間的限制，這會造成交易的擁塞和等待時間。
 
-## The Tangle data structure
+## **纏結的資料結構**
 
-The Tangle data structure is a directed acyclic graph (DAG), where each message is attached to two to eight previous ones. Rather than being limited to a single place for attaching new messages, you can attach messages in different places at the front of the Tangle. The protocol can process these various attachments in parallel.
+Tangle的資料結構是一個有向無環圖 (DAG)，其中每條消息都附加到 2 到 8 個之前的消息。您可以在 Tangle 前面的不同位置附加消息，而不是僅限於附加新消息的單個位置。該協議可以平行處理這些不同的附件。
 
-**Tangle bottleneck**
+**纏結的瓶頸**
 
 ![tangle-bottleneck](/img/learn/tangle-bottleneck.gif)
 
