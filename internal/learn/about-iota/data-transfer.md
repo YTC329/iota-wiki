@@ -7,32 +7,32 @@ description: A major use-case for the IOTA Technology is Data Transfer. Learn ho
 
 IOTA 提供免費傳輸數據的能力。數據傳輸快速、不可變、不可偽造且安全，是 IOTA 的核心功能之一。這種能力開闢了大多數其他加密貨幣無法做到，但IOTA卻能做到的廣泛用途。
 
-客戶端，可以是錢包或應用程序，通過 IOTA 中的節點發送和接收消息（數據對象）。節點是這些消息的入口和出口點，這些節點相互通信並與連接的客戶端通信。
+客戶端，可以是錢包或應用程序，通過 IOTA 中的節點發送和接收訊息（數據對象）。節點是這些訊息的入口和出口點，這些節點相互通信並與連接的客戶端通信。
 
-IOTA 中實現了幾種類型的消息。有些消息傳遞價值（IOTA 代幣或數字資產），而另一些只傳遞純數據，有些消息類型甚至可以同時包含價值和數據。這種靈活的消息結構可以在具有最高安全等級且完全不收費的單個消息中實現數據和價值的分散傳輸。網絡節點負責糾纏中所有這些消息的安全分發。
+IOTA 中實現了幾種類型的訊息。有些訊息傳遞價值（IOTA 代幣或數字資產），而另一些只傳遞純數據，有些訊息類型甚至可以同時包含價值和數據。這種靈活的訊息結構可以在具有最高安全等級且完全不收費的單個訊息中實現數據和價值的分散傳輸。網絡節點負責糾纏中所有這些訊息的安全分發。
 
 ## 數據使用
 
-Many applications and use cases can profit from this combination of free, secure, and fast data and value transport, which sees demand in many major industries. Read more about [IOTA Data use cases](https://www.iota.org/solutions/industries).
+許多應用程序和用例可以從這種免費、安全、快速的數據和價值傳輸的組合中獲益，這在許多主要行業都有需求。閱讀有關 [IOTA 數據用例] (https://www.iota.org/solutions/industries).
 
-## What is an IOTA message?
+## 什麼是 IOTA 訊息？?
 
-A message is an object consisting of information broadcasted in the Tangle.
+訊息是由糾纏中廣播的信息組成的物件。
 
-Every application that uses the protocol can issue these information objects to a node. The job of an Iota node is to verify incoming messages and broadcast them through the network if they are considered valid and follow the standard specifications of the protocol.
+每個使用該協議的應用程序都可以將這些信息對象發布給節點。 Iota 節點的工作是驗證傳入訊息並通過網絡廣播它們，如果它們被認為是有效的並遵循協議的標準規範。
 
-If a node decides that a message is valid, it will send it to its direct neighbors using the gossip protocol. Every neighbor that receives the message transfers it again to its neighbors and so on. Very quickly, every other node in the network sees the message and has the same information and the same knowledge of the "state" of the network at a given time.
+如果一個節點確定一條訊息是有效的，它將使用 gossip 協議將它發送給它的直接鄰居。每個收到訊息的鄰居都會將其再次傳輸給它的鄰居，依此類推。很快，網絡中的每個其他節點都會看到該訊息，並且在給定時間對網路的“狀態”具有相同的信息和相同的知識。
 
-A Message consists of basic information that defines the type and structure of the message, and it can also contain different **payloads**. A payload is an attachment that can include an IOTA transaction and many other kinds of data.
+訊息由定義訊息類型和結構的基本信息組成，還可以包含不同的**有效負載**。有效負載是一個附件，可以包含 IOTA 交易和許多其他類型的數據。
 
-The IOTA protocol categorizes these information packages into different types and handles certain types differently than others. Therefore, every message sent to the network must contain a unique label as an identifier that describes what this message is and what should be done with it. Only if this information is stated correctly, a node will accept and process a message.
-A more detailed description of this process on protocol level can be found in [TIP-0006 (Tangle Message)](https://github.com/iotaledger/tips/blob/main/tips/TIP-0006/tip-0006.md).
 
-## Sending a message in IOTA
+IOTA 協議將這些信息包分類為不同的類型，並以不同於其他類型的方式處理某些類型。因此，發送到網絡的每條訊息都必須包含一個唯一的標籤作為標識符，用於描述此訊息是什麼以及應該如何處理它。只有正確地陳述了此信息，節點才會接受並處理訊息。此協議級別的更詳細描述可以在[TIP-0006 (Tangle Message)](https://github.com/iotaledger/tips/blob/main/tips/TIP-0006/tip-0006.md)找到
 
-So-called clients create messages. Those clients can be an IOTA wallet or any other application generating IOTA messages. The client sends those messages to an IOTA node to process them.
+## 在 IOTA 中發送訊息
 
-To ensure a message is valid and a node knows what to do with the message, the message label created by a client must provide several pieces of information for the node to be processed and enter the network.
+所謂的客戶端創建訊息。這些客戶端可以是 IOTA 錢包或任何其他生成 IOTA 訊息的應用程序。客戶端將這些訊息發送到 IOTA 節點以進行處理。
+
+為了確保訊息有效並且節點知道如何處理該訊息，客戶端創建的訊息標籤必須提供幾條信息供節點處理並進入網絡。
 
 **Message ID**
 
