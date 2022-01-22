@@ -5,9 +5,9 @@ description: A basic introduction to the IOTA DLT Technology. The use-cases and
   the Ecosystem developed around it.
 ---
 
-# An Introduction to IOTA
+# IOTA 簡介
 
-**This topic gives a brief overview and describes some of the main differences between IOTA's Tangle and a blockchain.**
+**本主題簡要概述並描述了 IOTA 的 糾纏 (Tangle)和區塊鏈 (Blockchain)之間的一些主要區別。**
 
 Blockchains and the Tangle both fall under the same category of distributed ledger technology (DLT).
 
