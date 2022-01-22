@@ -34,46 +34,46 @@ IOTA 協議將這些信息包分類為不同的類型，並以不同於其他類
 
 為了確保訊息有效並且節點知道如何處理該訊息，客戶端創建的訊息標籤必須提供幾條信息供節點處理並進入網絡。
 
-**Message ID**
+**訊息 ID**
 
-The message ID is created as a unique cryptographic hash of the bytes contained in the message. It is created by the client (application) or wallet that issues the message.
+訊息ID創建為訊息中包含的字節的唯一加密哈希。它由發出訊息的客戶端（應用程序）或錢包創建。
 
-**Network ID**
+**網路 ID**
 
-An identification in which IOTA network the message belongs (Mainnet / Testnet / private network) - Nodes will only accept messages that identify themselves as part of the network the node belongs to.
+訊息所屬的 IOTA 網絡（主網/測試網/私有網絡）的標識 - 節點將僅接受將自己標識為節點所屬網絡的訊息。
 
-**Parents length and Parents ID**
+**父級長度和父級ID**
 
-This is the amount and the identifier of the messages referenced by the new message. To build up the graph structure of the Tangle, every new message in the Tangle must reference 2 - 8 previous messages. The node selects those two messages and sends the IDs to the client, and the client must include this information into the message "label." Therefore nodes make sure the data structure of the Tangle evolves as specified in the protocol.
+這是新訊息引用的訊息的數量和標識符。為了構建 Tangle 的圖結構，Tangle 中的每條新訊息都必須引用 2 - 8 條之前的訊息。節點選擇這兩條訊息並將 ID 發送給客戶端，客戶端必須將此信息包含在訊息“標籤”中。因此，節點確保 Tangle 的數據結構按照協議中的規定進行演變。
 
-**Payload length**
+**有效負載長度**
 
-Because messages in IOTA are not allowed to exceed a size of 32kb, the message must declare the size of its payload to the node... like you would need to report the weight of a package if you want to send it with a courier in advance.
+因為 IOTA 中的訊息不允許超過 32kb 的大小，所以訊息必須向節點聲明其有效負載的大小......就像如果你想用快遞發送包裹，你需要事先報告包裹的重量。
 
-**Payload type**
+**有效負載類別**
 
-A definition of which type of payload is part of the message. The node needs to know this, as some payload types need to processed differently than others.
+定義哪種類型的有效負載是訊息的一部分。節點需要知道這一點，因為某些有效負載類型的處理方式與其他類型不同。
 
-**Nonce**
+**隨機數**
 
-That is the nonce that lets this message fulfill the Proof-of-Work requirement. Proof of work is mainly done locally on the device that issues the message and is a form of spam protection. But if the node allows it, PoW can be done by the node instead of the client. This is a handy feature as it enables very low-powered devices to issue messages (like sensors, chips, etc.) without doing the PoW in the local device. If connected to a node that allows remote PoW, those low-power devices can send messages, and the node (which is usually running on a more powerful device) does the PoW for them. This is one of the reasons why IOTA is so suitable for IoT and data applications. Users planning to issue many data messages from a huge amount of extremely low-power devices only need to connect those devices to a node that allows them to do the PoW for them (which will be, in most cases, their own node). As the PoW requirement in IOTA, in general, is extremely low, it is no problem to do this even for a large number of devices by a node.
+就是隨機數讓這個訊息滿足PoW的需求。PoW主要在發出訊息的設備上本地完成，是一種垃圾郵件保護形式。但是如果節點允許，PoW 可以由節點而不是客戶端來完成。這是一個方便的功能，因為它使功率非常低的設備能夠發布訊息（如傳感器、芯片等），而無需在本地設備中執行 PoW。如果連接到允許遠程 PoW 的節點，這些低功耗設備可以發送訊息，並且節點（通常在更強大的設備上運行）為它們執行 PoW。這也是 IOTA 如此適合物聯網和數據應用的原因之一。計劃從大量極低功耗設備發出許多數據訊息的用戶只需將這些設備連接到允許他們為它們執行 PoW 的節點（在大多數情況下，這將是他們自己的節點）。由於IOTA中的PoW要求一般都非常低，即使是大量設備也可以透過一個節點做到。
 
-A side note - in the upcoming 2.0 IOTA version, this PoW requirement will become adaptive and is planned to be completely removed for times of normal network loads... Read more about [IOTA 2.0](/build/networks/iota-2.0).
+附註 - 在即將到來的 2.0 IOTA 版本中，此 PoW 要求將變得調適，並計劃在正常網絡負載時完全刪除...閱讀有關 [IOTA 2.0](/build/networks/iota-2.0).
 
-## Message structure
+## 訊息結構
 
-This is the defined syntactical structure of every message in the IOTA protocol (the label of our package):
+這是 IOTA 協議中每條消息的定義語法結構（我們組件的標籤）：
 
 <table>
     <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>名稱</th>
+        <th>類別</th>
+        <th>描述</th>
     </tr>
     <tr>
-        <td>NetworkID</td>
+        <td>網路ID</td>
         <td>uint64</td>
-        <td>Network identifier. This field will signify whether this message was meant for mainnet, testnet, or a private net. It also tells what protocol rules apply to the message. It is the first 8 bytes of the `BLAKE2b-256` hash of the concatenation of the network type and the protocol version string.</td>
+        <td>網絡標識符。此字段將表示此訊息是用於主網、測試網還是專用網。它還說明了適用於訊息的協議規則。它是網絡類型和協議版本字符串串聯的“BLAKE2b-256”哈希的前 8 個字節。</td>
         </tr>
     <tr>
         <td> Parents' length </td>
