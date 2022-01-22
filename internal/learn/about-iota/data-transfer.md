@@ -3,15 +3,15 @@ title: Data Transfer
 description: A major use-case for the IOTA Technology is Data Transfer. Learn how it works.
 ---
 
-# Data Transfer
+# 數據傳輸
 
-IOTA offers the ability to transfer Data for free. The Data transfer is fast, immutable, unforgeable, and secure and is one of the core features of IOTA. This capability opens up a wide array of use cases that most other cryptocurrencies cannot serve in a way that IOTA does.
+IOTA 提供免費傳輸數據的能力。數據傳輸快速、不可變、不可偽造且安全，是 IOTA 的核心功能之一。這種能力開闢了大多數其他加密貨幣無法做到，但IOTA卻能做到的廣泛用途。
 
-Clients, which can be wallets or applications, send and receive messages (data objects) through nodes in IOTA. Nodes are the entry and exit points for these messages, and those nodes communicate with each other and with the connected clients.
+客戶端，可以是錢包或應用程序，通過 IOTA 中的節點發送和接收消息（數據對象）。節點是這些消息的入口和出口點，這些節點相互通信並與連接的客戶端通信。
 
-There are several types of messages implemented in IOTA. Some messages transfer value (the IOTA token or digital assets), while others transfer only pure data, and some message types can even contain both value and data. This flexible message structure enables the decentralized transport of data and value in a single message with the highest security grade and the total absence of fees. The network nodes take care of the secure distribution of all those messages in the Tangle.
+IOTA 中實現了幾種類型的消息。有些消息傳遞價值（IOTA 代幣或數字資產），而另一些只傳遞純數據，有些消息類型甚至可以同時包含價值和數據。這種靈活的消息結構可以在具有最高安全等級且完全不收費的單個消息中實現數據和價值的分散傳輸。網絡節點負責糾纏中所有這些消息的安全分發。
 
-## Data Usage
+## 數據使用
 
 Many applications and use cases can profit from this combination of free, secure, and fast data and value transport, which sees demand in many major industries. Read more about [IOTA Data use cases](https://www.iota.org/solutions/industries).
 
