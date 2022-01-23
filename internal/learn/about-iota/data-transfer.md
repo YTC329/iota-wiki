@@ -76,92 +76,93 @@ IOTA 協議將這些信息包分類為不同的類型，並以不同於其他類
         <td>網絡標識符。此字段將表示此訊息是用於主網、測試網還是專用網。它還說明了適用於訊息的協議規則。它是網絡類型和協議版本字符串串聯的“BLAKE2b-256”哈希的前 8 個字節。</td>
         </tr>
     <tr>
-        <td> Parents' length </td>
+        <td> 父項長度 </td>
         <td> uint8</td>
-        <td> The number of messages we directly approve. Can be any value between 1-8.</td>
+        <td> 我們直接批准的訊息數量。可以是 1-8 之間的任何值。</td>
     </tr>
     <tr>
-        <td>Parents </td>
-        <td>ByteArray[32 * `parents length`]</td>
-        <td>The Message IDs that are referenced.</td>
+        <td>父項 </td>
+        <td>ByteArray[32 * `父項長度`]</td>
+        <td>引用的訊息 ID。</td>
     </tr>
     <tr>
-        <td>Payload Length</td>
+        <td>有效載荷長度</td>
         <td>uint32</td>
-        <td> The length of the payload. Since its type may be unknown to the node it must be declared in advance. 0 length means no payload will be attached.</td>
+        <td> 有效載荷的長度。由於節點可能不知道其類型，因此必須提前聲明。 0 長度意味著不會附加任何有效負載。</td>
     </tr>
     <tr>
         <td colspan="1">
-            Payload
+            有效載荷
         </td>
         <td colspan="2">
             <details open="true">
-                <summary>Generic Payload</summary>
+                <summary>通用有效載荷</summary>
                 <blockquote>
-                An outline of a general payload
+                一般有效載荷的概述
                 </blockquote>
                 <table>
                     <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Description</th>
+                        <th>名稱</th>
+                        <th>種類</th>
+                        <th>描述</th>
                     </tr>
                     <tr>
-                        <td>Payload Type</td>
+                        <td>有效載荷類型</td>
                         <td>uint32</td>
                         <td>
-                            The type of the payload. It will instruct the node on how to parse the fields that follow.
+                            有效負載的類型。它將指示節點如何解析後面的欄位。
                         </td>
                     </tr>
                     <tr>
-                        <td>Data Fields</td>
-                        <td>ANY</td>
-                        <td>A sequence of fields, where the structure depends on <code>payload type</code>.</td>
+                        <td>資料欄位</td>
+                        <td>任何</td>
+                        <td>欄位序列，其中結構取決於<code>有效負載類型</code>.</td>
                     </tr>
                 </table>
             </details>
         </td>
     </tr>
     <tr>
-        <td>Nonce</td>
+        <td>隨機數</td>
         <td>uint64</td>
-        <td>The nonce which lets this message fulfill the Proof-of-Work requirement.</td>
+        <td>此隨機數讓訊息滿足PoW的要求。</td>
     </tr>
 </table>
 
-All this information must be created by a client (wallet software or other programs that generate IOTA messages) to issue a message to a node and make sure the node knows what to do with this message.
+所有這些信息必須由客戶端（錢包軟件或其他生成 IOTA 訊息的程序）創建，以向節點發出訊息並確保節點知道如何處理該訊息。
 
-### Message validation
+### 訊息驗證
 
-A message is considered valid if the following syntactic rules are met:
+如果滿足以下句法規則，則認為消息有效：
 
-1. The message size must not exceed 32 KiB (32 \* 1024 bytes).
-2. Analyzing the Syntax structure of the message (parsing) does not leave any unknown bits - this means that all the message information is fully readable by the node... unreadable information could contain malicious code and is therefore denied.
-3. If the payload type is known to the node.
-4. If the Message PoW Hash indicates that the minimum requirements of PoW requested by the network or the node have been fulfilled.
-5. Number of parent messages must be between 1-8.
+1. 訊息大小不得超過 32 KiB（32 \* 1024 字節）。
+2. 分析消息的語法結構（解析）不會留下任何未知位 - 這意味著節點完全可以讀取所有訊息信息......不可讀的信息可能包含惡意代碼，因此被拒絕。
+3. 如果有效載荷類型為節點所知。
+4. 如果 Message PoW Hash 表明網絡或節點請求的 PoW 的最低要求已經滿足。
+5. 父訊息的數量必須在 1-8 之間。
 
-The message will only be accepted for processing if these parameters are met and readable by the node.
+只有當這些參數滿足並且節點可讀時，訊息才會被接受處理。
 
-### Payloads
+### 有效載荷
 
-A message may contain a payload. Three payload types are currently defined in the mainnet, but developers can create their custom payloads and attach them to messages as long as they fit the general requirements. This means an IOTA message can contain many types of information, and the IOTA token as transaction payload is just one of many. Below is a table of the currently specified core payloads with a link to their specifications.
+訊息可能包含有效負載。目前在主網中定義了三種有效負載類型，但開發人員可以創建他們的自定義有效負載並將它們附加到訊息中，只要它們符合一般要求。這意味著 IOTA 訊息可以包含多種類型的消息，而作為交易有效負載的 IOTA 令牌只是眾多信息之一。下面是當前指定的核心有效負載的表格，並附有其規格的鏈接。
 
-| Payload Name                                                                                                    | Type Value |
+| 有效載荷名稱                                                                                                 | 類型值 |
 | --------------------------------------------------------------------------------------------------------------- | ---------- |
-| [Transaction Payload](https://github.com/iotaledger/tips/blob/main/tips/TIP-0007/tip-0007.md)                   | 0          |
-| [Milestone Payload](https://github.com/iotaledger/tips/blob/main/tips/TIP-0008/tip-0008.md)                     | 1          |
-| [Indexation Payload](https://github.com/iotaledger/tips/blob/main/tips/TIP-0006/tip-0006.md#indexation-payload) | 2          |
+| [交易有效負載](https://github.com/iotaledger/tips/blob/main/tips/TIP-0007/tip-0007.md)                   | 0          |
+| [里程碑有效載荷](https://github.com/iotaledger/tips/blob/main/tips/TIP-0008/tip-0008.md)                     | 1          |
+| [索引有效負載](https://github.com/iotaledger/tips/blob/main/tips/TIP-0006/tip-0006.md#indexation-payload) | 2          |
 
-A message containing only an **indexation payload** (Data) can be sent without a signature. It can hold any data the user wants to send, as long as it is parsable and follows the required syntax and size limit.
+僅包含**索引有效負載**（數據）的訊息可以在沒有簽名的情況下發送。它可以保存用戶想要發送的任何數據，只要它是可解析的並遵循所需的語法和大小限制。
 
-The message is specified by an **index**, which will make it possible for any users to find this message and the containing Data by searching the network for this index.
+該訊息由**索引** 指定，這將使任何用戶都可以通過在網絡上搜索該索引來找到該消息及其包含的數據。
 
-As you may have recognized, a message in the IOTA network does not need a specific receiver. All messages in the network are propagated to all nodes and are visible to every network user. Also, the data payload (if not encrypted by the sender) is visible for everyone that sees the message. If you want to send a data message using the IOTA protocol that should only be visible to a selected group of receivers, the IOTA Streams framework is built precisely for this purpose. It will enable a direct gateway to receivers and encrypt the information from everyone else in the network. 
+您可能已經認識到，IOTA 網絡中的訊息不需要特定的接收者。網絡中的所有訊息都傳播到所有節點，並且對每個網絡用戶都是可見的。此外，看到訊息的每個人都可以看到數據有效負載（如果未由發件人加密）。如果您想使用 IOTA 協議發送僅對選定的一組接收者可見的數據訊息，IOTA Streams 框架正是為此目的而構建的。它將啟用一個直接通往接收者的網關，並對來自網絡中其他所有人的信息進行加密。
 
-A **data message**, which is defined as an indexation payload, can be easily found by everyone who knows that message's index. If you want to send an arbitrary message or sensitive data, you need to tell the receiver which index you are using. He can observe the network for all messages containing this index using an explorer.
+每個知道該訊息索引的人都可以輕鬆找到定義為索引有效負載的**數據訊息**。如果你想發送任意消息或敏感數據，你需要告訴接收者你正在使用哪個索引。他可以使用資源管理器觀察網絡中包含該索引的所有訊息。
 
-In a **value transaction**, the payment receiver - an IOTA address - will be specified in the "signed transaction payload" field. Then, only the owner of that specific address can use the contained funds by unlocking them with the private key that belongs to that receiving address. Read more about how sending value transactions in IOTA work here: [value transfer](/learn/about-iota/value-transfer)
+在**價值交易**中，支付接收方 - IOTA 地址 - 將在“簽名交易有效負載”字段中指定。然後，只有該特定地址的所有者可以通過使用屬於該接收地址的私鑰解鎖來使用包含的資金。在此處閱讀有關如何在 IOTA 中發送價值交易的更多信息：[價值轉移](/learn/about-iota/value-transfer)
 
-As the IOTA protocol is continuously improving, a new specification for payloads has been developed to dramatically extend the functionality of messages and payloads. Please read the [IOTA tokenization framework](https://blog.iota.org/iota-tokenization-framework-specifications/) specifications.
-Those changes will be implemented after intensive testing in the next update of the IOTA mainnet.
+隨著 IOTA 協議的不斷改進，已經開發了一種新的有效載荷規範，以顯著擴展訊息和有效載荷的功能。 請閱讀 [IOTA 代幣化框架](https://blog.iota.org/iota-tokenization-framework-specifications/) 規格。
+
+這些更改將在 IOTA 主網的下一次更新中進行密集測試後實施。
