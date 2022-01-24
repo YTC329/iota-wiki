@@ -4,53 +4,53 @@ title: Energy efficiency
 description: Energy efficiency of transactions in the IOTA Network.
 ---
 
-# Energy Efficiency
+# 能源效率
 
-An important measurement of any distributed ledger technology is the energy cost per transaction. The IOTA network is designed to be lightweight and energy-efficient. This page provides an overview of the process and results of tests conducted by the IOTA Foundation to measure the energy efficiency of the Tangle. To read the full details of the test, this [IOTA Foundation blog post](https://blog.iota.org/internal-energy-benchmarks-for-iota/) covers the process in depth.
+任何分佈式帳本技術的一個重要衡量標準是每筆交易的能源成本。 IOTA 網絡旨在實現輕量級和節能。本頁概述了 IOTA 基金會為測量糾纏的能源效率而進行的測試的過程和結果要閱讀測試的全部細節，這個 [IOTA 基金會部落客文章](https://blog.iota.org/internal-energy-benchmarks-for-iota/)深入介紹了這個過程。
 
-## The Tests
+## 測試
 
-The energy benchmark tests were conducted using a Raspberry Pi 3 and 4 running the [Hornet node](https://github.com/gohornet/hornet) software. Hornet was designed to be able to run on low-power devices such as these small computers.
+能源基準測試是使用 Raspberry Pi 3 和 4 運行的 [Hornet節點](https://github.com/gohornet/hornet) 軟體。 Hornet 被設計為能夠在這些小型計算機等低功耗設備上運行。
 
-Tests were completed on both a dedicated private Tangle set up for the tests as well as on the main [Chrysalis network](https://chrysalis.iota.org/). For the dedicated testing network, a laptop was used to be the test coordinator and to generate spam transactions for the Pi nodes.
+測試是在為測試設置的專用私人糾纏以及主 [Chrysalis 網路](https://chrysalis.iota.org/)。對於專用測試網絡，使用筆記本電腦作為測試協調器並為 Pi 節點生成垃圾郵件交易。
 
-To measure the energy consumed, INA219 current sensors were used to measure the power consumed by the devices while processing transactions. The INA219 data was collected by a BeagleBone Black. This data was then normalized against the power consumed by the devices when idle to determine the cost of processing transactions. Each set of measurements was collected over a period of 10 minutes.
+為了測量能耗，INA219 電流傳感器用於測量設備在處理事務時消耗的功率。 INA219 數據由 BeagleBone Black 收集。然後根據設備空閒時消耗的功率對這些數據進行標準化，以確定處理事務的成本。在 10 分鐘內收集每組測量值。
 
-## The Results
+## 結果
 
-The results of the tests are shown below in table 1 and figure 2.
+測試結果如下表1和圖2所示。
 
-| Device | Average Power | 
+| 設備 |平均功率 | 
 | ----------------------------------- | ------------- | 
-| Raspberry Pi 3 (Reference) | 2617.35 mW | 
-| Raspberry Pi 4 (Reference) | 2785.91 mW | 
-| Raspberry Pi 3 (No messages) | 2628.58 mW | 
-| Raspberry Pi 4 (No messages) | 2801.58 mW | 
-| Raspberry Pi 3 (50 MPS remote PoW) | 2745.52 mW | 
-| Raspberry Pi 4 (50 MPS remote PoW) | 2862.21 mW | 
-| Raspberry Pi 3 (100 MPS remote PoW) | 2947.90 mW | 
-| Raspberry Pi 4 (100 MPS remote PoW) | 2920.55 mW | 
-| Raspberry Pi 3 (Mainnet PoW) | 2968.84 mW | 
-| Raspberry Pi 4 (Mainnet PoW) | 3095.51 mW |
+| Raspberry Pi 3 (參考) | 2617.35 兆瓦 | 
+| Raspberry Pi 4 (參考) | 2785.91 兆瓦 | 
+| Raspberry Pi 3 (無訊息) | 2628.58 兆瓦 | 
+| Raspberry Pi 4 (無訊息) | 2801.58 兆瓦 | 
+| Raspberry Pi 3 (50 MPS 遠程 PoW) | 2745.52 兆瓦 | 
+| Raspberry Pi 4 (50 MPS 遠程 PoW) | 2862.21 兆瓦 | 
+| Raspberry Pi 3 (100 MPS 遠程 PoW) | 2947.90 兆瓦 | 
+| Raspberry Pi 4 (100 MPS 遠程 PoW) | 2920.55 兆瓦 | 
+| Raspberry Pi 3 (主網 PoW) | 2968.84 mW | 
+| Raspberry Pi 4 (主網 PoW) | 3095.51 mW |
 
-Table 1: Reference power levels
+表 1：參考功率等級
 
-With these results, the data of the node tests was then normalized against the results from the node without Hornet running and with Hornet running without messages being processed. Table 2 shows the final results of the test.
+有了這些結果，節點測試的數據然後根據節點沒有運行 Hornet 和運行 Hornet 而不處理消息的結果進行標準化。表 2 顯示了測試的最終結果。
 
-|device |No messages |50 MPS remote PoW |100 MPS remote PoW |Mainnet PoW | 
+|設備 |無訊息 |50 MPS 遠程 PoW |100 MPS 遠程 PoW |主網 PoW | 
 | -------------------------------------- | ----------- | ----------------- | ------------------ | ----------- | 
-| Raspberry Pi 3 | 11.23 mW | 128.16 mW | 330.55 mW | 351.49 mW | 
-| Raspberry Pi 4 | 15.67 mW | 76.30 mW | 134.63 mW | 309.60 mW | 
-| Raspberry Pi 3 (normalized from 0 MPS) | | 116.92 mW | 319.32 mW | 340.26 mW | | Raspberry Pi 4 (normalized from 0 MPS) | | 60.62 mW | 118.97 mW | 293.94 mW |
+| Raspberry Pi 3 | 11.23 兆瓦 | 128.16 兆瓦 | 330.55 兆瓦 | 351.49 兆瓦 | 
+| Raspberry Pi 4 | 15.67 兆瓦 | 76.30 兆瓦 | 134.63 兆瓦 | 309.60 兆瓦 | 
+| Raspberry Pi 3 (從 0 MPS 標準化) | | 116.92 兆瓦 | 319.32 兆瓦 | 340.26 兆瓦 | | Raspberry Pi 4 (從 0 MPS 標準化) | | 60.62 兆瓦 | 118.97 兆瓦 | 293.94 兆瓦 |
 
-## Results Explained
+## 結果解釋
 
-Using the normalized data of the nodes running at 0 messages per second, the energy cost per message can be calculated with the formula:
+使用以每秒 0 條訊息運行的節點的歸一化數據，可以使用以下公式計算每條訊息的能量成本：
 
-**Energy(J) = Power(W) \* Time(s)**
+**能量(J) = 功率(W) \* 時間(s)**
 
-It is important to note that while the devices were performing the mainnet proof of work, they were processing an average of 0.0592 messages per second (RPi 3), and 0.0730 messages per second (RPi 4). For the remote proof-of-work scenarios, the MPS rates were a fixed 50 and 100 messages per second. Table 3 shows the calculated energy cost per message for each test scenario.
+需要注意的是，當設備執行主網工作證明時，它們平均每秒處理 0.0592 條訊息（RPi 3）和每秒 0.0730 條訊息（RPi 4）。對於遠程工作量證明方案，MPS 速率為每秒固定 50 條和 100 條消息。表 3 顯示了為每個測試場景計算的每條訊息的能源成本。
 
-| device | 50 MPS remote PoW | 100 MPS remote PoW | Mainnet PoW | 
+|設備 |無訊息 |50 MPS 遠程 PoW |100 MPS 遠程 PoW |主網 PoW | 
 | -------------- | ----------------------------------- | ------------------------------------ | -------------------------------------- | 
-| Raspberry Pi 3 | 116.92 mW \* (1/50) S = **2.33 mJ** | 319.32 mW \* (1/100) S = **3.19 mJ** | 340.26 mW \* (1/.059) S = **5.77 J** | | Raspberry Pi 4 | 60.62 mW \* (1/50) S = **1.21 mJ** | 118.97 mW \* (1/100) S = **1.18 mJ** | 293.94 mW \* (1/0.073) S = **4.026 J** |
+| Raspberry Pi 3 | 116.92 兆瓦 \* (1/50) S = **2.33 兆焦耳** | 319.32 兆瓦 \* (1/100) S = **3.19 兆焦耳** | 340.26 兆瓦 \* (1/.059) S = **5.77 焦耳** | | Raspberry Pi 4 | 60.62 兆瓦 \* (1/50) S = **1.21 兆焦耳** | 118.97 兆瓦 \* (1/100) S = **1.18 兆焦耳** | 293.94 兆瓦 \* (1/0.073) S = **4.026 焦耳** |
