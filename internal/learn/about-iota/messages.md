@@ -5,29 +5,30 @@ description: This topic explores messages, models, and payloads that encompass
   the transfer of data within the Tangle.
 ---
 
-# Messages
+# 訊息
 
-A message is an object that nodes gossip around in the network. It always references two to eight other messages, which are known as **parents**. It is stored as a vertex on the Tangle data structure maintained by the nodes.
+訊息是節點在網絡中閒聊的對象。它總是引用 2 到 8 條其他消息，稱為 **父級**。它存儲為節點維護的糾纏數據結構上的一個頂點。
 
-Messages can contain payloads. Some of them are core payloads that are processed by all nodes as part of the core protocol. Others are community payloads that enable the building of new functionalities on top of the Tangle. And some payloads have other nested payloads embedded inside. So, the parsing of the message is done layer by layer, to ensure also embedded payloads have a correct syntax structure.
+訊息可以包含有效負載。其中一些是核心有效載荷，作為核心協議的一部分由所有節點處理。其他是社區有效負載，可以在糾纏之上構建新功能。並且一些有效載荷中嵌入了其他嵌套的有效載荷。因此，訊息的解析是逐層完成的，以確保嵌入的有效負載也具有正確的語法結構。
 
 ## UTXO
 
-Previously, the IOTA protocol used transactions (which were vertices in the Tangle), where each transaction defined either an input or an output. A grouping of those input/output transaction vertices made up a bundle that transferred the given values as an atomic unit. But this approach was seen as too time-consuming. So, we adopted a new transaction structure called the **unspent transaction outputs **(UTXO).
+以前IOTA 協議使用交易 (纏結中的頂點)，其中每個交易定義一個輸入或一個輸出。這些輸入/輸出事務頂點的分組組成了一個捆綁包，將給定值作為一個原子單元傳輸。但這種方法被認為過於耗時。因此，我們採用了一種新的交易結構，稱為**未使用的交易輸出**（UTXO）。
 
-The UTXO model defines a ledger state where balances are not directly associated with addresses but with the outputs of transactions. In this model, transactions specify the outputs of previous transactions as inputs, which are consumed to create new outputs. A transaction must consume the entirety of the specified inputs.
 
-![utxo-model](/img/learn/about-iota/utxo.png)
+UTXO 模型定義了一種帳本狀態，其中餘額不直接與地址相關聯，而是與交易的輸出相關聯。在此模型中，交易將先前交易的輸出指定為輸入，這些輸入用於創建新的輸出。交易必須消耗整個指定的輸入。
 
-So, the UTXO is a part of a larger, self-contained, and flexible message structure known as a **payload**. This approach is meant to enable a self-contained message structure defining the data of the entire transfer as a payload to be embedded into a message.
+![utxo模型](/img/learn/about-iota/utxo.png)
 
-Overall, these payload structures are simple:
+因此，UTXO 是一個更大、獨立且靈活的訊息結構的一部分，稱為**有效負載**。這種方法旨在啟用一個自包含的訊息結構，將整個傳輸的數據定義為嵌入到訊息中的有效負載。
 
-| Name         | Type      | Description                                          |
+總的來說，這些有效載荷結構很簡單：
+
+| 名稱         | 種類      | 描述                                          |
 | ------------ | --------- | ---------------------------------------------------- |
-| Payload Type | uint32    | must be set to **2**                                 |
-| Index        | String    | The index key of the message, a UTF-8 encoded string |
-| DATA         | ByteArray | Data we are attaching                                |
+| 有效載荷類型 | uint32    | 必須設置為 **2**                             |
+| 索引        | 字串    | 訊息的索引鍵，一個 UTF-8 編碼的字符串 |
+| 資料         | ByteArray | 我們附上的數據                                |
 
 Additionally, there can be three types of message payloads:
 
