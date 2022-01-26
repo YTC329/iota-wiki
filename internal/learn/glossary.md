@@ -8,12 +8,12 @@ description: Glossary of all specialized names and phrases used in the IOTA
 
 ## A
 
-- **Address Checksum:** Checksum validation is a way to determine if an address is valid and does not contain typos.
-- **Adaptive PoW** (In development for IOTA 1.5): With this feature, the coordinator can issue a milestone and simultaneously set the future PoW score. This means that if the network is not fully utilized, the PoW will be reduced to the point where it can be executed by microdevices. Accordingly, the coordinator can also raise the PoW difficulty in case of high utilization and thus make an attack very expensive.
-- **Auto peering:** A mechanism that allows nodes to automatically select their neighbors without manual intervention by the node operator.
-- **API(Application Programming Interfaces):** The way for applications to interact with the Tangle.
-- **Atomic Transactions:** Instead of the bundle construct, IOTA 1.5 uses simpler Atomic Transactions. An Atomic Transaction includes everything related to a transaction in a single message instead of splitting it up (Bundles). This reduces network overhead and signature verification load, improves spam protection and rate control, and shortens the length of Merkle proofs (for future sharding). It also reduces implementation overhead and increases maintainability of the core node software.
-- **Application Layer (IOTA 2.0):** The top layer of the 3-layer communication protocol. The IOTA protocol allows a variety of external applications to run on the Message Tangle. Anyone can design an application and users can decide which applications to run on their nodes. These applications will all use the communication layer to transmit and store data.
+- **Address Checksum (地址校驗和):** 校驗和驗證是一種確定地址是否有效且不包含拼寫錯誤的方法。
+- **Adaptive PoW (自適應 PoW)** (為了IOTA 1.5開發中):借助此功能，協調者可以發布里程碑並同時設置未來的 PoW 分數。這意味著如果網絡沒有得到充分利用，PoW 將減少到可以由微設備執行的程度。因此，協調者在利用率高的情況下也可以提高 PoW 難度，從而使攻擊變得非常昂貴。
+- **Auto peering (自動對等):** 一種允許節點自動選擇其鄰居而無需節點操作員手動干預的機制。
+- **API(Application Programming Interfaces) (應用程序編程接口):** 應用程序與糾纏交互的方式。
+- **Atomic Transactions 原子交易:** IOTA 1.5 沒有使用 bundle 結構，而是使用更簡單的原子交易。原子交易將與交易相關的所有內容包含在單個訊息中，而不是將其拆分（捆綁）。這減少了網絡開銷和簽名驗證負載，改進了垃圾郵件保護和速率控制，並縮短了 Merkle 證明的長度（用於未來的分片）。它還減少了實現開銷並提高了核心節點軟件的可維護性。
+- **Application Layer (應用層) (IOTA 2.0):** The top layer of the 3-layer communication protocol. The IOTA protocol allows a variety of external applications to run on the Message Tangle. Anyone can design an application and users can decide which applications to run on their nodes. These applications will all use the communication layer to transmit and store data.
 - **Approval Switch (IOTA 2.0):** When a message is selected as a parent, we can choose from the strong or weak tip pool. This mechanism is called Approval Switch.
 - **Approval Weight (IOTA 2.0):** A message gets Mana-weight by approving the message directly or indirectly. However, only strong parents can pass on the mana weight to the past, while weak parents receive the weight from their weak children but do not pass it on.
 - **Approvers (IOTA 2.0):** Parents are approved by their referencing messages called approvers. It is thus a reverse mapping of parents. As in the parents’ definition, an approver might be either strong or weak.
