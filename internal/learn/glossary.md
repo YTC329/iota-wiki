@@ -36,7 +36,7 @@ description: Glossary of all specialized names and phrases used in the IOTA
 - **ComNet:** ComNet 是一個僅用於測試的網絡，除了由 IOTA 社區維護之外，它與測試網類似。通信網中的節點繼續使用由 IOTA 社區運營的協調器。
 - **Chronicle (編年史):** IOTA 基金會的永久節點解決方案。它允許將到達節點的所有事務存儲在安全且可擴展的分佈式數據庫中。 編年史用於存儲糾纏的無限數據流並使其可查詢。換句話說，持久性允許無限期地存儲 Tangle 的整個歷史，並使這些數據易於訪問。
 - **Consensus (共識):** 在存在錯誤流程的情況下，就分佈式多代理系統中的特定日期或值達成一致。
-- **Coordinator (協調員) (直到 IOTA 2.0):** 一個受信任的實體，作為對惡意交易的保護。糾纏還不是最終產品，它仍處於測試階段。該網絡目前依賴於一種屏蔽，即所謂的協調器。它是開源的，在 Hornet 節點上運行。 COO 充當 Tangle 的中心化、自願和臨時替代共識機制。為此，COO 會定期向全節點發送誠實交易。這些數據包包含一個沒有價值的簽名消息，稱為里程碑。糾纏中的完整節點僅在獲得里程碑批准時才認為交易已確認。重要提示：協調者只能確認交易，但不能繞過共識規則。他無法創建、凍結或竊取代幣。這個固定的規則和 COO 地址在每個全節點上都是硬編碼的，所以協調者對 tangle 的影響是非常有限的，因為糾纏也一直受到所有其他全節點的監控。 > 隨著 IOTA 2.0 升級，COO 將被關閉。
+- **Coordinator (協調員) (直到 IOTA 2.0):** 一個受信任的實體，作為對惡意交易的保護。糾纏還不是最終產品，它仍處於測試階段。該網絡目前依賴於一種屏蔽，即所謂的協調員。它是開源的，在 Hornet 節點上運行。協調員充當糾纏的中心化、自願和臨時替代共識機制。為此，協調員會定期向全節點發送誠實交易。這些數據包包含一個沒有價值的簽名消息，稱為里程碑。糾纏中的完整節點僅在獲得里程碑批准時才認為交易已確認。重要提示：協調者只能確認交易，但不能繞過共識規則。他無法創建、凍結或竊取代幣。這個固定的規則和協調員地址在每個全節點上都是硬編碼的，所以協調者對糾纏的影響是非常有限的，因為糾纏也一直受到所有其他全節點的監控。 > 隨著 IOTA 2.0 升級，COO 將被關閉。
 - **ComNet (通信層) (IOTA 2.0):** 該層存儲和交流信息。該層包含分佈式帳本或糾纏。速率控制和時間戳也位於這一層。
 - **Core Object type (核心對像類型) (IOTA 2.0):** 必須由所有節點解析的對像類型。解析器是負責將輸入分解和轉換為更適合進一步處理的格式的計算機程序。
 - **Core Application (核心應用) (IOTA 2.0):** 必須由所有節點執行的核心應用程序，例如價值轉移應用程序。
@@ -45,16 +45,16 @@ description: Glossary of all specialized names and phrases used in the IOTA
 
 ## D
 
-- **Data:** The tangle is a way of proving the integrity of data (verifiability of completeness and origin) in a trustworthy manner. At present, there are several cryptographic methods that make this possible, but security gaps are repeatedly discovered here, making data vulnerable to manipulation. This is a major problem, especially in cloud computing, where third-party audit tools are sometimes even used (for a fee) to ensure this data integrity. This is exactly where IOTA comes in and offers a relatively easy way to escape this with its protocol and without fees.
-- **Data transactions:** These are confirmed directly and are notarized. With the help of “notarization”, it can be proven that an electronic document existed in a certain form at a certain time and has not been changed since its creation. When a notarization is created, a unique hash (fingerprint) of a document is calculated and stored together with a timestamp in the IOTA ledger (tangle) in an immutable manner.
-- **Data storage:** Just like the internet, the IOTA protocol does not store data or in other words, the Tangle is not a data storage. If someone wants to store the history of transactions in a decentralized way, they can build a second-layer solution for this themselves or pay third parties for this storage. For the basic layer, IOTA focuses on performance, throughput, and security rather than building a global database.
-- **Distributed Ledger Technology (DLT):** This is a database architecture that allows owners of digital assets to transfer and document them from peer to peer. Each transfer in a DLT is stored as a record in a distributed ledger (database). This database is stored in all nodes of a network.
-- **DevNet:** The DevNet (developer network) is a pure test network to research and test a Tangle without Coordinator.
-- **Decay:** Both Mana and pending Mana decay proportionally to its value, preventing Mana from growing indefinitely over time.
-- **Double-spending:** Double-spending is a threat to a digital money system, where the same single digital token can be spent more than once. Unlike physical money, a digital token consists of a digital file that can be duplicated or counterfeited.
-- **dRNG (Decentralized Random Number Generator):** This random number generator is required in Fast Probabilistic Consensus (FPC) to make the consensus model more resilient to attacks. In the case of conflicting transactions, the FPC votes on the transactions in question in several rounds. The threshold at which a node changes its mind in this vote is 50% +/- a small random deviation (using dRNG). In order to avoid stalemate or a specific outcome in the voting, this additional random component prevents potentially malicious nodes from influencing the voting process.
-- **Dust Protection (IOTA 1.5):** Someone who wants to harm IOTA could automatically send 1i for years to repeatedly recreated addresses, driving up the ledger’s memory requirements to the point where a full-node would eventually only run on large servers. In Chrysalis if you want to create a microtransaction (<1Mi) you need to activate dust on the receiving address. That will alow you to receive a certain amount of dust. Also, the addresses with Colored Coins have to be tokenized. After the Coordicide, there will be another solution for IOTA 2.0.
-- **Directed Acyclic Graph (DAG):** A directed acyclic graph is DLT structure that consists of edges and vertices that never form a closed loop. The IOTA arcitecture "the Tangle" is a form of directed acyclic graph.
+- **Data (數據):** 纏結是一種以可信賴的方式證明數據完整性（完整性和來源的可驗證性）的方法。目前，有幾種加密方法使這成為可能，但這裡反復發現安全漏洞，使數據容易受到操縱。這是一個主要問題，尤其是在雲計算中，有時甚至使用第三方審計工具（收費）來確保數據完整性。這正是 IOTA 的用武之地，它提供了一種相對簡單的方法來通過其協議避免這種情況，並且無需任何費用。
+- **Data transactions (數據交易):** 這些都是直接確認和公證的。借助“公證”，可以證明電子文檔在某個時間以某種形式存在，並且自創建以來就沒有改變過。創建公證時，會計算文檔的唯一哈希（指紋）並將其與時間戳一起以不可變的方式存儲在 IOTA 分類帳（纏結）中。
+- **Data storage (數據存儲):** 就像互聯網一樣，IOTA 協議不存儲數據，換句話說，糾纏不是數據存儲。如果有人想以去中心化的方式存儲交易歷史，他們可以自己為此構建第二層解決方案，或者為這種存儲付費給第三方。對於基礎層，IOTA 專注於性能、吞吐量和安全性，而不是構建全局數據庫。
+- **Distributed Ledger Technology (分佈式帳本技術) (DLT):** 這是一種數據庫架構，允許數字資產的所有者在點對點之間傳輸和記錄它們。 DLT 中的每次轉賬都作為記錄存儲在分佈式帳本（數據庫）中。該數據庫存儲在網絡的所有節點中。
+- **DevNet (開發網):** DevNet（開發者網絡）是一個純測試網絡，可以在沒有協調員的情況下研究和測試糾纏。
+- **Decay (衰減):** Mana值和未決Mana值都與其值成比例衰減，防止Mana值隨時間無限增長。
+- **Double-spending (雙花):** 雙重支付是對數字貨幣系統的威脅，在這種系統中，同一個數字代幣可以多次使用。與實物貨幣不同，數字代幣由可以復製或偽造的數字文件組成。
+- **dRNG (Decentralized Random Number Generator) (去中心化隨機數生成器）:** 快速概率共識 (FPC) 中需要此隨機數生成器，以使共識模型對攻擊更具彈性。在交易衝突的情況下，FPC 會分幾輪對相關交易進行投票。節點在這次投票中改變主意的閾值是 50% +/- 一個小的隨機偏差（使用 dRNG）。為了避免投票中的僵局或特定結果，這個額外的隨機組件可以防止潛在的惡意節點影響投票過程。
+- **Dust Protection (防塵) (IOTA 1.5):** 想要傷害 IOTA 的人可以自動將 1i 發送到反復重新創建的地址連續好幾年，從而將分類帳的內存需求推高到一個完整節點最終只能在大型服務器上運行的地步。在蛹中，如果你想創建一個微交易 (<1Mi)，你需要在接收地址上激活灰塵。這將使您收到一定量的灰塵。此外，必須對帶有彩色硬幣的地址進行標記。在 Coordicide 之後，IOTA 2.0 將會有另一個解決方案。
+- **Directed Acyclic Graph (有向無環圖) (DAG):** 有向無環圖是由永遠不會形成閉環的邊和頂點組成的 DLT 結構。 IOTA 架構“纏結”是有向無環圖的一種形式。
 
 ## E
 
