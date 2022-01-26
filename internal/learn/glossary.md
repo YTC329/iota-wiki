@@ -13,36 +13,35 @@ description: Glossary of all specialized names and phrases used in the IOTA
 - **Auto peering (自動對等):** 一種允許節點自動選擇其鄰居而無需節點操作員手動干預的機制。
 - **API(Application Programming Interfaces) (應用程序編程接口):** 應用程序與糾纏交互的方式。
 - **Atomic Transactions 原子交易:** IOTA 1.5 沒有使用 bundle 結構，而是使用更簡單的原子交易。原子交易將與交易相關的所有內容包含在單個訊息中，而不是將其拆分（捆綁）。這減少了網絡開銷和簽名驗證負載，改進了垃圾郵件保護和速率控制，並縮短了 Merkle 證明的長度（用於未來的分片）。它還減少了實現開銷並提高了核心節點軟件的可維護性。
-- **Application Layer (應用層) (IOTA 2.0):** The top layer of the 3-layer communication protocol. The IOTA protocol allows a variety of external applications to run on the Message Tangle. Anyone can design an application and users can decide which applications to run on their nodes. These applications will all use the communication layer to transmit and store data.
-- **Approval Switch (IOTA 2.0):** When a message is selected as a parent, we can choose from the strong or weak tip pool. This mechanism is called Approval Switch.
-- **Approval Weight (IOTA 2.0):** A message gets Mana-weight by approving the message directly or indirectly. However, only strong parents can pass on the mana weight to the past, while weak parents receive the weight from their weak children but do not pass it on.
-- **Approvers (IOTA 2.0):** Parents are approved by their referencing messages called approvers. It is thus a reverse mapping of parents. As in the parents’ definition, an approver might be either strong or weak.
+- **Application Layer (應用層) (IOTA 2.0):** 三層通信協議的頂層。 IOTA 協議允許各種外部應用程序在 Message Tangle 上運行。任何人都可以設計應用程序，用戶可以決定在他們的節點上運行哪些應用程序。這些應用程序都將使用通信層來傳輸和存儲數據。
+- **Approval Switch (批准開關) (IOTA 2.0):** 當一條訊息被選為父級訊息時，我們可以從強或弱提示池中進行選擇。這種機制稱為批准開關。
+- **Approval Weight (批准權重) (IOTA 2.0):** 訊息通過直接或間接批准訊息獲得Mana權重。然而，只有強父級才能將Mana權重傳給過去，而弱父級從弱孩子那裡得到了權重，但不會將其傳遞下去。
+- **Approvers (審批人) (IOTA 2.0):** 父級通過稱為批准者的參考消息獲得批准。因此，它是父級的反向映射。正如父級的定義一樣，批准者可能是強者，也可能是弱者。
 
 ## B
 
-- **Balance:** Funds on the addresses (account). These are always available and cannot be deleted or forgotten.
-- **Blockchain Bottleneck:** The more transactions are issued, the more the block rate and size become a bottleneck in the system. It is no longer possible to capture all incoming transactions in a prompt manner. Attempts to speed up block rates result in more orphaned blocks (blocks are left behind) and reduce the security of the blockchain.
-- **Branch (IOTA 2.0):** A version of the ledger that temporarily coexists with other versions, each spawned by conflicting transactions.
-- **Bee:** Node software developed by the IOTA foundation using the Rust programming language.
-- **Bootstrapping attack:** An attack in which a node downloads malicious snapshot files, including invalid transactions and balances.
+- **Balance (餘額):** 地址（帳戶）上的資金。這些始終可用，不能刪除或忘記。
+- **Blockchain Bottleneck (區塊鏈瓶頸):** 發出的交易越多，出塊率和大小就越會成為系統的瓶頸。不再可能以迅速的方式捕獲所有傳入的交易。加快塊速率的嘗試會導致更多的孤立塊（塊被留下）並降低區塊鏈的安全性。
+- **Branch (分支) (IOTA 2.0):** 與其他版本暫時共存的分類帳版本，每個版本都由衝突的交易產生。
+- **Bee (蜜蜂):** IOTA 基金會使用 Rust 編程語言開發的節點軟件。
+- **Bootstrapping attack (自舉攻擊):** 節點下載惡意快照文件的攻擊，包括無效交易和餘額。
 
 ## C
 
-- **Curl:** This is one of the hash functions currently in use. It is based on the “sponge” construction of the Keccak inventors (SHA-3).
-- **Confirmed:** Confirmed transactions. In IOTA 1.5, messages in the Tangle are considered for confirmation only when they are directly or indirectly referenced by a milestone that the Coordinator node has validated.
-  To allow the nodes to recognize the milestones, all nodes that participate in the same IOTA network are configured with the Merkle root address of a Coordinator that they trust to confirm messages. Using this address, nodes can validate the signatures in milestones to verify whether the trusted Coordinator signs them.
-  To make sure that new messages always have a chance of being confirmed, the Coordinator sends indexed milestones at regular intervals. This way, nodes can compare the indexes of their milestones to check whether they are synchronized with the rest of the network.
-- **CTPS:** Confirmed transactions per second.
-- **Cumulative Weight:** A system for valuing transactions. Each additional transaction that references a transaction increases its cumulative weight. When tips are selected, a path through transactions that has a higher cumulative weight is preferred.
-- **ComNet:** The ComNet is a test-only network and is similar to the Testnet except that it is maintained by the IOTA community. The nodes in the ComNet continue to use a coordinator operated by the IOTA community.
-- **Chronicle:** A permanode solution of the IOTA Foundation. It allows to store all transactions reaching a node in a distributed database that is secure and scales well. Chronicle is used to store the Tangle’s unlimited data flow and make it queryable. In other words, permanence allows the entire history of the Tangle to be stored indefinitely and makes that data easily accessible.
-- **Consensus:** Agreement on a specific date or value in distributed multi-agent systems, in the presence of faulty processes.
-- **Coordinator (only up to IOTA 2.0):** A trusted entity, as protection against malicious transactions. The Tangle is not yet a final product, it is still in beta. The network currently relies on a kind of shield, the so-called coordinator. It is open-source and runs on a Hornet node. The COO acts as a centralized, voluntary, and temporary alternative consensus mechanism for the Tangle. To do this, the COO sends honest transactions to the full nodes at regular intervals. These packets contain a signed message with no value, called a milestone. The full nodes in the Tangle consider a transaction as confirmed only if it is approved by a milestone. Important: The coordinator can only confirm transactions, but he cannot bypass the consensus rules. To create, freeze or steal tokens is not possible for him. This fixed rule and the COO address is hardcoded on each full node, so the coordinator’s influence on the tangle is very limited, since the tangle is also constantly monitored by all the other full nodes. > The Coo will be switched off with the IOTA 2.0 upgrade.
-- **Communication Layer (IOTA 2.0):** This layer stores and communicates information. This layer contains the distributed ledger or tangle. The rate control and timestamps are also located in this layer.
-- **Core Object type (IOTA 2.0):** An object type that must be parsed by all nodes. Parsers are computer programs responsible for decomposing and converting an input into a format more suitable for further processing.
-- **Core Application (IOTA 2.0):** Core application that must be executed by all nodes, for example the value transfer application.
-- **Child (IOTA 2.0):** A transaction that gets referenced by Parents.
-- **Chrysalis:** The name of the IOTA 1.5 network upgrade.
+- **Curl (捲曲):** 這是當前使用的哈希函數之一。它基於 Keccak 發明者 (SHA-3) 的“海綿”結構。
+- **Confirmed (已確認):** 確認交易。在 IOTA 1.5 中，糾纏中的訊息僅在被協調器節點已驗證的里程碑直接或間接引用時才被考慮進行確認。
+  為了允許節點識別里程碑，參與同一 IOTA 網絡的所有節點都配置有他們信任的協調器的 Merkle 根地址以確認消息。使用此地址，節點可以驗證里程碑中的簽名，以驗證受信任的協調者是否對其進行簽名。為確保新消息始終有機會得到確認，協調器會定期發送索引里程碑。這樣，節點可以比較其里程碑的索引，以檢查它們是否與網絡的其餘部分同步。
+- **CTPS (Confirmed transactions per second.):** 每秒確認交易。
+- **累積權重:** 評估交易的系統。每個引用交易的附加交易都會增加其累積權重。當選擇提示時，首選具有較高累積權重的交易路徑。
+- **ComNet:** ComNet 是一個僅用於測試的網絡，除了由 IOTA 社區維護之外，它與測試網類似。通信網中的節點繼續使用由 IOTA 社區運營的協調器。
+- **Chronicle (編年史):** IOTA 基金會的永久節點解決方案。它允許將到達節點的所有事務存儲在安全且可擴展的分佈式數據庫中。 編年史用於存儲糾纏的無限數據流並使其可查詢。換句話說，持久性允許無限期地存儲 Tangle 的整個歷史，並使這些數據易於訪問。
+- **Consensus (共識):** 在存在錯誤流程的情況下，就分佈式多代理系統中的特定日期或值達成一致。
+- **Coordinator (協調員) (直到 IOTA 2.0):** 一個受信任的實體，作為對惡意交易的保護。糾纏還不是最終產品，它仍處於測試階段。該網絡目前依賴於一種屏蔽，即所謂的協調器。它是開源的，在 Hornet 節點上運行。 COO 充當 Tangle 的中心化、自願和臨時替代共識機制。為此，COO 會定期向全節點發送誠實交易。這些數據包包含一個沒有價值的簽名消息，稱為里程碑。糾纏中的完整節點僅在獲得里程碑批准時才認為交易已確認。重要提示：協調者只能確認交易，但不能繞過共識規則。他無法創建、凍結或竊取代幣。這個固定的規則和 COO 地址在每個全節點上都是硬編碼的，所以協調者對 tangle 的影響是非常有限的，因為糾纏也一直受到所有其他全節點的監控。 > 隨著 IOTA 2.0 升級，COO 將被關閉。
+- **ComNet (通信層) (IOTA 2.0):** 該層存儲和交流信息。該層包含分佈式帳本或糾纏。速率控制和時間戳也位於這一層。
+- **Core Object type (核心對像類型) (IOTA 2.0):** 必須由所有節點解析的對像類型。解析器是負責將輸入分解和轉換為更適合進一步處理的格式的計算機程序。
+- **Core Application (核心應用) (IOTA 2.0):** 必須由所有節點執行的核心應用程序，例如價值轉移應用程序。
+- **Child (子級) (IOTA 2.0):** 被父級引用的交易。
+- **Chrysalis (蛹):** IOTA 1.5 網絡升級的名稱。
 
 ## D
 
