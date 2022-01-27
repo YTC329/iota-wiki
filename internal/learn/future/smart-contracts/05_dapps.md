@@ -15,23 +15,23 @@ keywords:
 image: http://blog.iota.org/content/images/size/w1600/2021/10/Group-4947.png
 ---
 
-In this article, you will learn decentralized applications (dApps) work and how users can interact with them.
+在本文中，您將了解去中心化應用程序 (dApp) 的工作原理以及用戶如何與它們進行交互。
 
-## Build dApps on IOTA Smart Contracts
+## 在 IOTA 智能合約上構建 dApp
 
-Decentralized applications (dApps) are computer applications that run on a decentralized computing system, like IOTA Smart Contracts.
+去中心化應用程序（dApps）是在去中心化計算系統上運行的計算機應用程序，如 IOTA 智能合約。
 
-IOTA Smart Contracts enable you to use your preferred programming language, set a fee model for users, incentives for validators, and committee structure.
+IOTA 智能合約使您能夠使用您喜歡的編程語言、為用戶設置費用模型、為驗證者提供激勵和委員會結構。
 
-There are some exciting aspects of dApps:
+dApp 有一些令人興奮的方面：
 
-- **No downtime**: dApps are based on a peer-to-peer system which ensures the dApps will continue to work even if individual computers, or parts of the network, go offline.
-- **Censorship-resistant**: As there is no single point of failure, and it is based on the Tangle, it is impossible to take over the Network.
-- **Open-source**: This brings even more trust to dApps. As the source code is publicly available, it can be verified and improved by many developers.
+- **沒有停機時間**: dApps 基於點對點系統，即使個別計算機或部分網絡離線，dApps 也能繼續工作。
+- **抗審查**: 由於不存在單點故障，並且基於糾纏，因此無法接管網絡。
+- **開源**: 這給 dApp 帶來了更多的信任。由於源代碼是公開的，它可以被許多開發人員驗證和改進。
 
-## Architecture
+## 架構
 
-Decentralized applications consist of one or multiple Smart Contracts and a User Interface. The user interface is usually a Website, which interacts with the Smart Contracts.
+去中心化應用程序由一個或多個智能合約和一個用戶界面組成。用戶界面通常是與智能合約交互的網站。
 
 ### Interacting With Smart Contracts
 
