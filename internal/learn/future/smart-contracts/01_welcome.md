@@ -10,15 +10,15 @@ keywords:
   - EVM
 ---
 
-This is series of articles brings a detailed overview of IOTA Smart Contracts.
+本系列文章詳細介紹了 IOTA 智能合約。
 
-IOTA Smart Contracts provide a more natural way of running distributed computations. Each smart contract can be executed in a localized context without forcing the whole network to execute it.
+IOTA 智能合約提供了一種更自然的運行分佈式計算的方式。每個智能合約都可以在本地化的上下文中執行，而無需強制整個網絡執行它。
 
-Learn more about the concepts in the following articles:
+在以下文章中了解有關這些概念的更多信息：
 
-- [Smart Contract VM & Language](02_VM-and-languages.md)
-- [Validators](03_validators.md)
-- [Chains](04_chains.md)
-- [dApps & User interactions](05_dapps.md)
-- [Consensus](06_consensus.md)
-- [IOTA Tangle](07_tangle.mdx)
+- [智能合約虛擬機和語言](02_VM-and-languages.md)
+- [驗證器](03_validators.md)
+- [鏈](04_chains.md)
+- [dApp 和用戶交互](05_dapps.md)
+- [共識](06_consensus.md)
+- [IOTA 糾纏](07_tangle.mdx)
