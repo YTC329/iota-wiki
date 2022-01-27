@@ -5,43 +5,44 @@ description: The unique feature of IOTA is the absence of any Fee's in the
   protocol. Here we explain how this is achieved.
 ---
 
-# Why is IOTA Feeless?
+# 為什麼IOTA是免費的？
 
-Most decentralized cryptocurrencies, including all of the best-known ones – Bitcoin, Ethereum, Dogecoin, and many others – require that anyone making a transaction on the network pay a fee for the services provided. This is not merely an add-on feature of those cryptocurrencies that can easily be removed. It is a fundamental aspect of how they work.
+大多數去中心化加密貨幣，包括所有最著名的加密貨幣——比特幣、以太坊、狗狗幣和許多其他加密貨幣——都要求任何在網絡上進行交易的人為所提供的服務支付費用。這不是那些可以輕鬆刪除的加密貨幣的附加功能。這是它們如何運作的基本原則。
 
-IOTA was designed to require no fees to process a transaction. In any transaction, the amount deducted from the sender's wallet is exactly the same as the amount added to the recipient's wallet.
+IOTA 旨在不收取任何費用來處理交易。在任何交易中，從發送方錢包中扣除的金額與添加到接收方錢包中的金額完全相同。
 
-## Blockchains
+## 區塊鏈
 
-There are three major types of participants in many blockchain-based cryptocurrencies, including Bitcoin: nodes, miners, and users. To learn more about these participants, we first have to learn a bit more about blockchain itself.
+許多基於區塊鏈的加密貨幣（包括比特幣）主要分為三種類型的參與者：節點、礦工和用戶。要了解更多關於這些參與者的信息，我們首先必須更多地了解區塊鏈本身。
 
-A blockchain is a ledger published to and tracked by any number of independent participants. These participants, who track the current state of the ledger, are called "nodes". The structure of the ledger is a series of blocks of information chained together in chronological order, hence the name "blockchain". Every block of information contains a header and a body.
+區塊鏈是發布給任意數量的獨立參與者並由其跟踪的分類帳。這些跟踪帳本當前狀態的參與者被稱為“節點”。賬本的結構是一系列按時間順序鏈接在一起的信息塊，因此得名“區塊鏈”。每個信息塊都包含一個標題和一個正文。
 
-A **block header** contains: a four-byte version number, a 32-byte double hash of the previous block's header, a 32-byte Merkle root of the transactions in the current block, the four-byte Unix time when the block was mined, a four-byte rounded off version of the target difficulty in mining that block, and finally a four-byte nonce that can be any value set by the miner in order to meet a specific condition we'll discuss more in a moment.
+**區塊頭**包含：一個四字節的版本號，一個 32 字節的前一個區塊頭的雙散列，一個 32 字節的當前區塊交易的默克爾根，四字節的 Unix 時間。塊被挖出，四字節四捨五入版本的目標難度在挖掘該塊，最後是四字節隨機數，可以是礦工設置的任何值以滿足特定條件，我們將在後面討論更多片刻。
 
-The **block body** contains a protocol-dependent number of bytes, often 1,000,000 or more, of transaction data.
+**區塊**包含與協議相關的字節數，通常為 1,000,000 或更多的交易數據。
 
-We mentioned mining several times above. Here we look at what that means for cryptocurrencies built on a proof of work model. When a given block has just been added to the blockchain, a race begins. In this race, to mine the next block the participants – most commonly referred to as miners – gather as many open transactions as they can into a new block body and calculate the Merkle root from that, and they calculate other information for their new block header as well, all except the four-byte nonce we mentioned above.
+我們在上面多次提到了挖礦。在這裡，我們看看這對基於工作量證明模型的加密貨幣意味著什麼。當一個給定的區塊剛剛被添加到區塊鏈中時，一場競賽就開始了。在這場競賽中，為了挖掘下一個區塊，參與者——通常被稱為礦工——將盡可能多的開放交易收集到一個新的區塊體中，並從中計算默克爾根，並為他們的新區塊頭計算其他信息同樣，除了我們上面提到的四字節隨機數之外。
 
-The miner can set this nonce to any value they like, but the goal in doing so is to make the hash of the block header meet the target difficulty. To slightly oversimplify it, the nonce is changed and the header hashed repeatedly until the resulting hash begins with enough zeros. At the current difficulty, approximately one in every 75,000,000,000,000,000,000,000 possible headers will produce a hash with enough leading zeros to be valid. When one is found, the block is mined and can be sent to the nodes where it is added to the blockchain, and the race begins again for the next block.
+礦工可以將此隨機數設置為他們喜歡的任何值，但這樣做的目標是使塊頭的哈希值滿足目標難度。為了稍微簡化它，更改隨機數並對標頭進行反复哈希處理，直到生成的哈希以足夠的零開始。在目前的難度下，大約每 75,000,000,000,000,000,000,000 個可能的標頭中就有一個會產生一個具有足夠前導零的哈希值才能有效。當找到一個時，該塊被挖掘並可以被發送到它被添加到區塊鏈的節點，並且下一個塊的比賽再次開始。
 
-This race to mine the next block is a key security feature in the blockchain. If one could mine blocks at will, an attacker could make a competing blockchain and, by getting enough nodes to publish it, could create fraudulent transactions, reverse legitimate ones, or any of a number of other actions that would rapidly cause trust in the system and the value of the associated coin to trend to zero.
+這場挖掘下一個區塊的競賽是區塊鏈中的一個關鍵安全功能。如果一個人可以隨意挖掘區塊，攻擊者可以創建一個競爭區塊鏈，並通過獲得足夠的節點來發布它，可以創建欺詐交易、逆轉合法交易或任何其他會迅速引起系統信任的行為以及相關硬幣的價值趨向於零。
 
-Because each block in the blockchain contains a double hash of the header of the previous block, any change made earlier in the blockchain requires all subsequent blocks to also be changed, and these changes require the newly-changed blocks to be mined again. It is easy to see that this system provides security not only for new transactions, but that the older a transaction in the blockchain is, the more secure it becomes.
+因為區塊鏈中的每個區塊都包含前一個區塊的頭部的雙重哈希，所以在區塊鏈中之前所做的任何更改都需要所有後續塊也被更改，而這些更改需要重新挖掘新更改的塊。很容易看出，該系統不僅為新交易提供安全性，而且區塊鏈中的交易越舊，它就變得越安全。
 
-So miners are critical to the blockchain. But mining is expensive work and must be financially compensated.
+所以礦工對區塊鏈至關重要。但採礦是一項昂貴的工作，必須得到經濟補償。
 
-When a block is mined, the successful miner is allowed to add a number of coins – the **block reward** – to his or her own wallet, the number being set by the protocol. These newly minted coins can be sold by the miner and are currently the primary way the miners are paid for their work. Unfortunately for miners, many crypto protocols reduce the size of the block reward over time. But there is another way miners can still get paid. This is where the user comes in.
+當一個區塊被挖出時，成功的礦工可以向他或她自己的錢包添加一定數量的硬幣——**區塊獎勵**，數量由協議設置。這些新鑄造的硬幣可以由礦工出售，是目前礦工獲得工作報酬的主要方式。不幸的是，對於礦工來說，許多加密協議會隨著時間的推移減少塊獎勵的大小。但是礦工仍然可以通過另一種方式獲得報酬。這就是用戶進來的地方。
 
-The role of users is simple. They buy, sell, and trade the currency native to their chosen blockchain. If blockchain transactions were feeless, the user needs only use their private key to sign a transaction, putting a set value of crypto under the control of the recipient whose public key is included in the transaction.
+用戶的角色很簡單。他們購買、出售和交易他們選擇的區塊鏈原生貨幣。如果區塊鏈交易是免費的，用戶只需要使用他們的私鑰來簽署交易，將一組加密值置於公鑰包含在交易中的接收者的控制之下。
 
-But there is a problem for the user here. The target difficulty of mining blocks is designed to force new blocks to be mined at a relatively constant rate. And the blocks themselves usually have a fixed size which in turn fixes a limit on the number of transactions that can be included per block. If there are more transactions waiting to be included in a block, the miners will usually select transactions that include payment (a "tip") to whomever mines the block the transaction is included in. The higher the fee, the sooner it is selected.
+但是這裡的用戶有一個問題。開採區塊的目標難度旨在強制以相對恆定的速率開採新區塊。並且塊本身通常具有固定的大小，這反過來又固定了每個塊可以包含的交易數量的限制。如果有更多交易等待包含在一個區塊中，礦工通常會選擇包含付款（“提示”）的交易，該交易包含給任何人開採包含該交易的區塊。費用越高，選擇越早。
 
-No solution has been proposed yet that can get miners on blockchain to adequately secure the system but doesn't make users pay for it in some way.
+尚未提出任何解決方案可以讓區塊鏈上的礦工充分保護系統，但不會讓用戶以某種方式為其付費。
 
-## IOTA and the DAG
 
-To do. Users and miners are one and the same on a DAG (setting aside outsourced POW) and the POW itself is many orders of magnitude less difficult. Random tip selection ensures a fair and equal chance for any transaction to be the next one added to the DAG . . .
+## IOTA 和 DAG
+
+去做。用戶和礦工在 DAG 上是一回事（撇開外包的 POW 不談），而且 POW 本身的難度要小很多數量級。隨機提示選擇確保任何交易都有公平和平等的機會成為添加到 DAG 的下一個交易。
 
 ---
 
