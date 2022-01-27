@@ -4,49 +4,48 @@ title: Value Transfer
 description: Learn how the IOTA Cryptocurrency Protocol transfers the native IOTA Tokens.
 ---
 
-# IOTA Value Transactions
+# IOTA 價值交易
 
-This page explains how IOTA tokens are sent and received in the IOTA network and links to more detailed content.
+本頁解釋了 IOTA 代幣如何在 IOTA 網絡中發送和接收，並鏈接到更詳細的內容。
 
-## Simple example:
+## 簡單的例子：
 
-To explain how IOTA tokens are transferred from one address to another, this topic follows three characters: Alice, Bob, and Charlie.
+為了解釋 IOTA 代幣如何從一個地址轉移到另一個地址，本主題遵循三個字符：Alice、Bob 和 Charlie。
 
-### The goal
+### 目標
 
-Charlie wants to transfer 10i to Bob.
+Charlie 想將 10i 轉移給 Bob。
 
-### What is in the Tangle
+### 糾纏中有什麼
 
-In this example, Alice had 10i that she transferred to Bob. Therefore, the Tangle now includes a value message that transferred those 10i to Bob.
+在這個例子中，Alice 有 10i 轉給 Bob。因此，糾纏現在包含一個將這些 10i 轉移給 Bob 的價值訊息。
 
-### Choosing where to attach messages
+### 選擇附加訊息的位置
 
-To transfer 10i to Bob, Charlie must attach a value message to the Tangle. For that, he needs between one and eight tip messages that he can attach to his own message.
+要將 10i 轉移給 Bob，Charlie 必須將價值訊息附加到糾纏。為此，他需要 1 到 8 條可以附加到自己的訊息中的提示訊息。
 
-To get these tip messages, Charlie requests them from a node.
+為了獲得這些提示訊息，Charlie 從一個節點請求它們。
 
-The node selects these messages by using an algorithm called **Uniform Random Tip Selection** (URTS). This algorithm selects between one and eight valid tip messages that lead to a valid ledger state.
+節點通過使用一種稱為 **Uniform Random Tip Selection** (URTS) 的算法來選擇這些訊息。該算法選擇 1 到 8 條有效的提示訊息，這些提示訊息會導致有效的分類帳狀態。
 
-- The ledger state is a record of all the value messages that have transferred IOTA tokens in the Tangle, including the state of all balances on addresses. This state must always be balanced: The total number of IOTA tokens must always add up to the total supply.
+- 帳本狀態是所有在糾纏中轉移 IOTA 代幣的價值訊息的記錄，包括地址上所有餘額的狀態。這種狀態必須始終保持平衡：IOTA 代幣的總數必須始終與總供應量相加。
 
-By using the tip messages that the node gave him, Charlie lets the network know that he is also approving them and their history. If any of those messages turn out to be invalid, Charlie's messages will also be treated as invalid and other nodes will not select Charlie's messages during tip selection.
+通過使用節點給他的提示訊息，Charlie 讓網絡知道他也在批准他們和他們的歷史。如果這些訊息中的任何一條被證明是無效的，Charlie 的訊息也將被視為無效，其他節點在節點選擇期間不會選擇 Charlie 的訊息。
+- 在提示選擇期間，節點會忽略糾纏的無效部分。這些術語是 **無效的子糾纏**。
 
-- Nodes ignore invalid parts of the Tangle during tip selection. The term for these is an **invalid subtangle**.
+### 簽署訊息
 
-### Signing the messages
+為了向節點證明他確實是他地址中 IOTA 代幣的所有者，Charlie 用他的私鑰簽署了一條輸入訊息。此輸入訊息從他的地址中提取 10i。
 
-To prove to nodes that he is indeed the owner of the IOTA tokens in his address, Charlie signs an input message with his private key. This input message withdraws 10i from his address.
+Charlie 然後創建一個輸出訊息，將該 10i 存入 Bob 的地址。此訊息不需要簽名，因為它不會提取 IOTA 代幣。
 
-Charlie then creates an output message to deposit that 10i into Bob's address. This message does not need a signature because it is not withdrawing IOTA tokens.
+然後 Charlie 將所有訊息放入 UTXO 中，並將它們發送到 IOTA 網絡上的節點。
 
-Then Charlie puts all the messages in a UTXO and sends them to a node on an IOTA network.
+### 等待訊息被確認
 
-### Waiting for the messages to be confirmed
+任何人都可以隨時向節點發送訊息。因此，選擇有效的提示訊息並不總是一件簡單的事情。但是，里程碑根據確定性排序確定包含和確認哪些訊息。
 
-Anyone is free to send messages to a node at any time. As a result, it is not always a simple matter of selecting valid tip messages. The milestone, however, determines which messages are included and confirmed based on deterministic ordering.
-
-For example, what if Alice actually attached two messages to the Tangle: One that transferred 10i to Bob, and one that transferred 10i to Charlie? Together, these messages would be called a **double-spend** because they try to transfer the same IOTA tokens to different addresses.
+例如，如果 Alice 實際上將兩條訊息附加到糾纏：一條將 10i 傳輸給 Bob，另一條將 10i 傳輸給 Charlie？這些消息一起被稱為**雙花**，因為它們試圖將相同的 IOTA 代幣轉移到不同的地址。
 
 Both of Alice's messages could not be part of the ledger state because it would result in a negative balance for Alice’s address: minus 10i.
 
