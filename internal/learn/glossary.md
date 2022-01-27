@@ -97,21 +97,21 @@ description: Glossary of all specialized names and phrases used in the IOTA
 ## M
 
 - **Merkle Tree (默克爾樹):** 默克爾樹是一種用於計算機科學應用的數據結構。在加密貨幣中，默克爾樹用於更有效、更安全地編碼。
-- **Mainnet (主網):** The public usable IOTA network, in which the IOTA tokens are used that are traded on cryptocurrency exchanges.
-- **Milestone (IOTA 1.5):** Milestones are messages that are signed and issued by the coordinator. Their main goal is to help the Tangle grow healthily and guarantee finality. When milestones directly or indirectly approve a transaction in the Tangle, nodes mark the status of that transaction and its entire history as confirmed.
-- **Message:** A message is a core data type that reflects a vertex in the communication layer DAG. It contains the following properties: References to other messages, the sender’s public key, the issuing time of the message, the message sequence number from the node that issued the message, the payload that can be interpreted by higher layers, the nonce that the message uses to satisfy the PoW requirement, a signature that signs all of the above fields. A message is not forwarded until it becomes “solid”, i.e., its history is known to the node. Messages must meet a PoW requirement, which currently is to find a nonce so that the hash of the message’s fields (minus the signature) has a certain number of leading zeros.
-- **Message overhead:** The additional information (metadata) that must be sent along with the actual information (data). This can include signatures, polls and anything that is transmitted over the network but is not the transaction itself.
-- **Mana (IOTA 2.0):** When a value transaction is processed, a quantity called Mana will be “pledged” to a specified node ID. This quantity is related to the amount of IOTA moved into the transaction. The only way to gain Mana is to convince some token holder to pledge it to you. In this sense, Mana is Delegated Proof of Token Ownership. Mana, therefore, provides adequate Sybil protection because it is difficult to acquire it in arbitrary amounts.
-- **Markers (IOTA 2.0):** A tool that exists only locally and allows certain calculations to be performed more efficiently, such as the calculation of the approval weight or the presence of certain messages in the past or future cone of another message.
-- **Messages per Second (MPS):** The amount of messages issued to the network every second.
+- **Mainnet (主網):** 公共可用的 IOTA 網絡，其中使用在加密貨幣交易所交易的 IOTA 代幣。
+- **Milestone (里程碑) (IOTA 1.5):** 里程碑是由協調員簽署和發布的消息。他們的主要目標是幫助糾纏健康成長並保證最終性。當里程碑直接或間接批准糾纏中的交易時，節點會將該交易的狀態及其整個歷史標記為已確認。
+- **Message (訊息):** 訊息是一種核心數據類型，它反映了通信層 DAG 中的一個頂點。它包含以下屬性：對其他訊息的引用、發送者的公鑰、訊息的發佈時間、來自發布訊息的節點的消息序列號、可以被更高層解釋的有效負載、訊息的隨機數用於滿足 PoW 要求，即對上述所有字段進行簽名的簽名。一條訊息在變為“可靠”之前不會被轉發，即節點知道它的歷史。訊息必須滿足 PoW 要求，目前是找到一個隨機數，以便訊息字段的哈希（減去簽名）具有一定數量的前導零。
+- **Message overhead (訊息開銷):** 必須與實際信息（數據）一起發送的附加信息（元數據）。這可以包括簽名、投票和任何通過網絡傳輸但不是交易本身的東西。
+- **Mana (法力) (IOTA 2.0):** 當一個價值交易被處理時，一個名為法力的數量將被“質押”到一個指定的節點 ID。這個數量與轉移到交易中的 IOTA 數量有關。獲得法力的唯一方法是說服某個代幣持有者將其質押給您。從這個意義上說，法力是代幣所有權的委託證明。因此，法力提供了足夠的 Sybil 保護，因為很難以任意數量獲得它。
+- **Markers (標記) (IOTA 2.0):** 一種只存在於本地並允許更有效地執行某些計算的工具，例如批准權重的計算或某些消息在過去或未來錐體中的存在。
+- **Messages per Second (每秒訊息數) (MPS):** 每秒向網絡發布的訊息量。
 
 ## N
 
-- **Nakamoto Consensus:** Named after the creator of Bitcoin, Satoshi Nakamoto, the Nakamoto Consensus describes the replacement of coordination / communication between known agents with a cryptographic puzzle (Proof-of-Work). Completion of the puzzle determines which agent acts next.
-- **Neighbors:** Network nodes that are directly connected and can exchange messages without intermediate nodes.
-- **Nodes:** A node is any computer that connects to other nodes in the network via software. In principle, they serve as a connection point for data transfers. The Tangle works with different types of nodes, such as full nodes (Hornet, Bee), permanodes (Chronicle) or smart contract nodes (Wasp).
-- **Network Layer (IOTA 2.0):** This layer manages the lower layers of Internet communication such as TCP. In this layer, the connections between the nodes are managed by the Auto peering and Peer Discovery modules and the Gossip protocol.
-- **Network ID:** The network ID enables user-specific subtangles in which nodes can only recognize messages from the network ID listed in their configuration file.
+- **Nakamoto Consensus (中本共識):** 中本共識以比特幣的創造者中本聰的名字命名，描述了用密碼學難題（工作證明）替換已知代理之間的協調/通信。謎題的完成決定了接下來哪個代理行動。
+- **Neighbors (鄰居):** 直接連接的網絡節點，無需中間節點即可交換訊息。
+- **Nodes (節點):** 節點是通過軟件連接到網絡中其他節點的任何計算機。原則上，它們用作數據傳輸的連接點。 糾纏適用於不同類型的節點，例如完整節點（大黃蜂、蜜蜂）、永久節點（編年史）或智能合約節點（黃蜂）。
+- **Network Layer (網絡層) (IOTA 2.0):** 該層管理網路通信的較低層，例如 TCP。在這一層中，節點之間的連接由 Auto peering 和 Peer Discovery 模塊以及 Gossip 協議管理。
+- **Network ID (網絡 ID):** 網絡 ID 啟用用戶特定的子纏結，其中節點只能識別來自其配置文件中列出的網絡 ID 的訊息。
 
 ## O
 
