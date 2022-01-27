@@ -36,7 +36,7 @@ description: Glossary of all specialized names and phrases used in the IOTA
 - **ComNet:** ComNet 是一個僅用於測試的網絡，除了由 IOTA 社區維護之外，它與測試網類似。通信網中的節點繼續使用由 IOTA 社區運營的協調器。
 - **Chronicle (編年史):** IOTA 基金會的永久節點解決方案。它允許將到達節點的所有事務存儲在安全且可擴展的分佈式數據庫中。 編年史用於存儲糾纏的無限數據流並使其可查詢。換句話說，持久性允許無限期地存儲 Tangle 的整個歷史，並使這些數據易於訪問。
 - **Consensus (共識):** 在存在錯誤流程的情況下，就分佈式多代理系統中的特定日期或值達成一致。
-- **Coordinator (協調員) (直到 IOTA 2.0):** 一個受信任的實體，作為對惡意交易的保護。糾纏還不是最終產品，它仍處於測試階段。該網絡目前依賴於一種屏蔽，即所謂的協調員。它是開源的，在 Hornet 節點上運行。協調員充當糾纏的中心化、自願和臨時替代共識機制。為此，協調員會定期向全節點發送誠實交易。這些數據包包含一個沒有價值的簽名消息，稱為里程碑。糾纏中的完整節點僅在獲得里程碑批准時才認為交易已確認。重要提示：協調者只能確認交易，但不能繞過共識規則。他無法創建、凍結或竊取代幣。這個固定的規則和協調員地址在每個全節點上都是硬編碼的，所以協調者對糾纏的影響是非常有限的，因為糾纏也一直受到所有其他全節點的監控。 > 隨著 IOTA 2.0 升級，COO 將被關閉。
+- **Coordinator (協調員) (直到 IOTA 2.0):** 一個受信任的實體，作為對惡意交易的保護。糾纏還不是最終產品，它仍處於測試階段。該網絡目前依賴於一種屏蔽，即所謂的協調員。它是開源的，在 Hornet 節點上運行。協調員充當糾纏的中心化、自願和臨時替代共識機制。為此，協調員會定期向全節點發送誠實交易。這些數據包包含一個沒有價值的簽名消息，稱為里程碑。糾纏中的完整節點僅在獲得里程碑批准時才認為交易已確認。重要提示：協調者只能確認交易，但不能繞過共識規則。他無法創建、凍結或竊取代幣。這個固定的規則和協調員地址在每個全節點上都是硬編碼的，所以協調者對糾纏的影響是非常有限的，因為糾纏也一直受到所有其他全節點的監控。 > 隨著 IOTA 2.0 升級，協調員將被關閉。
 - **ComNet (通信層) (IOTA 2.0):** 該層存儲和交流信息。該層包含分佈式帳本或糾纏。速率控制和時間戳也位於這一層。
 - **Core Object type (核心對像類型) (IOTA 2.0):** 必須由所有節點解析的對像類型。解析器是負責將輸入分解和轉換為更適合進一步處理的格式的計算機程序。
 - **Core Application (核心應用) (IOTA 2.0):** 必須由所有節點執行的核心應用程序，例如價值轉移應用程序。
@@ -50,7 +50,7 @@ description: Glossary of all specialized names and phrases used in the IOTA
 - **Data storage (數據存儲):** 就像互聯網一樣，IOTA 協議不存儲數據，換句話說，糾纏不是數據存儲。如果有人想以去中心化的方式存儲交易歷史，他們可以自己為此構建第二層解決方案，或者為這種存儲付費給第三方。對於基礎層，IOTA 專注於性能、吞吐量和安全性，而不是構建全局數據庫。
 - **Distributed Ledger Technology (分佈式帳本技術) (DLT):** 這是一種數據庫架構，允許數字資產的所有者在點對點之間傳輸和記錄它們。 DLT 中的每次轉賬都作為記錄存儲在分佈式帳本（數據庫）中。該數據庫存儲在網絡的所有節點中。
 - **DevNet (開發網):** DevNet（開發者網絡）是一個純測試網絡，可以在沒有協調員的情況下研究和測試糾纏。
-- **Decay (衰減):** Mana值和未決Mana值都與其值成比例衰減，防止Mana值隨時間無限增長。
+- **Decay (衰減):** 法力值和未決法力值都與其值成比例衰減，防止法力值隨時間無限增長。
 - **Double-spending (雙花):** 雙重支付是對數字貨幣系統的威脅，在這種系統中，同一個數字代幣可以多次使用。與實物貨幣不同，數字代幣由可以復製或偽造的數字文件組成。
 - **dRNG (Decentralized Random Number Generator) (去中心化隨機數生成器）:** 快速概率共識 (FPC) 中需要此隨機數生成器，以使共識模型對攻擊更具彈性。在交易衝突的情況下，FPC 會分幾輪對相關交易進行投票。節點在這次投票中改變主意的閾值是 50% +/- 一個小的隨機偏差（使用 dRNG）。為了避免投票中的僵局或特定結果，這個額外的隨機組件可以防止潛在的惡意節點影響投票過程。
 - **Dust Protection (防塵) (IOTA 1.5):** 想要傷害 IOTA 的人可以自動將 1i 發送到反復重新創建的地址連續好幾年，從而將分類帳的內存需求推高到一個完整節點最終只能在大型服務器上運行的地步。在蛹中，如果你想創建一個微交易 (<1Mi)，你需要在接收地址上激活灰塵。這將使您收到一定量的灰塵。此外，必須對帶有彩色硬幣的地址進行標記。在 Coordicide 之後，IOTA 2.0 將會有另一個解決方案。
@@ -58,47 +58,46 @@ description: Glossary of all specialized names and phrases used in the IOTA
 
 ## E
 
-- **Eclipse attack:** A cyber-attack that aims to isolate a specific node rather than attack the entire network.
-- **ETH Virtual Machine:** A VM is what executes the Smart Contract code so that it runs deterministically. The language in which you run the code provides hooks to access the sandbox on which the VM runs. In the case of IOTA, this is the ISCP sandbox, which only provides access to IOTA tokens, thus consensus also runs on IOTA tokens. It is only the VM that IOTA works with, foreign tokens have nothing to do with a VM running the SC code, not the ETH VM, nor the Cartesi VM.
-- **Epoch (IOTA 2.0):** A time interval used for a specific type of consensus mana. At the end of each epoch, a snapshot is taken of the state of mana distribution on the network. Since this tool uses the timestamp of messages, each node can eventually reach a consensus on the mana distribution of an epoch.
+- **Eclipse attack (日食攻擊):** 旨在隔離特定節點而不是攻擊整個網絡的網絡攻擊。
+- **ETH Virtual Machine (ETH 虛擬機):** 虛擬機是執行智能合約代碼的東西，以便確定性地運行。運行代碼所使用的語言提供了訪問運行虛擬機的沙箱的掛鉤。對於 IOTA，這是 ISCP 沙箱，它只提供對 IOTA 代幣的訪問，因此共識也在 IOTA 代幣上運行。 IOTA 只使用虛擬機，外部代幣與運行 SC 代碼的虛擬機無關，與 ETH 虛擬機或 Cartesi 虛擬機無關。
+- **Epoch (時期) (IOTA 2.0):** 用於特定類型共識法力的時間間隔。在每個時期結束時，都會對網絡上的法力分配狀態進行快照。由於該工具使用消息的時間戳，因此每個節點最終都可以就一個時期的法力分配達成共識。
 
 ## F
 
-- **Faucet:** A pool of tokens (funds). Upon uncomplicated request, one gets a limited number of tokens for testing, especially for developers of own apps this is a great help.
-- **Firefly:** Firefly is a wallet, intended to serve as a platform for the current and future IOTA ecosystem.
-- **Finality:** The property that once a transaction has been completed, there is no way to reverse or change it. This is the moment when the parties involved in a transfer can consider the transaction completed. Finality can be deterministic or probabilistic.
-- **Full nodes (Hornet, Bee):** They form the core (infrastructure) of the IOTA network. In order to participate in the peer-to-peer network, the full node must always be online and connected to neighbors (other full nodes). In addition, the transaction database must be synchronized with all other full nodes in the network. The role of full nodes is to interact with clients (wallets, DApps, etc.) and attach their transactions to the ledger, make transactions known to all other full nodes in the network, validate transactions and store them in the ledger.
-- **Future Cone:** All messages that directly or indirectly reference a message are called its future cone.
-- **Fork:** In IT, this is a new development branch after a project is split into a second follow-on project; the source code or parts of it are developed independently of the original parent project.
-- **FPC(Fast Probabilistic Consensus):** Consensus that uses a random number and node opinions to reach consensus. In On-Tangle Voting, it is only used in a specific edge case. Check out OTVFPCS.
-
+- **Faucet (水龍頭):** 一個代幣池（資金）。根據簡單的請求，一個人會獲得有限數量的測試令牌，特別是對於自己的應用程序的開發人員來說，這是一個很大的幫助。
+- **Firefly (螢火蟲):** 螢火蟲是一個錢包，旨在作為當前和未來 IOTA 生態系統的平台。
+- **Finality (確定性):** 交易一旦完成，就無法撤銷或改變它的屬性。這是參與轉讓的各方可以認為交易已完成的時刻。確定性可以是確定性的或概率性的。
+- **Full nodes (Hornet, Bee) 全節點（大黃蜂、蜜蜂）:** 它們構成了 IOTA 網絡的核心（基礎設施）。為了參與點對點網絡，完整節點必須始終在線並連接到鄰居（其他完整節點）。此外，交易數據庫必須與網絡中的所有其他全節點同步。全節點的作用是與客戶端（錢包、DApp 等）交互並將其交易附加到賬本上，使網絡中的所有其他全節點都知道交易，驗證交易並將其存儲在賬本中。
+- **Future Cone (未來錐):** 所有直接或間接引用訊息的訊息都稱為它的未來錐。
+- **Fork (分叉):** 在 IT 中，這是一個項目拆分為第二個後續項目後的新開發分支；源代碼或其部分是獨立於原始父項目開發的。
+- **FPC(Fast Probabilistic Consensus) (快速概率共識):** 使用隨機數和節點意見達成共識的共識。在 On-Tangle 投票中，它僅用於特定的邊緣情況。查看 OTVFPCS。
 ## G
 
-- **Genesis transaction:** The Genesis transaction is the first transaction that created all IOTA tokens and distributed them to the addresses of the buyers.
-- **GoShimmer (No Main net):** Prototype of the coordinator less version of IOTA written in the Go programming language. GoShimmer implements the various modules of Coordicide, such as auto peering, node identities, Mana, etc. GoShimmer serves as a test environment for the first alpha version and the test network. Everything tested here will be gradually merged with Hornet and Bee.
-- **Generic Data Object (IOTA 2.0):** The most basic object type. All unrecognized data objects are defined this way.
+- **Genesis transaction (創世交易):** 創世交易是第一個創建所有 IOTA 代幣並將其分發到買家地址的交易。
+- **GoShimmer (Go微光) (非主網):** 用 Go 編程語言編寫的無協調器版本的 IOTA 的原型。 Go微光實現了 Coordicide 的各種模塊，例如自動對等、節點身份、法力等。Go微光作為第一個 alpha 版本和測試網絡的測試環境。這裡測試的一切都將逐漸與大黃蜂和蜜蜂合併。
+- **Generic Data Object (通用數據對象) (IOTA 2.0):** 最基本的對像類型。所有無法識別的數據對像都以這種方式定義。
 
 ## H
 
-- **History:** The list of transactions that were directly or indirectly authorized by a particular transaction.
-- **Hash values:** Checksums that are applied to the encryption of messages of variable length. Hash values are like fingerprints of a very long data set. Each message is assigned a very specific hash value.
-- **Hooks:** An interface that allows foreign program code to be integrated into an existing application to extend it, change its flow, or intercept certain events.
-- **Hornet Node (IOTA 1.5):** Community-developed IOTA Node written in the Go programming language. In addition, the coordinator also runs as a plugin via Hornet.
+- **History (歷史):** 由特定交易直接或間接授權的交易列表。
+- **Hash values (哈希值):** 應用於可變長度消息加密的校驗和。哈希值就像一個很長的數據集的指紋。每條消息都被分配了一個非常具體的哈希值。
+- **Hooks (掛鉤):** 允許將外部程序代碼集成到現有應用程序中以對其進行擴展、更改其流程或攔截某些事件的接口。
+- **Hornet Node (大黃蜂節點) (IOTA 1.5):** 社區開發的 IOTA 節點，用 Go 編程語言編寫。此外，協調員還通過大黃蜂作為插件運行。
 
 ## I
 
-- **Inclusion state:** Used to determine if a transaction has been accepted and confirmed by the network. Especially for a transaction and a list of tips: Inclusion state is true if the tip refers to this transaction.
+- **Inclusion state (包含態):** 用於確定交易是否已被網絡接受和確認。特別是對於交易和提示列表：如果提示引用此交易，則包含態為真。
 
 ## L
 
-- **Local Snapshots:** Local snapshots are used to limit the memory requirements of the nodes. For this purpose, on the individual nodes old, already confirmed, transactions are deleted from the database. What remains is only a small file (list) with the balances on the respective addresses. Nodes perform the snapshot independently and at their own discretion. This feature allows faster synchronization, lower system resource requirements and no more waiting for global snapshots to clean up the database.
-- **Layer:** In DLT a 2nd-layer refers to a secondary framework or protocol built on top of an existing distributed ledger. On these second layers, other applications can be executed without putting too much strain on the base layer. In IOTA, for example, these are the Smart Contracts and IOTA Streams.
-- **Local Modifiers:** User-defined conditions that can be considered by nodes during tip selection. In IOTA, nodes do not necessarily have the same view of the tangle. Different types of information that are only available to them locally can be used to strengthen security.
+- **Local Snapshots (局部快照):** 局部快照用於限制節點的內存需求。為此，在各個節點上，已確認的舊交易將從數據庫中刪除。剩下的只是一個小文件（列表），其中包含各個地址的餘額。節點獨立並自行決定執行快照。此功能允許更快的同步、更低的系統資源要求並且無需再等待全局快照來清理數據庫。
+- **Layer (層):** 在 DLT 中，第二層是指建立在現有分佈式帳本之上的二級框架或協議。在這些第二層上，可以執行其他應用程序而不會對基礎層施加太大壓力。例如，在 IOTA 中，這些是智能合約和 IOTA 流。
+- **Local Modifiers (局部修飾器):** 用戶定義的條件，節點在選擇提示時可以考慮。在 IOTA 中，節點不一定具有相同的纏結視圖。只能在本地獲得的不同類型的信息可用於加強安全性。
 
 ## M
 
-- **Merkle Tree:** A Merkle tree is a data structure used in computer science applications. In cryptocurrencies, Merkle trees are used to encode more efficiently and securely.
-- **Mainnet:** The public usable IOTA network, in which the IOTA tokens are used that are traded on cryptocurrency exchanges.
+- **Merkle Tree (默克爾樹):** 默克爾樹是一種用於計算機科學應用的數據結構。在加密貨幣中，默克爾樹用於更有效、更安全地編碼。
+- **Mainnet (主網):** The public usable IOTA network, in which the IOTA tokens are used that are traded on cryptocurrency exchanges.
 - **Milestone (IOTA 1.5):** Milestones are messages that are signed and issued by the coordinator. Their main goal is to help the Tangle grow healthily and guarantee finality. When milestones directly or indirectly approve a transaction in the Tangle, nodes mark the status of that transaction and its entire history as confirmed.
 - **Message:** A message is a core data type that reflects a vertex in the communication layer DAG. It contains the following properties: References to other messages, the sender’s public key, the issuing time of the message, the message sequence number from the node that issued the message, the payload that can be interpreted by higher layers, the nonce that the message uses to satisfy the PoW requirement, a signature that signs all of the above fields. A message is not forwarded until it becomes “solid”, i.e., its history is known to the node. Messages must meet a PoW requirement, which currently is to find a nonce so that the hash of the message’s fields (minus the signature) has a certain number of leading zeros.
 - **Message overhead:** The additional information (metadata) that must be sent along with the actual information (data). This can include signatures, polls and anything that is transmitted over the network but is not the transaction itself.
