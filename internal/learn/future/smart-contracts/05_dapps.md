@@ -33,32 +33,32 @@ dApp 有一些令人興奮的方面：
 
 去中心化應用程序由一個或多個智能合約和一個用戶界面組成。用戶界面通常是與智能合約交互的網站。
 
-### Interacting With Smart Contracts
+### 與智能合約交流
 
-There are two ways to interact with IOTA Smart Contracts:
+與 IOTA 智能合約交流的方式有兩種：
 
-- [On-ledger](/smart-contracts/guide/core_concepts/smartcontract-interaction/on-ledger-requests): Requests to the smart contract are transactions on the Tangle.
-- [Off-ledger](/smart-contracts/guide/core_concepts/smartcontract-interaction/off-ledger-requests): The requests are sent using an API call to a Wasp node.
+- [帳上](/smart-contracts/guide/core_concepts/smartcontract-interaction/on-ledger-requests): 對智能合約的請求是糾纏上的交易。
+- [帳外](/smart-contracts/guide/core_concepts/smartcontract-interaction/off-ledger-requests): 使用 API 調用將請求發送到黃蜂節點。
 
-You can [configure your Wasp node's API URL](/smart-contracts/guide/chains_and_nodes/running-a-node#web-api), or use the [public Wasp REST API](https://api.wasp.sc.iota.org/doc).
+你可以[配置你的 Wasp 節點的 API URL]/smart-contracts/guide/chains_and_nodes/running-a-node#web-api)，或使用 [公共黃蜂 REST API](https://api.wasp.sc.iota.org/doc).
 
-## Examples
+## 例子
 
-There are several different example applications deployed on the [public test-net](/smart-contracts/guide/chains_and_nodes/testnet) chain.
+部署了幾個不同的示例應用程序在 [公共測試網](/smart-contracts/guide/chains_and_nodes/testnet) chain.
 
-### Fair Roulette
+### 公平輪盤賭
 
-![Fair Roulette](http://blog.iota.org/content/images/size/w1600/2021/10/Group-4947.png)
+![公平輪盤賭](http://blog.iota.org/content/images/size/w1600/2021/10/Group-4947.png)
 
-The [Fair roulette example](/smart-contracts/guide/example_projects/fair_roulette) is a simple betting game in which players can bet on a number within a certain range.
+[公平輪盤賭例子](/smart-contracts/guide/example_projects/fair_roulette) 是一個簡單的投注遊戲，玩家可以在一定範圍內投註一個數字。
 
-- Play with the [Live Demo](https://demo.sc.iota.org/).
-- Discover the [Code Repository](https://github.com/iotaledger/wasp/tree/roulette_poc/contracts/rust/fairroulette).
+- 玩 [現場演示](https://demo.sc.iota.org/).
+- 發現 [代碼庫](https://github.com/iotaledger/wasp/tree/roulette_poc/contracts/rust/fairroulette).
 
-More examples for Wasm Smart Contracts written in Rust and Go (TinyGo) can be found in the [Wasp code repository](https://github.com/iotaledger/wasp/tree/master/contracts/wasm).
+更多用 Rust 和 Go (TinyGo) 編寫的 Wasm 智能合約示例可以在 [Wasp 代碼存儲庫] 中找到 (https://github.com/iotaledger/wasp/tree/master/contracts/wasm).
 
 ---
 
-- Learn more about [On-ledger](/smart-contracts/guide/core_concepts/smartcontract-interaction/on-ledger-requests) and [Off-ledger Requests](/smart-contracts/guide/core_concepts/smartcontract-interaction/off-ledger-requests).
-- Participate on the [public testnet](/smart-contracts/guide/chains_and_nodes/testnet).
-- Build your first dApp with the [Schema Tool](/smart-contracts/guide/schema).
+- 了解更多關於 [帳上](/smart-contracts/guide/core_concepts/smartcontract-interaction/on-ledger-requests) 以及 [帳外要求](/smart-contracts/guide/core_concepts/smartcontract-interaction/off-ledger-requests).
+- 參與 [公共測試網](/smart-contracts/guide/chains_and_nodes/testnet).
+- 使用 [Schema Tool] 構建您的第一個 dApp(/smart-contracts/guide/schema).
