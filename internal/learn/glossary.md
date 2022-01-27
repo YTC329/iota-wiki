@@ -36,7 +36,7 @@ description: Glossary of all specialized names and phrases used in the IOTA
 - **ComNet:** ComNet 是一個僅用於測試的網絡，除了由 IOTA 社區維護之外，它與測試網類似。通信網中的節點繼續使用由 IOTA 社區運營的協調器。
 - **Chronicle (編年史):** IOTA 基金會的永久節點解決方案。它允許將到達節點的所有事務存儲在安全且可擴展的分佈式數據庫中。 編年史用於存儲糾纏的無限數據流並使其可查詢。換句話說，持久性允許無限期地存儲 Tangle 的整個歷史，並使這些數據易於訪問。
 - **Consensus (共識):** 在存在錯誤流程的情況下，就分佈式多代理系統中的特定日期或值達成一致。
-- **Coordinator (協調員) (直到 IOTA 2.0):** 一個受信任的實體，作為對惡意交易的保護。糾纏還不是最終產品，它仍處於測試階段。該網絡目前依賴於一種屏蔽，即所謂的協調員。它是開源的，在 Hornet 節點上運行。協調員充當糾纏的中心化、自願和臨時替代共識機制。為此，協調員會定期向全節點發送誠實交易。這些數據包包含一個沒有價值的簽名消息，稱為里程碑。糾纏中的完整節點僅在獲得里程碑批准時才認為交易已確認。重要提示：協調者只能確認交易，但不能繞過共識規則。他無法創建、凍結或竊取代幣。這個固定的規則和協調員地址在每個全節點上都是硬編碼的，所以協調者對糾纏的影響是非常有限的，因為糾纏也一直受到所有其他全節點的監控。 > 隨著 IOTA 2.0 升級，協調員將被關閉。
+- **Coordinator (協調員) (直到 IOTA 2 .0):** 一個受信任的實體，作為對惡意交易的保護。糾纏還不是最終產品，它仍處於測試階段。該網絡目前依賴於一種屏蔽，即所謂的協調員。它是開源的，在 Hornet 節點上運行。協調員充當糾纏的中心化、自願和臨時替代共識機制。為此，協調員會定期向全節點發送誠實交易。這些數據包包含一個沒有價值的簽名消息，稱為里程碑。糾纏中的完整節點僅在獲得里程碑批准時才認為交易已確認。重要提示：協調者只能確認交易，但不能繞過共識規則。他無法創建、凍結或竊取代幣。這個固定的規則和協調員地址在每個全節點上都是硬編碼的，所以協調者對糾纏的影響是非常有限的，因為糾纏也一直受到所有其他全節點的監控。 > 隨著 IOTA 2.0 升級，協調員將被關閉。
 - **ComNet (通信層) (IOTA 2.0):** 該層存儲和交流信息。該層包含分佈式帳本或糾纏。速率控制和時間戳也位於這一層。
 - **Core Object type (核心對像類型) (IOTA 2.0):** 必須由所有節點解析的對像類型。解析器是負責將輸入分解和轉換為更適合進一步處理的格式的計算機程序。
 - **Core Application (核心應用) (IOTA 2.0):** 必須由所有節點執行的核心應用程序，例如價值轉移應用程序。
@@ -141,50 +141,49 @@ description: Glossary of all specialized names and phrases used in the IOTA
 
 ## R
 
-- **Rebroadcast:** Repeats the sending of a transaction. While a transaction is being sent to an IOTA node, it may go offline. In this case, the IOTA node may not forward the transactions to its neighbors, and the rest of the network will never see these transactions. As a result, that transaction will never be referenced by the coordinator and thus never confirmed. Resending a bundle means resending the same bundle to an IOTA node. This way you give your transactions another chance to be forwarded to the rest of the network.
-- **Reusable Addresses:** With the introduction of the Ed25519 signature scheme, through the IOTA 1.5 Chrysalis upgrade, reusable addresses are now supported.
-- **Reattachment:** Resending a transaction by re-selecting a tip and referencing newer tips by repeating PoW.
+- **Rebroadcast (重播):** 重複發送事務。在將交易發送到 IOTA 節點時，它可能會離線。在這種情況下，IOTA 節點可能不會將交易轉發給它的鄰居，並且網絡的其餘部分將永遠不會看到這些交易。結果，該交易將永遠不會被協調者引用，因此永遠不會被確認。重新發送捆綁包意味著將相同的捆綁包重新發送到 IOTA 節點。這樣，您就可以再次將您的交易轉發到網絡的其他部分。
+- **Reusable Addresses (可重複使用的地址):** 隨著 Ed25519 簽名方案的引入，通過 IOTA 1.5 蛹升級，現在支持可重用地址。
+- **Reattachment (重新連接):** 通過重新選擇提示來重新發送交易，並通過重複 PoW 來引用更新的提示。
 
 ## S
 
-- **Salt:** In cryptography, salt is a randomly chosen string of characters that is appended to a given plaintext before it is further processed to increase the entropy (disorder) of the input. It is often used for storing and transmitting passwords to increase information security.
-- **Sandbox:** An isolated area where programs can be tested.
-- **Software as a Service (SaaS):** The SaaS model is a subset of cloud computing. It is based on the principle that the software and IT infrastructure can be operated by an external service provider and rented by the customer as a service.
-- **Smart Contract:** Smart contracts are contracts or programs that are automatically executed.
-- **Smart Contract Chain:** Smart contracts are processed via a so-called contract chain, the representation of the contract state. A smart contract writes its state every time it is requested, and a new block is added for each of these state updates. All these updates are collected and confirmed in one block. So, the chain also contains all the past states. The chain can contain many Smart Contracts, all working on the same global state of the chain. From this perspective, the Contract chain is essentially a blockchain anchored on the Tangle. IOTA Smart Contracts can be considered “classic” Smart Contracts, but with the added feature that you can have multiple such parallel chains all using the same native IOTA token and trading between them in a trusted manner on the Tangle. This enables trusted interoperability between different applications.
-- **Solidification time:** The time of solidification when the entire history of a transaction has been received by a node.
-- **Splitting Attacks:** An attack in which a malicious node attempts to split the tangle into two branches. As one of the branches grows, the attacker publishes transactions on the other branch to keep both alive. Splitting attacks attempt to slow down the consensus process or perform double spending.
-- **Sharding:** IOTA nodes have an upper limit on transactions per second (TPS) they can process. Through a type of database partitioning (breaking a very large database into smaller ones) into more manageable segments (shards), each shard would contain a unique set of account balances and nodes would then be assigned to individual shards to validate transactions. The goal is that by dividing into more manageable segments, it will increase transaction throughput and thus overcome scalability issues.
-- **Signatures:** Signatures prove ownership of an address. Clients (Wallets) need this proof before nodes validate a transaction. To prove ownership, input transactions must be signed with the private key used to create the address.
-- **Solidity (IOTA 2.0):** A message is marked as solid if its entire past cone until the Genesis (or the latest snapshot) is known.
-- **Subtangle:** A consistent section of the tangle (i.e., a subset of messages / value objects) such that each contained message / value object also contains its referenced messages / value objects.
-- **Streams:** IOTA Streams is a multifunctional second layer data transfer protocol that can be used for various types of data transfer (e.g., streaming data). For example, it allows sensors and other devices to encrypt entire data streams and anchor them in the IOTA Tangle. IOTA’s consensus protocol adds integrity and authenticity to these message streams. Given these characteristics, IOTA Streams fills an important need in industries where integrity, privacy, and immutability collide.
-- **Sybil Attack:** An attempt to gain control of a peer-to-peer network by forging multiple false identities.
-- **Snapshot:** A special feature of the Tangle. A snapshot deletes all transactions. Only transactions with a balance > 0 are kept. The metadata such as tags and messages are also deleted. What is left behind is just a list of addresses and balances. After a snapshot, the nodes use this list as “genesis”, a new starting point for the tangle. This reduces the size of the tangle network, allowing IOTA nodes to use less memory. Full nodes perform what are called “Local Snapshots” independently and at their own discretion.
+- **Salt (鹽):** 在密碼學中，鹽是隨機選擇的字符串，在進一步處理之前附加到給定的明文以增加輸入的熵（無序）。它通常用於存儲和傳輸密碼以提高信息安全性。
+- **Sandbox (沙盒):** 可以測試程序的隔離區域。
+- **Software as a Service (軟件作為服務) (SaaS):** SaaS 模型是雲計算的一個子集。它基於軟件和IT基礎設施可以由外部服務提供商運營並由客戶作為服務租用的原則。
+- **Smart Contract (智能合約):** 智能合約是自動執行的合約或程序。
+- **Smart Contract Chain (智能合約鏈):** 智能合約通過所謂的合約鏈處理，即合約狀態的表示。每次請求時，智能合約都會寫入其狀態，並為每個狀態更新添加一個新塊。所有這些更新都在一個區塊中收集和確認。因此，該鏈還包含所有過去的狀態。鏈可以包含許多智能合約，它們都在鏈的相同全局狀態下工作。從這個角度來看，合約鏈本質上是一個錨定在糾纏上的區塊鏈。 IOTA 智能合約可以被認為是“經典”智能合約，但具有附加功能，您可以擁有多個這樣的平行鏈，它們都使用相同的原生 IOTA 代幣，並在糾纏上以可信的方式在它們之間進行交易。這實現了不同應用程序之間的可信互操作性。
+- **Solidification time (凝固時間):** 節點接收到交易的全部歷史時的固化時間。
+- **Splitting Attacks (分裂攻擊):** 惡意節點試圖將糾纏分成兩個分支的攻擊。隨著其中一個分支的增長，攻擊者在另一個分支上發布事務以保持兩個分支都處於活動狀態。分裂攻擊試圖減慢共識過程或執行雙重支出。
+- **Sharding (分片):** IOTA 節點對它們可以處理的每秒事務數 (TPS) 有上限。通過一種數據庫分區（將一個非常大的數據庫分成更小的數據庫）到更易於管理的段（分片），每個分片將包含一組唯一的帳戶餘額，然後將節點分配給各個分片以驗證交易。目標是通過劃分為更易於管理的部分，它將增加事務吞吐量，從而克服可伸縮性問題。
+- **Signatures (簽名):** 簽名證明地址的所有權。在節點驗證交易之前，客戶端（錢包）需要此證明。為了證明所有權，輸入交易必須使用用於創建地址的私鑰進行簽名。
+- **Solidity (可靠性) (IOTA 2.0):** 如果一條訊息在起源（或最新快照）之前的整個過去錐體都已知，則該訊息被標記為可靠消息。
+- **Subtangle (子糾纏):** 纏結的一致部分（即訊息/值對象的子集），使得每個包含的訊息/值對像還包含其引用的訊息/值對象。
+- **Streams (流):** IOTA 流是一種多功能的第二層數據傳輸協議，可用於各種類型的數據傳輸（例如流數據）。例如，它允許傳感器和其他設備加密整個數據流並將它們錨定在 IOTA糾纏中。 IOTA 的共識協議為這些消息流增加了完整性和真實性。鑑於這些特性，IOTA流滿足了完整性、隱私和不變性相衝突的行業的重要需求。
+- **Sybil Attack (西比爾攻擊):** 試圖通過偽造多個虛假身份來控制對等網絡。
+- **Snapshot (快照):** 糾纏的一個特殊功能。快照會刪除所有事務。僅保留餘額 > 0 的交易。標籤和消息等元數據也會被刪除。剩下的只是地址和余額的列表。快照後，節點將此列表用作“創世”，這是糾纏的新起點。這減小了糾纏網絡的大小，允許 IOTA 節點使用更少的內存。全節點獨立並自行決定執行所謂的“局部快照”。
 
 ## T
 
-- **Tangle:** The Tangle is the underlying core data structure. In mathematical terms it is a directed acyclic graph (DAG). The Tangle is the distributed ledger of IOTA that stores all transactions.
-- **Ternary system:** A trit (trinary digit) can have exactly three states (3 x 1 = 3): -1, 0 and 1. Three trits result in one tryte (33 = 27) and can thus represent 27 combinations. In IOTA, the letters A-Z (26 pieces) and the number 9 are used for this purpose.
-- **Token:** The digital currency form (cryptocurrency). It is a powerful tool for value transfer between people and machines. Total number: 2,779,530,283,277,761 IOTA. The base units are Pi,
-  Ti, Gi, Mi, ki, i
-- **Trinity (IOTA 1.0):** Depreciated IOTA Wallet
-- **Tip:** A transaction that has not yet been approved.
-- **Tip Selection:** The process of selecting previous transactions to be referenced by a new transaction. In these references, a transaction ties into the existing data structure. IOTA only enforces that a transaction approves up to eight other transactions, the tip selection strategy is left to the user (with a good default provided by IOTA).
-- **Tip Transaction:** A solid end transaction that is not yet a parent.
-- **Transaction (IOTA 2.0):** A message that contains a Token transfer as a payload. The transferred tokens can be native IOTA Tokens or native IOTA Assets.
+- **Tangle (糾纏):** 糾纏是底層的核心數據結構。在數學術語中，它是一個有向無環圖（DAG）。 糾纏是 IOTA 的分佈式帳本，用於存儲所有交易。
+- **Ternary system (三元系統):** 一個三元組（三位數字）可以恰好具有三種狀態 (3 x 1 = 3)：-1、0 和 1。三個三元組產生一個三元組 (33 = 27)，因此可以表示 27 種組合。在 IOTA 中，字母 A-Z（26 件）和數字 9 用於此目的。
+- **Token (代幣):** 數字貨幣形式（加密貨幣）。它是人與機器之間價值轉移的強大工具。總數：2,779,530,283,277,761 IOTA。基本單位是 Pi, Ti, Gi, Mi, ki, i
+- **Trinity (三位一體) (IOTA 1.0):** 折舊的 IOTA 錢包
+- **Tip (端點):** 尚未批准的交易。
+- **Tip Selection (端點選擇):** 選擇新事務引用的先前事務的過程。在這些參考資料中，事務與現有數據結構相關聯。 IOTA 只強制一個交易最多批准八個其他交易，提示選擇策略留給用戶（IOTA 提供了一個很好的默認值）。
+- **Tip Transaction(端點交易):** 尚未成為父級的可靠最終交易。
+- **Transaction (交易) (IOTA 2.0):** 包含代幣傳輸作為有效負載的消息。轉移的代幣可以是原生 IOTA 代幣或原生 IOTA 資產。
 
 ## U
 
-- **UTXO model:** This is a so-called addressing model. UTXO stands for “unspent transaction output”, which simply means that you not only keep track of the credits on the address, but also keep track of where the credits come from and where they are sent when they are spent. Each token on an address is thus uniquely identifiable and each issue names the exact token they want to move. This enables faster and more accurate conflict handling and improves the resilience and security of the protocol.
+- **UTXO model (UTXO 模型):** 這就是所謂的尋址模型。 UTXO 代表“未使用的交易輸出”，這僅僅意味著您不僅可以跟踪地址上的信用，還可以跟踪信用的來源以及它們在花費時發送到哪裡。因此，地址上的每個代幣都是唯一可識別的，並且每個問題都命名了他們想要移動的確切令牌。這可以實現更快、更準確的衝突處理，並提高協議的彈性和安全性。
 
 ## V
 
-- **Value Layer (IOTA 2.0):** The Value layer builds on the Communication layer. It works exclusively with payloads of type Value object. This layer has several tasks: Forming the ledger state, processing, validation and output of transactions, conflict detection, conflict resolution via FPC, forming a DAG from value objects, tip selection (on value object tips).
-- **Value Transactions:** Value transactions either withdraw IOTA tokens from an address or deposit them to an address. Nodes must verify these transactions to ensure that the sender actually owns the IOTA tokens and that additional tokens are never generated. To do this, the following checks are performed: All IOTA tokens withdrawn from an address are also deposited into one or more other addresses; the value of each transaction does not exceed the total global supply; signatures are valid.
-- **Version Number (IOTA 2.0):** Indicates the correct format of each type.
+- **Value Layer (價值層) (IOTA 2.0):** 價值層建立在通信層之上。它僅適用於 Value 對像類型的有效負載。該層有幾個任務：形成帳本狀態，交易的處理、驗證和輸出，衝突檢測，通過 FPC 解決衝突，從價值對象形成 DAG，提示選擇（在價值對象提示上）。
+- **Value Transactions (價值交易):** 價值交易要么從一個地址提取 IOTA 代幣，要么將它們存入一個地址。節點必須驗證這些交易，以確保發送者實際擁有 IOTA 代幣，並且永遠不會生成額外的代幣。為此，將執行以下檢查： 從一個地址提取的所有 IOTA 代幣也存入一個或多個其他地址；每筆交易的價值不超過全球總供應量；簽名有效。
+- **Version Number (版本號) (IOTA 2.0):** 表示每種類型的正確格式。
 
 ## W
 
-- **White-flag approach (IOTA 1.5):** Used to calculate credits. A simpler, conflict-avoiding approach that improves the speed and efficiency of tip selection, eliminates certain attacks, and significantly reduces the need for reattachments.
-- **Wasp:** The Wasp node software is an implementation of Smart Contracts on the IOTA Tangle.
+- **White-flag approach (白旗方法) (IOTA 1.5):** 用於計算學分。一種更簡單、避免衝突的方法，可提高提示選擇的速度和效率，消除某些攻擊，並顯著減少重新連接的需要。
+- **Wasp (黃蜂):** Wasp 節點軟件是 IOTA Tangle 上智能合約的實現。
