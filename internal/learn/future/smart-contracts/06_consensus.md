@@ -9,47 +9,35 @@ keywords:
   - ISCP
 ---
 
-In this article, you will learn how the IOTA Smart Contract Consensus works.
+在本文中，您將了解 IOTA 智能合約共識的工作原理。
 
-IOTA Smart Contracts is a sharded smart contract network, where each smart contract chain is limited by its own scalability and is not hindered by the rest of the network.
+IOTA 智能合約是一個分片的智能合約網絡，每個智能合約鏈都受到其自身可擴展性的限制，不受網絡其餘部分的阻礙。
 
-The committee is of fixed size, thus we use a Byzantine Fault Tolerant (BFT) Algorithm, which guarantees consistency and byzantine fault tolerance if less than ⅓ of nodes are malicious. So the verification process runs on Nodes within a chain committee.
+該委員會的規模是固定的，因此我們使用拜占庭容錯算法，如果少於 1/3 的節點是惡意的，該算法可以保證一致性和拜占庭容錯。因此，驗證過程在鏈委員會內的節點上運行。
 
-## Distributed Processor
+## 分佈式處理器
 
-Verification means re-running the program yourself whenever you need to determine if you trust the state of the smart contract. Instead, to make the state transition trustworthy, the processor which runs the SC Program needs to be trustworthy.
+驗證意味著當您需要確定您是否信任智能合約的狀態時，您自己重新運行程序。相反，為了使狀態轉換可信，運行 SC 程序的處理器需要是可信的。
 
-This is the reason smart contracts are run by a distributed processor. The term “distributed processor” refers to many processors performing the same calculations and coming to a consensus on the result of these computations. This consensus is reflected in the next block which updates the state of the chain.
+這就是智能合約由分佈式處理器運行的原因。術語“分佈式處理器”是指許多處理器執行相同的計算並就這些計算的結果達成共識。這種共識反映在下一個更新鏈狀態的塊中。
 
-In the case of Ethereum, the whole network is that distributed processor.
-IOTA Smart Contracts use a quorum majority voting in the `BFT` setting to determine the consensus arrived at by the committee of different processors.
+在以太坊的情況下，整個網絡就是那個分佈式處理器。
+IOTA 智能合約在“拜占庭容錯”設置中使用法定多數投票來確定不同處理器委員會達成的共識。
 
-It should only be possible to produce valid signatures of inputs of
-the anchor transaction by reaching the quorum in the committee of nodes. In this case, a confirmed anchor transaction
-becomes a cryptographical proof of consensus in the committee.
+它應該只可能產生輸入的有效簽名
+通過達到節點委員會中的法定人數來進行錨定交易。在這種情況下，確認的錨定交易成為委員會共識的加密證明。
 
-## BLS Threshold Signatures
+## BLS 閾值簽名
 
-IOTA Smart Contracts use BLS cryptography and threshold signatures in combination with
-polynomial (Shamir) secret sharing to achieve the requirement above.
-In short, IOTA Smart Contracts use BLS addresses as state addresses (controlling addresses) of the chain account
-where the state of the chain is locked. The secret sharing and threshold signatures allow for
-control of the address by any T out of N secret keys (partial private keys), where N is the size of
-the committee and T is a quorum factor.
+IOTA 智能合約使用 BLS 加密和閾值簽名與多項式 (Shamir) 秘密共享相結合來實現上述要求。
+簡而言之，IOTA 智能合約使用 BLS 地址作為鏈狀態被鎖定的鏈帳戶的狀態地址（控制地址）。秘密共享和閾值簽名允許通過 N 個密鑰（部分私鑰）中的任何 T 個來控制地址，其中 N 是委員會的規模，T 是法定人數因子。
 
-The “control of the address” means the ability to produce a valid signature of the transaction to
-the corresponding address. In threshold signatures the valid (master) signature can be
-reconstructed from any T out of N partial signatures. There is no need for all N of them and
-there is no need to know the master private key in order to reconstruct a valid signature. Each
-partial signature is a signature by one out of N of secret keys, while each of those secret keys is
-known only to the corresponding committee node.
+“地址控制”是指能夠產生交易的有效簽名到相應地址的能力。在閾值簽名中，有效（主）簽名可以從 N 個部分簽名中的任何 T 個重構。不需要所有 N 個，也不需要知道主私鑰來重建有效簽名。每個部分簽名都是 N 個密鑰中的一個的簽名，而這些密鑰中的每一個只有相應的委員會節點知道。
 
-IOTA Smart Contracts use the Dedis Kyber library in the implementation of Wasp. Goshimmer has BLS addresses implemented at its core. This means that BLS addresses are conventional addresses and BLS
-signatures in transactions can be validated by the IOTA node just like any other type of
-signature.
+IOTA 智能合約在實施黃蜂時使用 Dedis Kyber 庫。 Go微光在其核心實現了 BLS 地址。這意味著 BLS 地址是傳統地址，交易中的 BLS 簽名可以像任何其他類型的簽名一樣由 IOTA 節點驗證。
 
 ---
 
-- Learn more about consensus in the [IOTA Smart Contracts Architecture description](https://github.com/iotaledger/wasp/blob/master/documentation/ISC_WP_Nov_10_2021.pdf).
-- Participate and use the [preconfigured development Docker setup](/smart-contracts/guide/development_tools/docker_preconfigured).
-- Build a decentralized application with the [Schema Tool](/smart-contracts/guide/schema).
+- 在 [IOTA 智能合約架構描述] 中了解有關共識的更多信息(https://github.com/iotaledger/wasp/blob/master/documentation/ISC_WP_Nov_10_2021.pdf).
+- 參與並使用【預配置開發Docker設置】(/smart-contracts/guide/development_tools/docker_preconfigured).
+- 使用 [Schema Tool] 構建去中心化應用程序(/smart-contracts/guide/schema).
