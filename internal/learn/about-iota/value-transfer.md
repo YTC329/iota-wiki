@@ -47,40 +47,40 @@ Charlie 然後創建一個輸出訊息，將該 10i 存入 Bob 的地址。此�
 
 例如，如果 Alice 實際上將兩條訊息附加到糾纏：一條將 10i 傳輸給 Bob，另一條將 10i 傳輸給 Charlie？這些消息一起被稱為**雙花**，因為它們試圖將相同的 IOTA 代幣轉移到不同的地址。
 
-Both of Alice's messages could not be part of the ledger state because it would result in a negative balance for Alice’s address: minus 10i.
+Alice 的兩條訊息都不能成為帳本狀態的一部分，因為這會導致 Alice 地址的餘額為負數：負 10i。
 
-Messages in the Tangle are confirmed by special messages called **milestones**. Milestones are issued by a special node called Coordinator, which is operated by the IOTA Foundation and is therefore still a centralized part of the Consensus.
+糾纏中的訊息由稱為**里程碑**的特殊訊息確認。里程碑由一個名為協調員的特殊節點發布，該節點由 IOTA 基金會運營，因此仍然是共識的集中部分。
 
-After Charlie's message is confirmed by a milestone, the nodes update his and Bob's balances to reflect the transfer of 10i to Bob's address. Bob can now spend his new IOTA tokens.
+在 Charlie 的訊息被里程碑確認後，節點更新他和 Bob 的餘額以反映 10i 轉移到 Bob 的地址。 Bob 現在可以使用他的新 IOTA 代幣。
 
-Let's go a bit more into details and observe the single steps taken by the participants:
+讓我們更詳細地了解一下參與者所採取的各個步驟：
 
-## Clients
+## 客戶端
 
-Everything starts with a client. A client is a software that initiates and creates IOTA transactions for a user (whether human, machine or device). Most clients for users will come in the form of a wallet software like the [IOTA Firefly Wallet](https://firefly.iota.org/).
+一切從客戶端開始。客戶端是為用戶（無論是人、機器還是設備）發起和創建 IOTA 交易的軟件。大多數用戶委託人將以錢包軟件的形式出現，例如 [IOTA Firefly Wallet](https://firefly.iota.org/)。
 
-Simple command-line tools for professional users, like the [CLI Wallet](https://github.com/iotaledger/cli-wallet/), are also available.
+還提供了面向專業用戶的簡單命令行工具，例如 [CLI 錢包](https://github.com/iotaledger/cli-wallet/)。
 
-Machines, sensors, and devices, etc. will use the code of the IOTA wallet libraries to create and execute the transactions autonomously.
+機器、傳感器和設備等將使用 IOTA 錢包庫的代碼來自主創建和執行交易。
 
-To send a value transaction into the IOTA network, a client creates an IOTA message that includes a **signed transaction payload**. In this payload, all the data is specified to tell the IOTA network how many tokens from address A (owned by the issuer of the message) should be transferred to address B and makes it possible to upgrade the state of the IOTA Ledger accordingly.
+要將價值交易發送到 IOTA 網絡，客戶端會創建一條 IOTA 訊息，其中包含**簽名的交易有效負載**。在這個有效載荷中，所有數據都被指定來告訴 IOTA 網絡有多少代幣從地址 A（由訊息的發布者擁有）應該轉移到地址 B，並使得相應地升級 IOTA Ledger 的狀態成為可能。
 
-The signed transaction payload must contain a digital signature that guarantees that the sender of the transaction is the owner of the address where those funds are currently stored. This is guaranteed through signing the transaction with the private key of that address. A public key, which is also part of the message, will be used to validate the ownership of the funds. Read more about how private and public keys work together to establish this here:
+簽名的交易有效負載必須包含一個數字簽名，以保證交易的發送者是當前存儲這些資金的地址的所有者。這是通過使用該地址的私鑰簽署交易來保證的。公鑰（也是訊息的一部分）將用於驗證資金的所有權。在此處閱讀有關私鑰和公鑰如何協同工作的更多信息：
 
-The next step will be that the client connects to a node in the IOTA network and asks this node for valid tips to include in the message. After the tips (between one and eight previous messages of the tangle) are known to the client, they can be included in the message and therefore create a reference path for this message in the Tangle. Finally, the client now submits this message (that includes the transaction payload) for validation and processing to the node.
+下一步將是客戶端連接到 IOTA 網絡中的一個節點，並要求該節點提供有效的提示以包含在消息中。在客戶端知道提示（糾纏的前一到八個消息之間）之後，它們可以包含在訊息中，因此在糾纏中創建此訊息的引用路徑。最後，客戶端現在將這個消息（包括交易有效負載）提交給節點進行驗證和處理。
 
-## Nodes
+## 節點
 
-Nodes are the bookkeepers, decision-makers, and validators of all information in the IOTA network. Every node in the IOTA network knows the exact status and containing value of all existing addresses in the IOTA network at any given time. This is called **the ledger state**.
+節點是 IOTA 網絡中所有訊息的簿記員、決策者和驗證者。 IOTA 網絡中的每個節點在任何給定時間都知道 IOTA 網絡中所有現有地址的確切狀態和包含值。這稱為**帳本狀態**。
 
-A Node is also the entry point for clients into the network. The clients submit messages to the node over a specified port in the node. The node collects all arriving traffic of this entry port in his inbox and first checks if the message is correctly formatted and can be processed.
+節點也是客戶端進入網絡的入口點。客戶端通過節點中的指定端口向節點提交訊息。該節點在其收件箱中收集該入口端口的所有到達流量，並首先檢查該訊息是否格式正確並且可以被處理。
 
-If all bits of the message are readable for the node and the node detects the signed transaction payload included in the message, a validation process starts.
+如果節點可以讀取訊息的所有位並且節點檢測到訊息中包含的簽名交易有效負載，則驗證過程開始。
 
-Firstly, the node verifies if the address that tries to send these funds has the needed balance to do this. So he checks his current knowledge of that address (his ledger state) to see whether the address has enough funds. The node also checks that no conflicts are known in the network that would make it possible to spend more funds than are currently located on the address (in other words, a double spend). So if there is another message currently present and know for the node that wants to spend the same funds of the address, a conflict is detected and both messages will be processed into conflict resolution - more about this process later.
+首先，節點驗證嘗試發送這些資金的地址是否具有執行此操作所需的餘額。因此，他檢查了他當前對該地址的了解（他的帳本狀態），以查看該地址是否有足夠的資金。該節點還檢查網絡中是否存在已知的衝突，這將使花費比當前位於地址上的資金更多的資金成為可能（換句話說，雙花）。因此，如果當前存在另一條訊息並且知道要花費地址的相同資金的節點，則會檢測到衝突，並且兩條訊息都將被處理為衝突解決方案 - 稍後將詳細介紹此過程。
 
-If no conflicts are detected, the next step for a node is to submit the requested update of the ledger state: "remove amount Funds x from address A and add those amount to address B". Submitting happens via the so-called **gossip protocol**.
+如果沒有檢測到衝突，節點的下一步是提交請求的帳本狀態更新：“從地址 A 移除金額資金 x 並將這些金額添加到地址 B”。提交是通過所謂的 **gossip 協議** 進行的。
 
-The node sends its updated ledger state to all its directly connected neighboring nodes. Every node is connected to several other nodes. Those nodes receive the updated ledger state from their neighbors. Every node compares the request to its currently known version of the ledger and checks again for conflicts. If no conflicts are found, the node updates his ledger state and sends the updated state to his neighbors again.
+節點將其更新的帳本狀態發送給所有直接連接的相鄰節點。每個節點都連接到其他幾個節點。這些節點從它們的鄰居那裡接收更新的帳本狀態。每個節點將請求與其當前已知的分類帳版本進行比較，並再次檢查是否存在衝突。如果沒有發現衝突，節點更新他的帳本狀態並再次將更新後的狀態發送給他的鄰居。
 
-This leads to an extremely fast propagation of ledger updates through the network and in a few seconds, it has reached every node in the network and is therefore accepted and confirmed. In this stage, the message has reached full confirmation and is considered solid. It will now be added to the tip pool of every node and can be used as a reference by new messages.
+這導致帳本更新通過網絡以極快的速度傳播，並在幾秒鐘內到達網絡中的每個節點，因此被接受和確認。在這個階段，訊息已經完全確認，被認為是可靠的。它現在將被添加到每個節點的提示池中，並且可以用作新訊息的參考。
