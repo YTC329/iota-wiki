@@ -186,4 +186,4 @@ description: Glossary of all specialized names and phrases used in the IOTA
 ## W
 
 - **White-flag approach (白旗方法) (IOTA 1.5):** 用於計算學分。一種更簡單、避免衝突的方法，可提高提示選擇的速度和效率，消除某些攻擊，並顯著減少重新連接的需要。
-- **Wasp (黃蜂):** Wasp 節點軟件是 IOTA Tangle 上智能合約的實現。
+- **Wasp (黃蜂):** Wasp 節點軟件是 IOTA 糾纏上智能合約的實現。
