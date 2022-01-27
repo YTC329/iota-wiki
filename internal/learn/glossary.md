@@ -115,29 +115,29 @@ description: Glossary of all specialized names and phrases used in the IOTA
 
 ## O
 
-- **Orphan:** A transaction (or block) that is not referenced by any subsequent transaction (or block). An orphan is not considered confirmed and will not be part of the consensus.
-- **Object (IOTA 2.0):** the most basic unit of information in the IOTA protocol. Each object has a type and size and contains data.
-- **Oracles:** Oracles are designed to build a secure bridge between the digital and physical worlds in a decentralized, permissionless way. They bring off-chain data to decentralized applications and smart contracts on the IOTA network.
-- **OTV (IOTA 2.0):** On Tangle Voting is the official name for the multiverse consensus described by Hans Moog. It is a new consensus mechanism that allows nodes to vote on conflicts directly by publishing a message to the tangle.
-- **OTVFPCS (IOTA 2.0):** On Tangle Voting with FPCS (Fast Probabilistic Consensus on a Set) is a mechanism for breaking metastability, which can be used in addition to OTV (On Tangle Voting). Generally, in IOTA2.0, reaching a high approval weight is the finality criteria. If the approval weight is high enough, the message / transaction is finalized. With OTVFPC the initial opinion is created with OTV, if after some time the opinions of the nodes are still split, for whatever reason, FPC is activated to break this metastable state. The finality of value transactions should be reached faster this way.
+- **Orphan (孤兒):** 未被任何後續交易（或區塊）引用的交易（或區塊）。孤兒不被視為已確認，也不會成為共識的一部分。
+- **Object (物品) (IOTA 2.0):** IOTA 協議中最基本的信息單元。每個對像都有類型和大小並包含數據。
+- **Oracles (預言):** 預言機旨在以去中心化、無需許可的方式在數字世界和物理世界之間架起一座安全的橋樑。他們將鏈下數據帶到 IOTA 網絡上的去中心化應用程序和智能合約。
+- **OTV (On Tangle Voting) (糾纏投票) (IOTA 2.0):** 糾纏投票是 Hans Moog 描述的多元宇宙共識的官方名稱。這是一種新的共識機制，允許節點通過向糾纏發布訊息來直接對沖突進行投票。
+- **OTVFPCS (On Tangle Voting with FPCS) (使用 FPCS 進行 Tangle 投票) (IOTA 2.0):** 使用 FPCS 進行 Tangle 投票（FPCS (Fast Probabilistic Consensus on a Set）(集合上的快速概率共識))是一種打破亞穩態的機制，除了糾纏投票外，還可以使用。通常，在 IOTA2.0 中，達到較高的批准權重是確定性標準。如果批准權重足夠高，則消息/交易完成。使用 OTVFPC，初始意見是由 OTV 創建的，如果經過一段時間後節點的意見仍然分裂，無論出於何種原因，都會激活 FPC 以打破這種亞穩態。通過這種方式，應該更快地達到價值交易的最終確定性。
 
 ## P
 
-- **Parents:** A message directly references up to 8 previous messages that we call its parents. In IOTA 2.0 a parent can be either strong or weak (see approval switch).
-- **Parallel reality ledger state (IOTA 2.0):** This state is used to track conflicts in the tangle. Two new ledger entries that are causally valid but in conflict with each other (ex. Double Spend) are posted into two separate “realities” for this purpose, representing possible but mutually exclusive future ledger states. The consensus mechanism (with FPC, etc.) will now operate until the perception of most nodes tilts in one direction and one of the two possible ledger states is accepted as true.
-- **Partition Tolerant:** This means that a part of the Tangle can be disconnected from the main tangle for a certain time and continue to run without an Internet connection. These parts can be reconnected to the main Tangle when the Internet connection is restored.
-- **Past Cone:** All messages that are directly or indirectly referenced by a message are called its past cone.
-- **Parasite Chain Attacks:** A double spending attack on the Tangle. Here, an attacker attempts to reverse a transaction by setting up an alternate Tangle in which the funds were not spent. He then tries to get the majority of the network to accept the alternative Tangle as the legitimate one.
-- **Permanode:** This type of node permanently stores the entire transaction history, possibly with the help of external storage solutions, and possibly only specific transactions (selective permanode).
-- **Pending:** A transaction has been seen by the network but not yet confirmed.
-- **Peer to Peer Network:** A decentralized network of different network nodes that are connected to each other and exchange data.
-- **Peering:** The process of discovering and connecting to other network nodes.
-- **Payload (IOTA 2.0):** A field in a message that determines the type. Examples are value payload (TransactionType type), FPC opinion payload (StatementType type), dRNG payload (Payload), Salt declaration payload, generic data payload.
-- **Private Tangle:** A private tangle is comparable to a test network under complete control of the operator. This allows companies and developers to test their applications under self-defined environment variables without external influences and protected from prying eyes. There is no interoperability between a private Tangle and the IOTA Tangle. So, sending from one to the other does not work either. Each private Tangle is an independent network with its own nodes, tokens, and coordinator.
-- **Proof of Work (PoW):** A time-consuming (expensive) mathematical calculation that uses computational power to prevent spam attacks. It consists of a difficult cryptographic puzzle that is easy to verify.
-- **Proof of Inclusion (PoI):** With PoI, one is able to provide evidence that a transaction was indirectly referenced by another transaction without having to present the full chain of actual transactions between the two transactions. This is done by using a sequence of hashes instead of the actual transaction data to prove the inclusion of a transaction (inclusion) in the referenced subtangle.
-- **Pruning:** In computer science, this is a term for simplifying, shortening, and optimizing decision trees. In IOTA, this is done by local snapshots on each full node. Old transactions that have already been confirmed are deleted from the database, leaving only a file (list) of credits on each address.
-- **Public and private keys:** These are used in cryptographic systems which use key pairs. There are public keys which can be shared and private keys which are known only to the owner. The generation of such keys depends on cryptographic algorithms based on mathematical problems to generate one-way functions. Effective security requires keeping the private key to remain only known to the owner. Public keys derived from this private key can be shared and used by others to verify ownership of the private key, without exposing the private key. Public keys function as addresses in IOTA.
+- **Parents (父級):** 一條訊息直接引用最多 8 條我們稱之為父級訊息的先前消息。在 IOTA 2.0 中，父級可以是強的也可以是弱的（參見批准開關）。
+- **Parallel reality ledger state (平行現實帳本狀態) (IOTA 2.0):** 此狀態用於跟踪糾纏中的衝突。為此，兩個因果有效但相互衝突的新分類帳條目（例如雙花）被發佈到兩個獨立的“現實”中，代表可能但相互排斥的未來分類帳狀態。共識機制（使用 FPC 等）現在將運行，直到大多數節點的感知向一個方向傾斜並且兩種可能的分類帳狀態之一被接受為真實。
+- **Partition Tolerant (分區容錯):** 這意味著糾纏的一部分可以在一段時間內與主糾纏斷開連接，並在沒有網路連接的情況下繼續運行。當互聯網連接恢復時，這些部分可以重新連接到主糾纏。
+- **Past Cone (過去錐):** 訊息直接或間接引用的所有訊息稱為其過去錐。
+- **Parasite Chain Attacks (寄生蟲鏈攻擊):** 對糾纏的雙重支出攻擊。在這裡，攻擊者試圖通過設置一個沒有花費資金的備用糾纏來撤銷交易。然後，他試圖讓網絡中的大多數人接受替代的糾纏作為合法的糾纏。
+- **Permanode (永久節點):** 這種類型的節點永久存儲整個交易歷史，可能藉助外部存儲解決方案，也可能僅存儲特定交易（選擇性永久節點）。
+- **Pending (待辦的):** 網絡已看到一筆交易，但尚未確認。
+- **Peer to Peer Network (點對點網絡):** 不同網絡節點相互連接並交換數據的去中心化網絡。
+- **Peering (對等互連):** 發現和連接到其他網絡節點的過程。
+- **Payload (有效載荷) (IOTA 2.0):** 訊息中確定類型的字段。示例是值負載（TransactionType 類型）、FPC 意見負載（StatementType 類型）、dRNG 負載（Payload）、Salt 聲明負載、通用數據負載。
+- **Private Tangle (私有糾纏):** 私有糾纏可與運營商完全控制的測試網絡相媲美。這使公司和開發人員可以在自定義環境變量下測試他們的應用程序，而不受外部影響，並免受窺探。私有糾纏和 IOTA 糾纏之間沒有互操作性。因此，從一個發送到另一個也不起作用。每個私有糾纏都是一個獨立的網絡，擁有自己的節點、代幣和協調器。
+- **Proof of Work (工作證明) (PoW):** 使用計算能力來防止垃圾郵件攻擊的耗時（昂貴）的數學計算。它由一個易於驗證的困難密碼難題組成。
+- **Proof of Inclusion (包含證明) (PoI):** 使用 PoI，可以提供證據證明一筆交易被另一筆交易間接引用，而無需展示兩筆交易之間的完整實際交易鏈。這是通過使用哈希序列而不是實際交易數據來證明在引用的子糾纏中包含交易（包含）來完成的。
+- **Pruning (修剪):** 在計算機科學中，這是簡化、縮短和優化決策樹的術語。在 IOTA 中，這是通過每個完整節點上的本地快照來完成的。已確認的舊交易將從數據庫中刪除，在每個地址上只留下一個信用文件（列表）。
+- **Public and private keys (公鑰和私鑰):** 這些用於使用密鑰對的密碼系統中。有可以共享的公鑰和只有所有者知道的私鑰。這種密鑰的生成依賴於基於數學問題的密碼算法來生成單向函數。有效的安全性要求保持私鑰只為所有者所知。從此私鑰派生的公鑰可以被其他人共享和使用，以驗證私鑰的所有權，而不會暴露私鑰。公鑰在 IOTA 中充當地址。
 
 ## R
 
