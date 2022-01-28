@@ -8,8 +8,8 @@ keywords:
   - ASMB
 ---
 
-![Assembly](/img/learn/future/assembly.png 'Click to see the full-size image.')
+![部件](/img/learn/future/assembly.png 'Click to see the full-size image.')
 
-In December 2021, IOTA Foundation [introduced](https://blog.assembly.sc/announcing-assembly-and-the-asmb-token/) Assembly, a permissionless Smart Contracts network. Assembly will function as an intermediate layer for permissionless and interoperable Smart Contracts, and will have its own token called [ASMB](https://assembly.sc/token).
-For more information, check the official [Website](https://assembly.sc) or the [Assembly Wiki](https://wiki.assembly.sc).
+2021年12月，IOTA基金會[介紹](https://blog.assembly.sc/announcing-assembly-and-the-asmb-token/) Assembly，一個無需許可的智能合約網絡。 Assembly 將作為無需許可且可互操作的智能合約的中間層，並將擁有自己的代幣，稱為 [ASMB](https://assembly.sc/token).
+更多信息，請查看官方[網站](https://assembly.sc) 或 [Assembly Wiki](https://wiki.assembly.sc).
 
