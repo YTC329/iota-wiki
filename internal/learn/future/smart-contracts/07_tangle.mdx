@@ -11,11 +11,11 @@ keywords:
 
 import ReactPlayer from 'react-player';
 
-In this article you will learn how the IOTA Smart Contracts interact with the IOTA Tangle.
+在本文中，您將了解 IOTA 智能合約如何與 IOTA 糾纏交互。
 
-as Smart Contracts can automate contractual obligations within many industries, they are essential across many of IOTA’s verticals including [Supply Chains](https://www.iota.org/solutions/global-trade-and-supply-chains), [Smart Cities](https://www.iota.org/solutions/smart-city), and [Industrial IoT](https://www.iota.org/solutions/industrial-iot) amongst others.
+由於智能合約可以在許多行業中實現合同義務的自動化，因此它們在 IOTA 的許多垂直領域都必不可少，包括 [供應鏈] (https://www.iota.org/solutions/global-trade-and-supply-chains)，[智慧城市](https://www.iota.org/solutions/smart-city)，以及 [工業物聯網] 等 (https://www.iota.org/solutions/industrial-iot)。
 
-Thanks to the Tangle’s properties of scalability, high throughput, and feeless transactions, IOTA Smart Contracts have many benefits.
+由於糾纏的可擴展性、高吞吐量和無費用交易的特性，IOTA 智能合約有很多好處。
 
 <ReactPlayer
   playing
@@ -26,15 +26,15 @@ Thanks to the Tangle’s properties of scalability, high throughput, and feeless
 
 <br />
 
-To facilitate IOTA’s use cases, including the Internet of Things, IOTA Smart Contracts run on top of the base layer - Layer 1 (L1), ”off-Tangle”.
+為了促進 IOTA 的用例，包括物聯網，IOTA 智能合約在基礎層 - 第 1 層（L1），“off-Tangle” 之上運行。
 
-Although Ethereum’s “on-chain” smart contracts are popular, they have some significant drawbacks. The most salient one is that for every smart contract in existence every node needs to keep a copy of the contract’s program code and state. Every node in the network has to execute the exact same code when the smart contract is triggered.
+儘管以太坊的“鏈上”智能合約很受歡迎，但它們也有一些明顯的缺點。最突出的一點是，對於每個存在的智能合約，每個節點都需要保留一份合約程序代碼和狀態的副本。當智能合約被觸發時，網絡中的每個節點都必須執行完全相同的代碼。
 
-There is no limit to the number of nodes that have to run this identical code just to generate a single result. And as the network grows, the amount of processing needed to produce that same result increases. This is a huge barrier to scalability.
+必須運行相同代碼以生成單個結果的節點數量沒有限制。隨著網絡的增長，產生相同結果所需的處理量也會增加。這是可擴展性的巨大障礙。
 
-In addition to the transaction fees you need to pay to be considered for inclusion in the ledger, you also need to pay gas fees to keep the program running long enough for it to complete. This means the cost to run these smart contracts becomes prohibitively high for anything but certain classes of use cases where the cost overhead is relatively insignificant.
+除了您需要支付的交易費用以考慮包含在分類帳中之外，您還需要支付汽油費以保持程序運行足夠長的時間以完成它。這意味著運行這些智能合約的成本變得高得令人望而卻步，除了成本開銷相對微不足道的某些用例類別。
 
-This is why IOTA Smart Contracts are not implemented as part of the core protocol but as a layer 2 (L2) protocol to leverage all the advantages.
+這就是為什麼 IOTA 智能合約沒有作為核心協議的一部分實現，而是作為第 2 層（L2）協議來利用所有優勢的原因。
 
 <ReactPlayer
   playing
@@ -45,11 +45,11 @@ This is why IOTA Smart Contracts are not implemented as part of the core protoco
 
 <br />
 
-## Architecture Overview
+## 架構概述
 
-![IOTA Smart Contracts Network Overview](/img/learn/sc_overview.png)
+![IOTA 智能合約網絡概述](/img/learn/sc_overview.png)
 
-The current IOTA Smart Contracts implementation runs on the experimental next-generation of [IOTA 2.0](https://v2.iota.org/), deployed on the fully decentralized [IOTA 2.0 DevNet](https://v2.iota.org/visualizer), powered by [GoShimmer nodes](/goshimmer/welcome). As IOTA Smart Contracts should be available on the IOTA mainnet before switching to the fully decentralized IOTA 2.0 protocol (in a process known as “Coordicide”), an important deliverable for the next release will be to support anchoring to the current IOTA mainnet. The current IOTA mainnet and the fully decentralized future IOTA 2.0 protocol have some fundamental differences, making it difficult to support both at the same time. The primary team focus is therefore to support smart contracts on the current IOTA mainnet using the [Hornet node](/hornet/welcome) software.
+當前的 IOTA 智能合約實施在實驗性的下一代 [IOTA 2.0] 上運行(https://v2.iota.org/) ，部署在完全去中心化的 [IOTA 2.0 DevNet] (https://v2.iota.org/visualizer) ，由 [Go微光節點](/goshimmer/welcome)提供支持. 由於 IOTA 智能合約應該在切換到完全去中心化的 IOTA 2.0 協議之前在 IOTA 主網上可用（在一個稱為“Coordicide”的過程中），下一個版本的一個重要交付物將是支持錨定到當前的 IOTA 主網。當前的 IOTA 主網和完全去中心化的未來 IOTA 2.0 協議存在一些根本性的差異，很難同時支持兩者。 因此，團隊的主要重點是使用 [Hornet 節點](/hornet/welcome) 軟件支持當前 IOTA 主網上的智能合約。
 
 ---
 
