@@ -39,5 +39,6 @@ IOTA 智能合約在實施黃蜂時使用 Dedis Kyber 庫。 Go微光在其核�
 ---
 
 - 在 [IOTA 智能合約架構描述] 中了解有關共識的更多信息(https://github.com/iotaledger/wasp/blob/master/documentation/ISC_WP_Nov_10_2021.pdf).
-- 參與並使用【預配置開發Docker設置】(/smart-contracts/guide/development_tools/docker_preconfigured).
-- 使用 [Schema Tool] 構建去中心化應用程序(/smart-contracts/guide/schema).
+- 參與並使用[預配置開發Docker設置](/smart-contracts/guide/development_tools/docker_preconfigured).
+- 使用構建去中心化應用程序[Schema Tool](/smart-contracts/guide/schema).
+ 
