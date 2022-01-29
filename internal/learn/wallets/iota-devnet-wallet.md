@@ -5,17 +5,17 @@ description: A Wallet for the current IOTA 2.0 Development - and Testnet. Offers
   IOTA Tokens are used here.
 ---
 
-# IOTA 2.0 DevNet Wallet
+# IOTA 2.0 開發網錢包
 
-With a wallet for the IOTA 2.0 DevNet you can request tokens from the faucet, transfer them and create or manage NFTs and digital assets. Currently, there exist two wallets for the IOTA 2.0 DevNet. A Command Line Wallet (cli-wallet) and a GUI Wallet (IOTA 2.0 DevNet GUI Wallet)
+使用 IOTA 2.0 開發網的錢包，您可以從水龍頭請求代幣，轉移它們並創建或管理 NFT 和數字資產。 目前，IOTA 2.0 開發網有兩個錢包。 一個命令行錢包（cli-wallet）和一個 GUI 錢包（IOTA 2.0 開發網 GUI Wallet）
 
 ## cli-wallet
 
-The cli wallet is the most feature complete wallet. You can find a guide for it [here](/goshimmer/tutorials/wallet_library).
-The cli wallet is located directly in the Goshimmer repo and pre-build binaries are released with each new GoShimmer version [here](https://github.com/iotaledger/goshimmer/releases).
+cli錢包是功能最齊全的錢包。 你可以在 [這裡](/goshimmer/tutorials/wallet_library) 找到它的指南。
+cli 錢包直接位於 Goshimmer 存儲庫中，預構建二進製文件隨每個新的 GoShimmer 版本一起發布 [此處](https://github.com/iotaledger/goshimmer/releases)。
 
-## IOTA 2.0 DevNet GUI Wallet
+## IOTA 2.0 開發網 GUI 錢包
 
 ![DevNet-Wallet](https://github.com/iotaledger/IOTA-2.0-DevNet-wallet/blob/master/images/devnet-wallet.png?raw=true)
 
-With the GUI wallet you can transfer token and manage your digital assets. It has its own [repo](https://github.com/iotaledger/IOTA-2.0-DevNet-wallet) and you can get prebuild binaries from the [releases](https://github.com/iotaledger/IOTA-2.0-DevNet-wallet/releases).
+使用 GUI 錢包，您可以轉移代幣並管理您的數字資產。 它有自己的 [repo](https://github.com/iotaledger/IOTA-2.0-DevNet-wallet)，你可以從 [發行](https://github.com/iotaledger/IOTA- 2.0-DevNet-錢包/版本）。
