@@ -5,28 +5,28 @@ description: An introduction to the huge work that researchers of the IOTA
   around the IOTA Protocol.
 ---
 
-# The Research Department of the IOTA Foundation
+# IOTA基金會研究部
 
-The research department of the IOTA Foundation has several key functions: securing the protocol, innovating new developments, overseeing academic research collaborations, communicating new concepts to the community, and investigating fundamental questions about distributed ledger technology (DLT).
+IOTA 基金會的研究部門有幾個關鍵職能：保護協議、創新新發展、監督學術研究合作、向社區傳達新概念以及調查有關分佈式帳本技術 (DLT) 的基本問題。
 
-To achieve the goal of improving the IOTA protocol, they identify possible changes, theorize solutions, simulate proposals, and test their theories. This process involves much internal discussion and collaboration with external parties.
+為了實現改進 IOTA 協議的目標，他們識別可能的變化、理論化解決方案、模擬提案並測試他們的理論。此過程涉及大量內部討論以及與外部各方的協作。
 
-When team members agree that an approach is nearing the deployment stage, when all stakeholders are confident in its success, and when they have received peer-reviewed external validation, the Engineering Team joins the discussions to turn the approach into code.
+當團隊成員同意一種方法接近部署階段，當所有利益相關者都對其成功充滿信心，並且當他們收到同行評審的外部驗證時，工程團隊會加入討論，將方法轉化為代碼。
 
-## The Goals
+## 目標
 
-- Moving the IOTA protocol forward to meet the IOTA vision.
-- Be a leader in DLT research.
+- 推進 IOTA 協議以滿足 IOTA 的願景。
+- 成為 DLT 研究的領導者。
 
-## The Team
+## 團隊
 
-The research department consists of over 20 scientists and advisors that are highly specialized and widely recognized in the academic world. In addition, they receive support from external researchers and universities worldwide, which have established partnerships and collaborations with the IOTA Foundation.
+研究部門由 20 多名科學家和顧問組成，他們高度專業化並在學術界得到廣泛認可。此外，他們還獲得了全球外部研究人員和大學的支持，這些研究人員和大學與 IOTA 基金會建立了夥伴關係和合作關係。
 
-Meet the team here: [Research Team](https://www.iota.org/foundation/researcher-profiles)
+在這裡與團隊會面：[研究團隊](https://www.iota.org/foundation/researcher-profiles)
 
-## Research Videos
+## 研究視頻
 
-The research team has created a large database of videos and recordings that can help you understand the complex topics the researchers address in their groundbreaking work:
+研究團隊創建了一個包含視頻和錄音的大型數據庫，可以幫助您了解研究人員在其開創性工作中解決的複雜主題：
 
-- [IOTA Developer Playlist](https://www.youtube.com/playlist?list=PLMbc46iGTB_TIkwgBrAMSi4NbjPKkxrr4)
-- [IOTA Research Symposium 2021 Playlist](https://www.youtube.com/playlist?list=PLMbc46iGTB_Q7KAFXnQTFOn5keU2yDOXU)
+- [IOTA 開發者播放列表](https://www.youtube.com/playlist?list=PLMbc46iGTB_TIkwgBrAMSi4NbjPKkxrr4)
+- [IOTA 研討會 2021 播放列表](https://www.youtube.com/playlist?list=PLMbc46iGTB_Q7KAFXnQTFOn5keU2yDOXU)
