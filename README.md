@@ -17,32 +17,32 @@
   <h3 align="center">IOTA Wiki</h3>
 
   <p align="center">
-    Everything you need to know about IOTA in one place.
+    您需要了解有關 IOTA 的所有信息都在這!
     <br />
-    <a href="https://wiki.iota.org"><strong>Explore the Wiki »</strong></a>
+    <a href="https://wiki.iota.org"><strong>探索wiki »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/iota-community/iota-wiki/issues">Report Error</a>
+    <a href="https://github.com/iota-community/iota-wiki/issues">報告錯誤</a>
     ·
-    <a href="https://github.com/iota-community/iota-wiki/issues">Request Topic</a>
+    <a href="https://github.com/iota-community/iota-wiki/issues">請求主題</a>
     .
   </p>
 </p>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Table of Contents</summary>
+  <summary>目錄</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">關於該項目</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">內置</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">入門</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#prerequisites">先決條件</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
