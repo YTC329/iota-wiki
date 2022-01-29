@@ -4,101 +4,102 @@ title: Staking IOTA
 description: Everything you need to know about all the different upcoming staking opportunities in IOTA, Assembly, and Shimmer network.
 ---
 
-# Staking in the IOTA network ecosystem
+# 在 IOTA 網絡生態系統中質押
 
-IOTA introduced two new networks that will exist next to the main network: the Shimmer staging network and the Assembly trustless smart contract network. This marks a historical event and a vast increase of utility for the IOTA token.
-Both networks will launch with their own native tokens: SMR for Shimmer and ASMB for Assembly. With the new tokenomics and incentive structure around these networks, it is now possible to stake tokens.
 
-:::info
+IOTA 引入了兩個將存在於主網絡旁邊的新網絡：Shimmer(微光) 登台網絡和 Assembly(部件) 無信任智能合約網絡。這標誌著 IOTA 代幣的歷史性事件和實用性的大幅增加。
+這兩個網絡都將使用自己的原生代幣啟動：SMR 代表微光，ASMB 代表部件。借助圍繞這些網絡的新代幣經濟學和激勵結構，現在可以質押代幣。
 
-Find the blog post introducing IOTA staking [here](https://blog.iota.org/introducing-iota-staking/).
-Find the announcement of the start of IOTA staking [here](https://blog.iota.org/iota-staking-start/).
+:::信息
+
+查找介紹 IOTA 質押的部落格 [這裡](https://blog.iota.org/introducing-iota-staking/).
+找到IOTA Staking開始的公告 [這裡](https://blog.iota.org/iota-staking-start/).
 
 :::
 
 
-There are several ways to stake your tokens and earn staking rewards:
-- Shimmer and Assembly pre-launch staking to create the initial token supply for both the SMR and the ASMB token and distribute them to those who stake their IOTA tokens.
-- Assembly post-launch staking to further distribute ASMB tokens among those who stake their IOTA tokens.
-- ASMB token staking to secure the Assembly network and reward the ones who stake their ASMB tokens.
-- SMR token staking to help testing on the Shimmer network and to support the network.
+有幾種方法可以質押您的代幣並獲得質押獎勵：
+- 微光和部件啟動前質押，為 SMR 和 ASMB 代幣創建初始代幣供應，並將其分發給質押其 IOTA 代幣的人。
+- 大會發布後質押，以進一步在持有 IOTA 代幣的人之間分配 ASMB 代幣。
+- ASMB 代幣質押以保護大會網絡並獎勵質押 ASMB 代幣的人。
+- SMR 代幣質押有助於在微光網絡上進行測試並支持網絡。
 
-## Shimmer and Assembly pre-launch staking
+## 微光和部件發布前質押
 
-This staking period aims to reward IOTA token holders for their participation and distribute tokens of the two new networks to them. In the case of Shimmer, it also creates the total initial supply of the network. In the case of Assembly, it can produce up to 8% of the total initial supply.
+這個質押期旨在獎勵 IOTA 代幣持有者的參與，並向他們分發兩個新網絡的代幣。在微光的情況下，它還創建了網絡的總初始供應。在組裝的情況下，它可以生產高達初始供應總量的 8%。
 
-Starting from 28th December 2021, 3 p.m. CET, IOTA holders that possess IOTA tokens in the Firefly wallet and have chosen to participate in the staking period will generate Assembly and Shimmer tokens for 90 days.
+從 2021 年 12 月 28 日下午 3 點開始CET，在螢火蟲錢包中擁有 IOTA 代幣並選擇參與質押期的 IOTA 持有者將生成為期 90 天的部件和微光代幣。
 
-### IOTA staking for ASMB rewards
+### IOTA 質押獲得 ASMB 獎勵
 
-It is planned that IOTA token holders will receive 20% (20 billion tokens) of the total initial Assembly supply of 100 billion tokens. Read more about the Assembly token launch and distribution [in this blog](https://blog.assembly.sc/assembly-fair-launch-token-distribution/).
-- To distribute the first batch of those Assembly tokens to IOTA holders, the staking functionality in the Firefly wallet has been developed. 
-- In the initial 90 days staking period, a maximum of 8% of the Assembly supply can be distributed to IOTA token stakers. 
-- This happens at a fixed rate for every IOTA token staked.
-- This rate has been set to `0,000004 ASMB tokens per 1 MIOTA per milestone`. That means for every 1 MIOTA that you hold and stake in Firefly, you will receive 0,000004 ASMB tokens every 10 seconds (the interval of milestones issued in the IOTA tangle)
+計劃 IOTA 代幣持有者將獲得 1000 億代幣初始總供應量的 20%（200 億代幣）。閱讀有關部件代幣發布和分發的更多信息 [在此部落格中](https://blog.assembly.sc/assembly-fair-launch-token-distribution/).
+- 為了將第一批部件代幣分發給 IOTA 持有者，螢火蟲錢包中的質押功能已經開發完成。
+- 在最初的 90 天質押期間，最多 8% 的大會供應可以分配給 IOTA 代幣質押者。
+- 對於每個質押的 IOTA 代幣，這都會以固定的比率發生。
+- 此比率已設置為“每個里程碑每 1 個 MIOTA 0,000004 個 ASMB 代幣”。這意味著您每持有 1 個 MIOTA 並在螢火蟲中質押，您將每 10 秒收到 0,000004 個 ASMB 代幣（IOTA 糾結中發布的里程碑間隔）
 
-![assembly staking](/img/learn/iota-token/assembly-staking.png)
+![質押部件](/img/learn/iota-token/assembly-staking.png)
 
- You can read how to stake and calculate the possible rewards [here](https://assembly.sc/stake).
-- After the 90 days have passed, the total amount of IOTA tokens that have participated in the staking event for Assembly will have created a set amount of Assembly tokens (maximum 8 billion if 100% if the IOTA supply has been staked for Assembly)
-- With the launch of the Assembly network, these generated Assembly tokens will be distributed to the IOTA stakers. This distribution will be implemented as a functionality within the Firefly wallet. As long as the Assembly network is not yet launched, Firefly will hold the record of rewards for the IOTA token holder. 
+ 您可以閱讀如何質押和計算可能的獎勵 [這裡](https://assembly.sc/stake).
+- 90天過去後，參與部件質押活動的IOTA代幣總量將創建一定數量的部件代幣（如果IOTA供應量已被質押用於部件，則最多80億）
+- 隨著組裝網絡的啟動，這些生成的組裝代幣將分發給 IOTA 質押者。此分發將作為螢火蟲錢包中的一項功能實現。只要部件網絡尚未啟動，螢火蟲就會保存 IOTA 代幣持有者的獎勵記錄。
 
-### IOTA staking for SMR rewards
+### IOTA 質押 SMR 獎勵
 
-Shimmer, the incentivized testnet and battlefield for IOTA's core technology innovations, will be bootstrapped purely from IOTA token stakers. The initial token supply of the Shimmer network will only rely on the amount of IOTA tokens staked for Shimmer in the 90-day staking period, and 100% of the initial supply will be distributed to IOTA token holders.
+微光是 IOTA 核心技術創新的激勵測試網和戰場，將完全由 IOTA 代幣質押者引導。微光網絡的初始代幣供應將僅依賴於在 90 天質押期間為微光質押的 IOTA 代幣數量，初始供應的 100% 將分配給 IOTA 代幣持有者。
 
-- The same staking functionality used for Assembly in the Firefly Wallet will also be used for Shimmer.
-- Shimmer tokens will be distributed at a fixed rate of `1 Shimmer per 1 MIOTA per milestone`.
+- 在螢火蟲錢包中用於組裝的相同 Staking 功能也將用於微光。
+- 微光代幣將以“每個里程碑每 1 MIOTA 1 微光”的固定比率分發。
 
-![shimmer staking](/img/learn/iota-token/shimmer-staking.png)
+![質押微光](/img/learn/iota-token/shimmer-staking.png)
 
-You can read how to stake and calculate the possible rewards [here](https://shimmer.network/claim).
-- With the launch of the Shimmer network, these generated Shimmer tokens will be distributed to the IOTA stakers. This distribution will be implemented as a functionality within the Firefly wallet. As long as the Shimmer network is not yet launched, Firefly will hold the record of rewards for the IOTA token holder. 
+您可以閱讀如何質押和計算可能的獎勵 [這裡](https://shimmer.network/claim).
+- 隨著微光網絡的啟動，這些生成的微光代幣將分發給 IOTA 質押者。此分發將作為 Firefly 錢包中的一項功能實現。只要微光網絡尚未啟動，螢火蟲就會保持 IOTA 代幣持有者的獎勵記錄。
 
-## Assembly post-launch staking
+## 發布後質押部件
 
-Assembly, the smart contract implementation connecting and governing thousands of independent smart contract blockchains on top of IOTA's Tangle will have a deep connection with the IOTA tangle. The security of the Assembly network relies on the underlying security of the IOTA tangle as it solves the interconnection and exchange layer between different chains in Assembly and provides a secure anchor and immutable audit trail for state updates of IOTA smart contracts chains in Assembly.
+部件，在 IOTA 的糾纏之上連接和管理數千個獨立的智能合約區塊鏈的智能合約實現將與 IOTA 的糾纏有很深的聯繫。 部件網絡的安全性依賴於IOTA糾纏的底層安全性，解決了部件中不同鏈之間的互連和交換層，並為部件中IOTA智能合約鏈的狀態更新提供了安全的錨點和不可變的審計線索。
 
-Also, the Tangle, with its newly implemented tokenization abilities and multi-asset functionalities, will be the home of all kinds of interoperable tokens. Those will be freely exchanged between accounts on different smart contract chains and accounts on the Tangle.
+此外，憑藉其新實施的代幣化能力和多資產功能，糾纏將成為各種可互操作代幣的家園。這些將在不同智能合約鏈上的帳戶和糾纏上的帳戶之間自由交換。
 
-To further reward IOTA token stakers and give them a fair share in the new Assembly network, IOTA token holders can continue to stake their IOTA tokens in order to receive Assembly tokens for 21 months after the Assembly mainnet launch.
+為了進一步獎勵 IOTA 代幣質押者並讓他們在新的部件網絡中獲得公平的份額，IOTA 代幣持有者可以繼續質押他們的 IOTA 代幣，以便在部件主網啟動後的 21 個月內收到部件代幣。
 
-As described in the Assembly [token launch and fair distribution scheme](https://blog.assembly.sc/assembly-fair-launch-token-distribution/), a total of 20% of the Assembly supply is given to IOTA token stakers. 
-The first distribution phase happens in the 90 days as described above.
-The second ASMB distribution will happen during the first 21 months of the newly launched Assembly network.
+如部件所述[代幣發行和公平分配方案](https://blog.assembly.sc/assembly-fair-launch-token-distribution/)，總共 20% 的部件供應提供給 IOTA 代幣質押者。
+如上所述，第一個分發階段發生在 90 天內。
+第二次 ASMB 分發將在新推出的部件網絡的前 21 個月內進行。
 
-![assembly supply](/img/learn/iota-token/assembly-supply.png)
+![部件供應](/img/learn/iota-token/assembly-supply.png)
 
-- The amount of ASMB tokens that can be distributed during these 21 months depends totally on the number of tokens that are still undistributed after the initial 90 days of staking. 
-- If less than 100% of IOTA tokens have been staked for Assembly (which would distribute 8 billion ASMB tokens to IOTA stakers), the remaining ASMB tokens will be distributed in addition to the already planned 12 billion ASMB tokens to IOTA stakers.
-If only 6 billion ASMB tokens had been distributed in the first 90 days, 14 billion ASMB tokens would still be available during the second 21 month staking period.
-- The ASMB distribution during the second staking period will happen on a **daily fixed rate**.
-    - Assuming 14 billion ASMB tokens will be available to distribute, this would lead to a daily payout of: 
-    - 21.909.233 ASMB tokens to the IOTA stakers over 639 days.
-    - The amount of individual received ASMB tokens per day depends on the total percentual part an IOTA staker holds of the total daily staked amount of IOTA tokens.
-    - The fewer total IOTA tokens are staked, the higher the individual payout of those 21.909.233 ASMB tokens per day for an individual IOTA staker.
+- 在這 21 個月內可分配的 ASMB 代幣數量完全取決於最初 90 天質押後仍未分配的代幣數量。
+- 如果少於 100% 的 IOTA 代幣被質押用於組裝（這將向 IOTA 質押者分配 80 億個 ASMB 代幣），除了已經計劃向 IOTA 質押者分配 120 億個 ASMB 代幣外，其餘的 ASMB 代幣將被分配。
+如果前 90 天只分發了 60 億個 ASMB 代幣，那麼在第二個 21 個月的質押期間仍有 140 億個 ASMB 代幣可用。
+- 第二個質押期間的 ASMB 分配將以**每日固定利率**進行。.
+    - 假設將有 140 億個 ASMB 代幣可供分配，這將導致每日支付： 
+    - 在 639 天內向 IOTA 質押者提供 21.909.233 個 ASMB 代幣。
+    - 個人每天收到的 ASMB 代幣數量取決於 IOTA 質押者持有的 IOTA 代幣每日質押總量的總百分比。
+    - 質押的 IOTA 代幣總數越少，個人 IOTA 質押者每天獲得的 21.909.233 個 ASMB 代幣的個人支出就越高。
 
-![assembly token release](/img/learn/iota-token/assembly-token-release.png)
+![推出部件代幣](/img/learn/iota-token/assembly-token-release.png)
 
-## ASMB token staking
+## ASMB 代幣質押
 
-Assembly will implement two different mechanisms to reward Assembly token stakers.
-1. Reward Assembly stakers for holding ASMB tokens and distributing newly minted ASMB tokens as part of the inflationary token distribution.
-    - The yearly inflation of the Assembly supply is set to 8%. This inflation rate is planned to be reduced over the years by community governance decisions.
-    - The final mechanism of how this distribution will happen is not yet published.
+部件將實施兩種不同的機制來獎勵部件代幣質押者。
+1. 獎勵部件質押者持有 ASMB 代幣並分發新鑄造的 ASMB 代幣作為通膨代幣分配的一部分。
+    - 部件供應的年度通貨膨脹率設定為 8%。多年來，社區治理決定計劃降低通貨膨脹率。
+    - 這種分配將如何發生的最終機制尚未公佈。
 
-2. Reward Assembly stakers to secure the Assembly chains by staking their ASMB tokens with a validator.
-    - This mechanism is crucial to the security and functionality of the Assembly smart contract chains. Validators processing the code executed in the IOTA smart contract chains deployed in Assembly are required to deposit Assembly tokens as a security bond in the Assembly Root chain smart contract. This stake deposited by validators is used as a security bond to grant a validator access to a smart contract chains validator committee. The higher the stake a validator can offer as a security deposit, the more likely this validator will be chosen to secure high-value smart contract chains. Those chains will likely be more profitable for the validator, so the incentive to deposit more stakes as a security deposit in Assembly is very high. You can read details of that mechanism [here](https://blog.assembly.sc/meet-assembly-2-validators-and-committees/).
-    - A validator must always deposit a certain amount of tokens that he owns himself but can additionally use tokens that Assembly tokens holders deposited to the validator.
-    - As this described mechanism of using delegated stake increases the total security bond a validator can offer, the validators will most likely be willing to pay a part of their earned profits to the Assembly holders who deposited their tokens to the validator.
-    - This involves a potential risk, as a deposited stake in the Assembly root chain contract can be partially or fully slashed if the validator acts maliciously. But, besides this small theoretical risk, delegating stake to a validator will also offer higher rewards for Assembly stakers, as a share of the validators profit will be distributed to the stakers that delegate the stake to the validator.
+2. 獎勵部件質押者通過將他們的 ASMB 代幣與驗證者質押來保護部件鏈。
+    - 這種機制對於部件智能合約鏈的安全性和功能性至關重要。處理在部件中部署的 IOTA 智能合約鏈中執行的代碼的驗證者需要將部件代幣作為安全債券存入部件根鏈智能合約中。驗證者存入的股份用作擔保，以授予驗證者訪問智能合約鏈驗證者委員會的權限。驗證者可以提供的作為保證金的股份越高，該驗證者就越有可能被選擇來保護高價值的智能合約鏈。這些鏈可能對驗證者來說更有利可圖，因此在 部件中存入更多股份作為保證金的動機非常高。您可以閱讀該機制的詳細信息[這裡](https://blog.assembly.sc/meet-assembly-2-validators-and-committees/).
+    - 驗證者必須始終存入一定數量的他自己擁有的代幣，但還可以使用部件代幣持有者存入驗證者的代幣。
+    - 由於這種使用委託權益的機制增加了驗證者可以提供的總保證金，因此驗證者很可能願意將其賺取的部分利潤支付給將其代幣存入驗證者的大會持有人。
+    - 這涉及一個潛在的風險，因為如果驗證者惡意行為，則在部件根鏈合約中的存入股份可能會被部分或全部削減。 但是，除了這個小的理論風險之外，將權益委託給驗證者還將為部件權益者提供更高的回報，因為驗證者利潤的一部分將分配給將權益委託給驗證者的權益者。
 
-## SMR token staking
+## SMR代幣質押
 
-The Shimmer network has yearly inflation of 8% planned. These newly minted Shimmer tokens will be distributed to Shimmer stakers. 
-By staking your Shimmer tokens, you will help the network fulfill its purpose of being an incentivized playground for applications to test new IOTA technology features in a real network with real value.
+微光網絡計劃的年通貨膨脹率為 8%。這些新鑄造的微光代幣將分發給微光質押者。
+通過質押您的微光代幣，您將幫助網絡實現其目標，即成為應用程序在具有真正價值的真實網絡中測試新 IOTA 技術功能的激勵遊樂場。
 
-To learn more about the Shimmer network, read the Shimmer FAQ [here](https://shimmer.network/faqs).
+要了解有關微光網絡的更多信息，請閱讀微光常見問題解答 [這裡](https://shimmer.network/faqs).
 
 
 ---
