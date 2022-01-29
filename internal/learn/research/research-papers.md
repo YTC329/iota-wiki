@@ -3,14 +3,14 @@ title: Research Papers
 description: Links to all the Research papers published from IOTA Foundation Researchers.
 ---
 
-# IOTA Foundation Research Papers
+# IOTA 基金會研究論文
 
-The research department of the IOTA Foundation aims for academic validation of the whole protocol and regularly publishes papers and studies to the academic world following a strictly peer-reviewed approach in the protocol development.
+IOTA 基金會的研究部門旨在對整個協議進行學術驗證，並在協議開發中遵循嚴格的同行評審方法，定期向學術界發表論文和研究。
 
-You can find the papers here:
+你可以在這裡找到論文：
 
-- [Research Papers](https://www.iota.org/foundation/research-papers)
+- [研究論文](https://www.iota.org/foundation/research-papers)
 
-And here:
+以及這裡：
 
-- [Google Scholar](https://scholar.google.com/citations?user=_ZIH81gAAAAJ&hl=en)
+- [Google 學術](https://scholar.google.com/citations?user=_ZIH81gAAAAJ&hl=en)
