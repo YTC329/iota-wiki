@@ -280,382 +280,382 @@ description: The IOTA Firefly Wallet sets a new standard for Software Wallets in
 ### 恢復現有的分類帳配置文件
 如果您需要使用新設備恢復現有的螢火蟲配置文件，或者您以某種方式無法訪問螢火蟲，您可以通過幾個簡單的步驟插入 Ledger 並恢復現有的配置文件。為此，請在設置中選擇“遷移或恢復錢包”，然後選擇“我有 Firefly Ledger 備份”。
 
-![setup a wallet1 ledger](/img/learn/firefly/setup_a_wallet_ledger.png)![create a wallet1 ledger](/img/learn/firefly/create_a_wallet_ledger.png)
+![設置錢包1 ledger](/img/learn/firefly/setup_a_wallet_ledger.png)![創建一個錢包1 ledger](/img/learn/firefly/create_a_wallet_ledger.png)
 
-Note: Backups of your transaction history for Ledger Nano users are not currently supported but will be added in a later version. Once a profile is restored, Firefly will sync your transaction history. It will always find your balance. In a future version, we will add support for retrieving your full transaction history from a node that stores the complete history of the IOTA Tangle.
+注意：目前不支持為 Ledger Nano 用戶備份您的交易歷史記錄，但將在以後的版本中添加。恢復配置文件後，Firefly 將同步您的交易歷史記錄。它總會找到你的平衡點。在未來的版本中，我們將支持從存儲 IOTA Tangle 完整歷史記錄的節點檢索您的完整交易歷史記錄。
 
-### Adding a second Ledger device to Firefly
+### 向螢火蟲添加第二個 Ledger 設備
 
-It is possible to have more than one Ledger device with the same Firefly app. You can add another device by creating an additional profile from the login page. Firefly will always check that the right device is connected and you will receive an error message if you try to generate an address or send a transaction with the wrong device.
+可以有多個 Ledger 設備與同一個螢火蟲應用程序。您可以通過從登錄頁面創建附加配置文件來添加另一台設備。 螢火蟲將始終檢查是否連接了正確的設備，如果您嘗試生成地址或使用錯誤的設備發送交易，您將收到一條錯誤訊息。
 
-![ledger multiple profile view](/img/learn/firefly/ledger_multiple_profile_view.png)
+![ledger 多個配置文件視圖](/img/learn/firefly/ledger_multiple_profile_view.png)
 
-## Firefly FAQ
+## 螢火蟲常見問題
 
-## Setup and installation
+## 設置和安裝
 
-#### I'm worried I might make a mistake when setting up Firefly.
+#### 我擔心我在設置 Firefly 時可能會出錯。
 
-Don't worry! All you need to do is download Firefly only from the official website for your preferred OS and start the setup. The application has been designed to guide you through setting up your profile, securing it, and migrating your tokens successfully.
+別擔心！您所需要做的就是僅從您首選操作系統的官方網站下載 Firefly 並開始設置。該應用程序旨在指導您設置個人資料、保護個人資料並成功遷移您的代幣。
 
-#### How do I back up my seed?
+#### 如何備份我的種子？
 
-IOTA Firefly now uses a 24-word mnemonic or a recovery phrase. Like with other cryptocurrencies, all you will need are 24 words to recover access to your tokens on the Tangle. You will be able to back up your recovery phrase using the recovery kit you create when you set up your wallet. You will have captured the 24-word recovery phrase in a safe location by saving a so-called "stronghold-file" and writing the 24 words down.
+IOTA 螢火蟲現在使用 24 個單詞的助記詞或恢復短語。與其他加密貨幣一樣，您只需要 24 個字即可恢復對糾纏上代幣的訪問權限。您將能夠使用您在設置錢包時創建的恢復工具包備份您的恢復短語。通過保存所謂的“要塞文件”並寫下 24 個單詞，您將在安全位置捕獲 24 個單詞的恢復短語。
 
-This physical paper backup is recommended as computers can fail.
+建議使用此物理紙質備份，因為計算機可能會出現故障。
 
-Hardware wallets such as the Ledger Nano X and S are also supported. In case you use a Ledger Nano device, all relevant security measures are taken by using your ledger device together with the Firefly Wallet. Ledger Seeds are only stored on the Ledger device and never revealed to you.
+還支持 Ledger Nano X 和 S 等硬件錢包。如果您使用 Ledger Nano 設備，所有相關的安全措施都是通過將您的 Ledger 設備與螢火蟲錢包一起使用來採取的。 Ledger Seeds 僅存儲在 Ledger 設備上，不會透露給您。
 
-#### What is Stronghold?
+#### 什麼是要塞？
 
-Stronghold is a secure software implementation developed by the IOTA Foundation with the sole purpose of isolating digital secrets from exposure to hackers and accidental leaks. It uses versioned, file-based backups (with the file extension .stronghold) with double encryption that can be easily backed up and securely shared between devices. You can read more about Stronghold [here!](IOTA Stronghold: Beta Release)
+Stronghold 是由 IOTA 基金會開發的安全軟件實現，其唯一目的是隔離數字機密，避免暴露給黑客和意外洩漏。它使用帶有雙重加密的版本化、基於文件的備份（文件擴展名為 .stronghold），可以輕鬆備份並在設備之間安全共享。您可以閱讀更多關於 Stronghold [這裡！]（IOTA Stronghold：Beta 版）的信息
 
-#### I have lost access to my device. How do I recover my wallet?
+#### 我無法訪問我的設備。如何找回我的錢包？
 
-There are several ways to recover your wallet, and both can be found in the backups you performed in the wallet setup. One way would be using your 24-word recovery phrase, while the other would be using the Stronghold file you backed up.
+有幾種方法可以恢復你的錢包，這兩種方法都可以在你在錢包設置中執行的備份中找到。一種方法是使用您的 24 字恢復短語，而另一種方法是使用您備份的 Stronghold 文件.
 
-#### Do you plan to support Trezor or other hardware wallets?
+#### 你打算支持 Trezor 或其他硬件錢包嗎？
 
-We do not currently have any plans to support Trezor, but if a community member would like to work on the integration, please get in touch with Charlie#0123 on our Discord.
+我們目前沒有任何支持 Trezor 的計劃，但如果社區成員想要進行集成，請在我們的 Discord 上與 Charlie#0123 聯繫。
 
-#### Which Ledger hardware do you support?
+#### 您支持哪種 Ledger 硬件？
 
-The IOTA app is supported on Ledger Nano S/X via a USB connection. Additionally, the IOTA legacy app, which would be needed for a network migration process from the deprecated legacy network, works with Ledger Blue. Since official support is no longer provided for the Blue by Ledger, Blue can only be used for migrating funds.
+Ledger Nano S/X 通過 USB 連接支持 IOTA 應用程序。此外，從已棄用的舊網絡進行網絡遷移過程所需的 IOTA 舊版應用程序可與 Ledger Blue 一起使用。由於 Ledger 不再為 Blue 提供官方支持，Blue 只能用於遷移資金。
 
-#### Do I need to install the Ledger app on my computer? Where do I download this?
+#### 我需要在我的電腦上安裝 Ledger 應用程序嗎？我在哪裡下載這個？
 
-You can install both the new and legacy applications by downloading and installing Ledger Live. After ensuring your firmware is up-to-date, both IOTA apps can be installed to your Ledger device directly from Ledger Live in the Manager tab.
+您可以通過下載和安裝 Ledger Live 來安裝新的和舊的應用程序。在確保您的固件是最新的之後，兩個 IOTA 應用程序都可以直接從管理器選項卡中的 Ledger Live 安裝到您的 Ledger 設備上。
 
-#### I don't have my original Ledger USB cable anymore. Will this be a problem?
+#### 我沒有原來的 Ledger USB 數據線了。這會是一個問題嗎？
 
-Most Micro-USB (for Nano S) and USB-C (for Nano X) cables should work. We do recommend using the original cable, though.
+大多數 Micro-USB（適用於 Nano S）和 USB-C（適用於 Nano X）電纜都可以使用。不過，我們確實建議使用原裝電纜。
 
-#### Do I need to update my Ledger firmware before using it with Firefly?
+#### 在使用 Firefly 之前，我是否需要更新我的 Ledger 固件？
 
-Yes, the legacy and the new applications may not be visible in Ledger Live without the current firmware. Make sure you have the latest versions of both apps on your device.
+是的，如果沒有當前固件，舊版和新版應用程序可能在 Ledger Live 中不可見。確保您的設備上安裝了這兩個應用程序的最新版本。
 
-#### I don't have the original Ledger device that I used when I first set up Firefly. Will this be a problem?
+#### 我沒有第一次設置 Firefly 時使用的原始 Ledger 設備。這會是一個問題嗎？
 
-The 24 words mnemonic (also known as the recovery phrase) and your Firefly account index (default 0) are all you need to regain access to your tokens on the IOTA Tangle. The tokens are in no way connected to the hardware itself. You can set up a new device with the same recovery phrase to access your tokens.
+24 個單詞的助記詞（也稱為恢復短語）和您的 Firefly 帳戶索引（默認為 0）是您重新獲得對 IOTA 糾纏上代幣的訪問權限所需的全部內容。令牌絕不會連接到硬件本身。您可以使用相同的恢復短語設置新設備來訪問您的代幣。
 
-#### I have run out of space to install more applications on the Ledger. What should I do?
+#### 我沒有空間在 Ledger 上安裝更多應用程序。我該怎麼辦？
 
-If you're short on space, you may need to remove other cryptocurrency applications from your Ledger device temporarily. This will have no impact on the related cryptocurrencies. After reinstalling the apps, they will be available again. You should refer to the official Ledger support site if you need more help.
+如果您的空間不足，您可能需要暫時從您的 Ledger 設備中刪除其他加密貨幣應用程序。這不會對相關的加密貨幣產生影響。重新安裝應用程序後，它們將再次可用。如果您需要更多幫助，請參閱官方 Ledger 支持網站。
 
-## Backups and recovery
+## 備份和恢復
 
-#### I have the seed words (recovery phrase) but don't remember the password; what can I do?
+#### 我有種子詞（恢復短語）但不記得密碼；我能做什麼？
 
-The recovery phrase works without a password or PIN. Just input the words at the wallet set up, using the 'I have a text backup' option.
+恢復短語無需密碼或 PIN 即可使用。只需使用“我有文本備份”選項在設置的錢包中輸入單詞。
 
-#### Why should I do regular Stronghold backups?
+#### 為什麼要定期進行要塞備份？
 
-Performing regular Stronghold backups will allow you to keep convenient, up-to-date digital backups should something happen, where you would then have a complete recovery of your funds.
+執行定期要塞備份將使您能夠在發生某些事情時保持方便、最新的數位備份，這樣您就可以完全收回您的資金。
 
-#### What is an internal transfer? Is it different from a standard transaction?
+#### 什麼是內部轉帳？它與標準交易不同嗎？
 
-An internal transfer is the same as a standard transaction. It is just made between your own wallets; it is also handled entirely on the Tangle. It is easier to perform because you don't need to input the address.
+內部轉賬與標準交易相同。它只是在您自己的錢包之間製作的；它也完全在糾纏上處理。它更容易執行，因為您不需要輸入地址。
 
-#### I have forgotten my device pin. How do I recover my Ledger?
+#### 我忘記了我的設備密碼。如何恢復我的分類帳？
 
-Should you forget the Ledger PIN, you can reset and restore the Ledger using the 24-word recovery phrase.
+如果您忘記了 Ledger PIN，您可以使用 24 字的恢復短語重置和恢復 Ledger。
 
-#### How do I backup my Ledger transaction history?
+#### 如何備份我的 Ledger 交易歷史？
 
-Backups of your transaction history for Ledger Nano users are not currently supported but will be added in a later version. Firefly will sync your available transaction history when a Ledger profile is restored. It may not find all transactions, but it will always find your balance. In a future version, we will add support for retrieving your full transaction history from a node that stores the complete history of the IOTA Tangle.
+目前不支持為 Ledger Nano 用戶備份您的交易歷史記錄，但將在以後的版本中添加。當 Ledger 配置文件恢復時，螢火蟲將同步您可用的交易歷史記錄。它可能無法找到所有交易，但它總能找到您的餘額。在未來的版本中，我們將支持從存儲 IOTA 糾纏完整歷史記錄的節點檢索您的完整交易歷史記錄。
 
-#### Are the 24 words previously found in the Ledger and are now in Firefly for the same seed?
+#### 之前在 Ledger 中找到的 24 個單詞現在在糾纏中是否是同一個種子？
 
-The 24 words mnemonic, also known as the recovery passphrase, work in Firefly as both reflect the BIP39 standard. Never enter your recovery phrase anywhere other than your Ledger is strongly recommended. This defeats the security benefits of having a Ledger.
+24 個單詞的助記符，也稱為恢復密碼，在螢火蟲中工作，因為它們都反映了 BIP39 標準。強烈建議不要在 Ledger 以外的任何地方輸入恢復短語。這破壞了擁有帳本的安全優勢。
 
-#### Can I save a Stronghold backup in Firefly for a Ledger Profile? If yes, does this contain my Ledger Seed?
+#### 我可以在 Firefly 中為 Ledger Profile 保存要塞備份嗎？如果是，這是否包含我的分類帳種子？
 
-Strongholds are not used for Ledger profiles in Firefly.
+要塞不用於 Firefly 中的分類帳配置文件。
 
-#### Can I put my 24 words from the Ledger into Firefly to see/use my funds with Firefly?
+#### 我可以將我的 24 個單詞從 Ledger 放入 Firefly 以在 Firefly 中查看/使用我的資金嗎？
 
-You can, but it is not recommended because it circumvents the hardware wallet security model entirely and is therefore strongly advised against it!
+可以，但不建議這樣做，因為它完全繞過了硬件錢包安全模型，因此強烈建議不要這樣做！
 
-## Profiles and wallets
+## 個人資料和錢包
 
-#### What are profiles in Firefly?
+#### Firefly 中的配置文件是什麼？
 
-Profiles in Firefly are representations of your IOTA seed and contain all of your balances on different wallets. They also include general information such as your language and currency preferences and system notifications.
+Firefly 中的配置文件代表您的 IOTA 種子，並包含您在不同錢包中的所有餘額。它們還包括一般信息，例如您的語言和貨幣偏好以及系統通知。
 
-#### What are wallets in Firefly?
+#### Firefly 中的錢包是什麼？
 
-Wallets in Firefly are like a bank account and a personalized stock portfolio all in one. And in that sense, wallets always belong to a specific profile of your Firefly application. You can view your wallet balance and transactions, send and receive funds instantly, measure your wallet and token value over time, and check your wallet activity by month.
+Firefly 中的錢包就像一個銀行賬戶和一個個性化的股票投資組合。從這個意義上說，錢包始終屬於 Firefly 應用程序的特定配置文件。您可以查看您的錢包餘額和交易，即時發送和接收資金，隨時間測​​量您的錢包和代幣價值，並按月檢查您的錢包活動。
 
-#### Can I change profile names after I create the profile?
+#### 我可以在創建個人資料後更改個人資料名稱嗎？
 
-No, you cannot change a profile name after creating a profile just yet. But you can add a profile with your preferred name and populate it near-instantly with your preferred wallet(s), security, and other such information.
+不，您還不能在創建配置文件後更改配置文件名稱。但是您可以使用您的首選名稱添加配置文件，並使用您首選的錢包、安全性和其他此類信息幾乎立即填充它。
 
-#### Can I change wallet names after I create the account?
+#### 創建賬戶後可以更改錢包名稱嗎？
 
-Yes. You can change your wallet name by clicking on the ellipses (three dots in a row) next to your wallet balance, giving you the "Customise wallet" option. There, you can change the name of the wallet you are currently in.
+是的。您可以通過單擊錢包餘額旁邊的省略號（連續三個點）來更改您的錢包名稱，從而為您提供“自定義錢包”選項。在那裡，您可以更改您當前所在的錢包的名稱。
 
-#### What is "resync wallet"? Why do I need it, and what happens when I resync my wallet?
+#### 什麼是“重新同步錢包”？為什麼我需要它，當我重新同步我的錢包時會發生什麼？
 
-Resyncing your wallet starts a background task that makes sure all of your wallets are up to date; you would need it to ensure your wallet is correct so you can conduct the everyday functions of Firefly without issues.
+重新同步您的錢包會啟動一項後台任務，以確保您的所有錢包都是最新的；你需要它來確保你的錢包是正確的，這樣你就可以毫無問題地執行 Firefly 的日常功能。
 
-#### I want to delete a wallet; what happens to the funds in that wallet?
+#### 我想刪除一個錢包；那個錢包裡的錢怎麼辦？
 
-Wallets can only be deleted after your funds have been moved out of your wallet. So, you would need to send your funds from that wallet to another address.
+只有在您的資金從您的錢包中轉出後才能刪除錢包。因此，您需要將資金從該錢包發送到另一個地址。
 
-However, an empty 0 balance profile can be deleted.
+但是，可以刪除空的 0 餘額配置文件。
 
-#### I want to delete a profile; what happens to the funds in that profile?
+#### 我想刪除個人資料；該配置文件中的資金會怎樣？
 
-If you want to delete a profile, it is recommended that you first transfer your funds to a different profile. You need to make sure you have a backup for all of your wallets. If you delete a profile without a backup or recovery phrase, you will lose access to your IOTA!
+如果您想刪除配置文件，建議您先將資金轉移到不同的配置文件。您需要確保所有錢包都有備份。如果您刪除沒有備份或恢復短語的配置文件，您將無法訪問您的 IOTA！
 
-#### Why do I need to confirm the receiving address against one displayed on my Ledger device?
+#### 為什麼我需要根據我的 Ledger 設備上顯示的地址來確認收貨地址？
 
-This function is in place to confirm that the receiving address hasn't been manipulated by malicious software or by a man-in-the-middle attack. Make sure you always double-check it matches what is displayed on your device.
+此功能用於確認接收地址未被惡意軟件或中間人攻擊操縱。確保您始終仔細檢查它是否與您設備上顯示的內容相匹配。
 
-#### Can I have a Ledger wallet under my standard Firefly profile, or do I need to set up an entirely new profile for Ledger?
+#### 我可以在我的標準 Firefly 配置文件下擁有一個 Ledger 錢包，還是我需要為 Ledger 設置一個全新的配置文件？
 
-Every seed and Ledger has its own profile in Firefly. You need to create a new Firefly profile for every Ledger device you own.
+每個種子和分類帳在 Firefly 中都有自己的個人資料。您需要為您擁有的每個 Ledger 設備創建一個新的 Firefly 配置文件。
 
-#### How can I easily switch from one profile to another? Do I need to sign out each time?
+#### 如何輕鬆地從一個配置文件切換到另一個配置文件？每次都需要退出嗎？
 
-It is possible to change profiles. And yes, it is necessary to log out from one profile and log in to another with your PIN.
+可以更改配置文件。是的，有必要從一個配置文件中註銷並使用您的 PIN 登錄到另一個配置文件。
 
-#### Is it a bad idea to use the same PIN for Firefly as I do for my Ledger device?
+#### 對 Firefly 使用與 Ledger 設備相同的 PIN 是不是一個壞主意？
 
-Yes! As with websites, where security experts generally recommend that you use strong and unique passwords for each of your accounts, it is recommended to use unique PINs for Firefly and the Ledger device.
+是的！與網站一樣，安全專家通常建議您為每個帳戶使用強且唯一的密碼，建議為 Firefly 和 Ledger 設備使用唯一的 PIN。
 
-#### Where are my tokens located exactly if they are not on my Ledger device nor on my computer?
+#### 如果我的代幣既不在我的 Ledger 設備上也不在我的計算機上，它們的確切位置在哪裡？
 
-Since the Tangle is a distributed ledger, no one actually "holds" IOTA tokens in their wallet. The wallet controls the private keys.
+由於 Tangle 是一種分佈式賬本，因此實際上沒有人在他們的錢包中“持有”IOTA 代幣。錢包控制私鑰。
 
-A private key is like a secret passcode needed to transfer ownership of IOTA tokens on the Tangle. The private keys give the power to alter the Tangle record by authorizing an ownership transfer from one address to another. That transaction gets recorded in the Tangle.
+私鑰就像在 Tangle 上轉移 IOTA 代幣所有權所需的秘密密碼。私鑰授權通過授權從一個地址到另一個地址的所有權轉移來更改 Tangle 記錄。該交易記錄在 Tangle 中。
 
-To go deeper, IOTA tokens are, at their root, numbers: amounts assigned to IOTA addresses. For every private key, there are one or more public keys (which are translated into IOTA addresses).
+更深入地說，IOTA 代幣的根源是數字：分配給 IOTA 地址的數量。對於每個私鑰，都有一個或多個公鑰（轉換為 IOTA 地址）。
 
-The private key belonging to that corresponding public key is the secret code needed to "spend" IOTA tokens.
+屬於相應公鑰的私鑰是“花費”IOTA 代幣所需的密碼。
 
-You can think of the Firefly wallet as a password manager. Password managers store and secure the secret passwords you need to access websites, rather than the content of the websites themselves.
+您可以將 Firefly 錢包視為密碼管理器。密碼管理器存儲和保護您訪問網站所需的秘密密碼，而不是網站本身的內容。
 
-In this way, your Firefly wallet is essentially a key manager!
+這樣一來，你的 Firefly 錢包本質上就是一個密鑰管理器！
 
-Your private keys are stored on the Ledger device for and can never be extracted.
+您的私鑰存儲在 Ledger 設備上，永遠無法提取。
 
-## Transactions
+## 交易
 
-#### Can I use my own node to process my transaction?
+#### 我可以使用自己的節點來處理我的交易嗎？
 
-Yes. You can use your own node to process your transaction if it is accessible over HTTPS.
+是的。如果可以通過 HTTPS 訪問，您可以使用自己的節點來處理您的交易。
 
-#### I accidentally sent funds to the wrong address. Can I get them back?
+#### 我不小心將資金發送到錯誤的地址。我可以讓他們回來嗎？
 
-There is no way to recover funds accidentally sent to the wrong address.
+沒有辦法收回意外發送到錯誤地址的資金。
 
-#### Why can I not send less than 1Mi?
+####為什麼我不能發送小於1Mi？
 
-Because there is a minimum requirement of 1Mi due to the IOTA protocol's dust protection, in a later version, Firefly will enable a feature that allows you to send less than 1Mi.
+由於IOTA協議的防塵，最低要求是1Mi，所以在以後的版本中，Firefly會啟用一個允許你發送小於1Mi的功能。
 
-#### How can I send data transactions with Firefly?
+#### 如何使用 Firefly 發送數據事務？
 
-You cannot send data transactions with Firefly at this point in time.
+此時您無法使用 Firefly 發送數據事務。
 
-#### Where can I see my transaction history?
+####我在哪裡可以看到我的交易記錄？
 
-Your transaction history is broken down within your wallets. When you select "Wallets" from your dashboard, you will see a column with all of the transactions you made within the respective wallet.
+您的交易歷史記錄在您的錢包中進行細分。當您從儀表板中選擇“錢包”時，您將看到一個列，其中包含您在相應錢包中進行的所有交易。
 
-Additionally, there is an extra function, "wallet history," found in the ellipses (three dots) next to the "wallet balance" of your wallet page.
+此外，在您的錢包頁面的“錢包餘額”旁邊的省略號（三個點）中還有一個額外的功能“錢包歷史記錄”。
 
-#### How do I find a specific transaction that I did send/receive; I only know the day when it happened. Is there a search function?
+#### 如何找到我發送/接收的特定交易；我只知道事情發生的那一天。有搜索功能嗎？
 
-There is no search function in Firefly.
+Firefly 沒有搜索功能。
 
-#### What is a deep link, and how do I use it?
+#### 什麼是深層鏈接，如何使用它？
 
-Deep links automatically fill transaction data in Firefly when you click on an "iota://" link.
+當您單擊“iota://”鏈接時，深層鏈接會自動填充 Firefly 中的交易數據。
 
-#### Can I have a fixed receive address?
+####我可以有一個固定的接收地址嗎？
 
-Yes, you can have a fixed receive address. Simply copy an address from Firefly and store it somewhere. You can safely receive to an address as much as you like, but it is recommended to use new addresses for better privacy.
+是的，您可以有一個固定的接收地址。只需從 Firefly 複製一個地址並將其存儲在某個地方。您可以安全地接收任意地址，但建議使用新地址以獲得更好的隱私。
 
-#### Why do I need to confirm my transaction on the Ledger device against the one displayed in Firefly?
+#### 為什麼我需要在 Ledger 設備上與 Firefly 中顯示的交易進行確認？
 
-The Ledger Nano S/X shows you the transaction details before asking you to confirm. It then signs the transaction.
+在要求您確認之前，Ledger Nano S/X 會向您顯示交易詳情。然後它簽署交易。
 
-The addresses and values must exactly match those displayed by Firefly. This is to prevent man-in-the-middle attacks.
+地址和值必須與 Firefly 顯示的完全匹配。這是為了防止中間人攻擊。
 
-You should thoroughly verify them before confirming the transaction.
+在確認交易之前，您應該徹底驗證它們。
 
-## Staking
+## 質押
 
-#### Is staking secure? Will staked tokens stay in my control?
+#### 質押安全嗎？質押的代幣會留在我的控制之下嗎？
 
-Yes, absolutely. The staked tokens will always stay in your control. They neither need to be sent to a third party nor do private keys have to be shared with anyone. Firefly attaches a special message to IOTA tokens by sending them to the same address they currently reside on to stake IOTA tokens.
+是的，一點沒錯。質押的代幣將始終由您控制。它們既不需要發送給第三方，也不需要與任何人共享私鑰。 Firefly 通過將 IOTA 代幣發送到它們當前所在的相同地址來為 IOTA 代幣附加一條特殊消息，以質押 IOTA 代幣。
 
-#### How soon do I receive staking rewards?
+#### 我多久能收到質押獎勵？
 
-Staking rewards are being generated immediately after starting a new staking period. Staking for a specific reward is announced by projects that want to distribute staking rewards. Once the staking period starts, stakers will be earning staking rewards, usually every 10 seconds. Reward tokens are automatically issued to the Firefly wallet of the staker and can only be accessed by that wallet holder. Depending on the project doing the token distribution, the tokens might only be accessible with the launch of the actual project. Please refer to the individual project for more information when your tokens become fully available.
+在開始新的質押期後立即產生質押獎勵。想要分配 Staking 獎勵的項目會宣布 Staking 以獲得特定獎勵。一旦質押期開始，質押者將獲得質押獎勵，通常每 10 秒一次。獎勵代幣會自動發放到質押者的 Firefly 錢包，並且只能由該錢包持有者訪問。根據進行代幣分發的項目，代幣可能只有在實際項目啟動時才能訪問。當您的代幣完全可用時，請參閱單個項目以獲取更多信息。
 
-#### How and when can I unstake my tokens?
+#### 我如何以及何時可以取消我的代幣？
 
-Whenever you want, staking on IOTA is completely fluid, and there are no freezing or activation periods.
+無論何時，在 IOTA 上的質押都是完全流動的，沒有凍結或激活期。
 
-#### Is this like airdrops?
+#### 這像空投嗎？
 
-Somewhat. You could see IOTA staking as rolling airdrops or lock-drops, coming in every 10 seconds.
+有些。您可以將 IOTA 質押視為滾動空投或鎖定投遞，每 10 秒進行一次。
 
-#### Why don’t you just airdrop tokens to random accounts?
+#### 為什麼不將代幣空投到隨機賬戶？
 
-The idea is to incentivize active community members in order to allow new ecosystems to grow. To flourish, new economies need users that are willing to participate. Having users actively staking their IOTA tokens to gain rewards allows builders to separate the wheat from the chaff and only reward active users who care about upcoming economies and their opportunities. Simply speaking: builders are not interested in inactive, dormant users.
+這個想法是為了激勵活躍的社區成員，以允許新的生態系統發展。 為了蓬勃發展，新經濟體需要願意參與的用戶。 讓用戶積極質押他們的 IOTA 代幣以獲得獎勵，可以讓建設者將小麥從穀殼中分離出來，只獎勵關心即將到來的經濟體及其機會的活躍用戶。 簡單地說：建設者對不活躍的、休眠的用戶不感興趣。
 
-## Settings
+## 設置
 
-#### Where can I change my PIN and password?
+#### 我在哪裡可以更改我的 PIN 和密碼？
 
-You can change both your PIN and password under "Security" found in the settings of your dashboard.
+您可以在儀表板設置中的“安全”下更改您的 PIN 和密碼。
 
-#### Can I reuse an address? I know that this was always a problem in Trinity.
+#### 我可以重複使用地址嗎？ 我知道這一直是 Trinity 的問題。
 
-You can reuse an address in Firefly due to the EdDSA reusable address format.
+由於 EdDSA 可重用地址格式，您可以在 Firefly 中重用地址。
 
-#### Can I create NFTs or other digital assets in Firefly?
+#### 我可以在 Firefly 中創建 NFT 或其他數字資產嗎？
 
-You cannot create NFTs or other digital assets in Firefly at this time.
+目前您無法在 Firefly 中創建 NFT 或其他數字資產。
 
-## Troubleshooting
+## 故障排除
 
-#### How do I recover a PIN code?
+#### 如何恢復 PIN 碼？
 
-If you have lost your PIN, you need to create the profile again from a backup (recovery phrase or a Stronghold file) to re-access the profile. Later, you will create a new profile with a new PIN.
+如果您丟失了 PIN，則需要從備份（恢復短語或要塞文件）重新創建配置文件以重新訪問配置文件。稍後，您將使用新的 PIN 創建一個新的配置文件。
 
-#### I have my backup file but don't remember the password. How can I recover my funds?
+#### 我有我的備份文件，但不記得密碼。我怎樣才能收回我的資金？
 
-Without the password, you will not be able to recover your funds using the backup file. It is possible to access your funds using the recovery phrase and to set up a new profile in Firefly. However, your Firefly settings and history are lost by doing so.
+如果沒有密碼，您將無法使用備份文件恢復您的資金。可以使用恢復短語訪問您的資金並在 Firefly 中設置新的配置文件。但是，這樣做會丟失您的 Firefly 設置和歷史記錄。
 
-#### I received an error: what can I do?
+#### 我收到一個錯誤：我該怎麼辦？
 
-You can report to this GitHub page for any issues or errors: https://github.com/iotaledger/firefly/issues.
+您可以向此 GitHub 頁面報告任何問題或錯誤：https://github.com/iotaledger/firefly/issues。
 
-#### I received an error: "client error: { }". What does it mean, and what can I do?
+#### 我收到一個錯誤：“客戶端錯誤：{}”。這是什麼意思，我能做什麼？
 
-You can report to this GitHub page with any issues or errors: https://github.com/iotaledger/firefly/issues.
+您可以向此 GitHub 頁面報告任何問題或錯誤：https://github.com/iotaledger/firefly/issues。
 
-#### I received the "operation timed out" error message. What does it mean, and how can I solve it?
+#### 我收到“操作超時”錯誤消息。這是什麼意思，我該如何解決？
 
-You can report any issues or errors to this GitHub page: https://github.com/iotaledger/firefly/issues.
+您可以向此 GitHub 頁面報告任何問題或錯誤：https://github.com/iotaledger/firefly/issues。
 
-#### For those with more than one seed, can we replicate this process with every seed we have? Or do we need to transfer all tokens to one seed to migrate to the new network?
+#### 對於那些擁有不止一顆種子的人，我們可以用我們擁有的每一顆種子復制這個過程嗎？或者我們是否需要將所有代幣轉移到一個種子才能遷移到新網絡？
 
-You can import multiple seeds in Firefly. But this process must be replicated for every seed you own. Each seed will be imported into a new profile.
+您可以在 Firefly 中導入多個種子。但是必須為您擁有的每顆種子復制此過程。每個種子都將被導入一個新的配置文件。
 
-#### Can I buy IOTAs directly in Firefly?
+#### 我可以直接在 Firefly 中購買 IOTA 嗎？
 
-You cannot buy IOTAs directly in Firefly at this time. You can visit the IOTA website for more information about buying IOTA from an exchange.
+目前您無法直接在 Firefly 中購買 IOTA。您可以訪問 IOTA 網站，了解有關從交易所購買 IOTA 的更多信息。
 
-#### Why won't Firefly connect with my Ledger? Also, My IOTA application always closes after a couple of seconds after opening it. Why is this?
+#### 為什麼 Firefly 無法連接到我的 Ledger？此外，我的 IOTA 應用程序總是在打開後幾秒鐘後關閉。為什麼是這樣？
 
-If your Ledger is already connected and unlocked, ensure that you have closed the official Ledger Live application or browser plug-ins that might use the Ledger (e.g. MetaMask). Then make sure Ledger Live is not running silently in the background. Firefly cannot communicate with Ledger hardware if the Ledger Live software is open simultaneously. Firefly also provides a guide during setup to help with connection issues, and you can read the official Ledger guide here.
+如果您的 Ledger 已連接並解鎖，請確保您已關閉可能使用 Ledger 的官方 Ledger Live 應用程序或瀏覽器插件（例如 MetaMask）。然後確保 Ledger Live 沒有在後台靜默運行。如果 Ledger Live 軟件同時打開，Firefly 將無法與 Ledger 硬件通信。 Firefly 還在設置過程中提供了幫助解決連接問題的指南，您可以在此處閱讀官方 Ledger 指南。
 
-#### Finding balances keeps stalling. Why is this?
+#### 尋找平衡一直停滯不前。為什麼是這樣？
 
-If your Ledger device does not show "Generating address…" while finding balances, then try disconnecting and reconnecting the device in rare cases where you used an old version of the legacy app. You may need to uninstall and reinstall the legacy app. Return to Ledger Live, reinstall this application on your Ledger device and try again.
+如果您的 Ledger 設備在查找餘額時未顯示“正在生成地址...”，那麼在您使用舊版應用程序的極少數情況下，請嘗試斷開連接並重新連接設備。您可能需要卸載並重新安裝舊版應用程序。返回 Ledger Live，在您的 Ledger 設備上重新安裝此應用程序，然後重試。
 
-#### Why does my balance keep showing zero?
+#### 為什麼我的餘額一直顯示為零？
 
-Firstly, you can try "Check Again" to search for more addresses with balance.
+首先，您可以嘗試“再次檢查”以搜索更多餘額的地址。
 
-If your balance continues to display 0, you may have selected the wrong account index number. The default account index number is 0, but it is possible to change this from 0-2147483647. If this was changed during your Trinity Ledger setup, you might wish to try alternative account indexes to reveal your funds.
+如果您的餘額繼續顯示 0，則您可能選擇了錯誤的帳戶索引號。默認帳戶索引號為 0，但可以在 0-2147483647 之間更改。如果在您設置 Trinity Ledger 期間更改了此設置，您可能希望嘗試使用其他帳戶索引來顯示您的資金。
 
-#### What happens if my computer falls asleep or restarts during the migration process?
+#### 如果我的計算機在遷移過程中進入休眠狀態或重新啟動會怎樣？
 
-First, check if the migration is still in progress. If it is, then it should be complete on its own. Alternatively, you can check if you have a profile for that migration as it may have already been completed. If there are no profiles associated with the migration, you can simply create a new profile to start the migration again. If there is a profile, but the full set of migration transactions are not there, go to Advanced Settings and select "Migrate Another Index." You can continue where you left off by choosing the same account index and searching for more balance.
+首先，檢查遷移是否仍在進行中。如果是，那麼它應該是完整的。或者，您可以檢查您是否有該遷移的配置文件，因為它可能已經完成。如果沒有與遷移關聯的配置文件，您只需創建一個新配置文件即可再次開始遷移。如果有配置文件，但不存在完整的遷移事務集，請轉到高級設置並選擇“遷移另一個索引”。您可以通過選擇相同的帳戶索引並蒐索更多餘額來繼續您離開的地方。
 
-## Migration
+## 遷移
 
-#### I found an old seed from Trinity. Now that the migration period has already finished, how can I access these funds?
+#### 我從三位一體中找到了一顆舊種子。現在遷移期已經結束，我如何才能獲得這些資金？
 
-Seed migrations can be made after the migration period ends, at least until Coordicide.
+種子遷移可以在遷移期結束後進行，至少在 Coordicide 之前。
 
-#### Do I need to keep the IOTA Legacy app installed on my Ledger Nano after I have finished migration?
+#### 完成遷移後，我是否需要在我的 Ledger Nano 上繼續安裝 IOTA Legacy 應用程序？
 
-Once you have safely migrated all your account indexes to Firefly, the Legacy IOTA app will no longer be needed. Follow official Ledger guidance on how to remove Ledger Nano apps with Ledger Live.
+將所有帳戶索引安全遷移到 Firefly 後，將不再需要舊版 IOTA 應用程序。遵循 Ledger 官方指南，了解如何使用 Ledger Live 刪除 Ledger Nano 應用程序。
 
-#### If I follow the Ledger migration procedures, can I migrate the Ledger accounts that have been created with the 25th "word" passphrase?
+#### 如果我遵循 Ledger 遷移程序，我可以遷移使用第 25 個“單詞”密碼創建的 Ledger 帳戶嗎？
 
-The 25th word can be used with your Ledger, and Firefly will still find your tokens.
+第 25 個單詞可以與您的 Ledger 一起使用，Firefly 仍會找到您的代幣。
 
-#### What if something goes wrong while I migrate? Who do I contact?
+#### 如果我遷移時出現問題怎麼辦？我該聯繫誰？
 
-If any part of the process is aborted or fails, it can be redone! If something still goes wrong, reach out to the #help channel on Discord for community support.
+如果該過程的任何部分中止或失敗，則可以重做！如果仍有問題，請聯繫 Discord 上的#help 頻道以獲得社區支持。
 
-IMPORTANT: Never share personal information regarding the number of tokens you own, their type, or where and how you keep them, how you secure them, including passwords, recovery passphrases, and user names of wallet accounts or exchanges. Do NOT share that information with anyone – including members of the IOTA Foundation.
+重要提示：切勿分享有關您擁有的代幣數量、其類型、保存它們的位置和方式、保護它們的方式的個人信息，包括密碼、恢復密碼和錢包帳戶或交易所的用戶名。不要與任何人分享該信息——包括 IOTA 基金會的成員。
 
-Read more about "Security During Token Migration" on Chrysalis [here](https://blog.iota.org/security-during-token-migration/).
+在 Chrysalis [此處](https://blog.iota.org/security-during-token-migration/) 上閱讀有關“令牌遷移期間的安全性”的更多信息。
 
-#### If I have multiple addresses associated with one seed, will the Chrysalis migration send all of my tokens to one address?
+#### 如果我有多個地址與一個種子相關聯，Chrysalis 遷移會將我的所有代幣發送到一個地址嗎？
 
-Yes, Firefly will send your funds to one address in migration.
+是的，Firefly 會在遷移過程中將您的資金發送到一個地址。
 
-#### I have lots of addresses with less than 1Mi balance. What should I do?
+#### 我有很多餘額少於 1Mi 的地址。我該怎麼辦？
 
-Firefly will attempt to consolidate all of your funds, but there is a chance some dust (<1 Mi) is lost. If you have lots of addresses with <1Mi funds, it is recommended you first consolidate your balance in Trinity before 28 April 2021.
+Firefly 將嘗試整合您的所有資金，但有可能會丟失一些灰塵 (<1 Mi)。如果您有很多地址少於 1Mi 的資金，建議您在 2021 年 4 月 28 日之前先將餘額合併到 Trinity。
 
-#### In Chrysalis, will it be possible to migrate a seed for which all the addresses sum to less than 1 Mi?
+#### 在 Chrysalis 中，是否可以遷移所有地址總和小於 1 Mi 的種子？
 
-Seeds with <1 Mi balance in total will not migrate. We recommend sending all of those small balances to a seed with a balance of >=1 Mi to migrate.
+總餘額小於 1 Mi 的種子不會遷移。我們建議將所有這些小余額發送到餘額 >=1 Mi 的種子以進行遷移。
 
-#### Will the Firefly mobile app be available upon Chrysalis release, or do I have to migrate on PC?
+#### Firefly 移動應用程序會在 Chrysalis 發布後可用，還是我必須在 PC 上遷移？
 
-For now, the migration will be done via PC. Once Chrysalis is complete, we will focus on the mobile app!
+目前，遷移將通過 PC 完成。 Chrysalis 完成後，我們將專注於移動應用程序！
 
-#### I have 20 addresses on my Ledger Nano S. Is that a problem? I heard about this memory problem where only two addresses can be emptied at once.
+#### 我的 Ledger Nano S 上有 20 個地址。有問題嗎？我聽說過這個內存問題，一次只能清空兩個地址。
 
-The migration will bundle addresses together to avoid issues. Have a look at this article by the IOTA community for further information about how to consolidate your tokens.
+遷移會將地址捆綁在一起以避免出現問題。查看 IOTA 社區的這篇文章，了解有關如何整合代幣的更多信息。
 
-Firefly will attempt to consolidate all of your funds, but there is a chance some dust (<1 Mi) is lost.
+Firefly 將嘗試整合您的所有資金，但有可能會丟失一些灰塵 (<1 Mi)。
 
-#### What are the tax implications of the migration?
+#### 遷移的稅收影響是什麼？
 
-Tax regulations are different from country to country. Contact your local tax office or a tax consultant for the exact handling in your country.
+稅收規定因國家而異。請聯繫您當地的稅務局或稅務顧問，了解您所在國家/地區的具體處理方式。
 
-#### How do I migrate more than one Trinity account index?
+#### 如何遷移多個 Trinity 帳戶索引？
 
-If you want to migrate more than one account index, you will need to manually go through the indexes one by one and migrate them. Once you have completed the migration for one index, you will be prompted to migrate another index on the same profile. Each migration is sent to a separate wallet within the same Firefly profile.
+如果要遷移多個賬戶索引，則需要手動逐個遍歷索引並進行遷移。完成一個索引的遷移後，系統將提示您遷移同一配置文件上的另一個索引。每個遷移都發送到同一 Firefly 配置文件中的單獨錢包。
 
-You can also migrate additional indexes by going to the Advanced Settings in your dashboard and choosing "Migrate Ledger Index." This will migrate the funds to the same profile.
+您還可以通過轉到儀表板中的高級設置並選擇“遷移分類帳索引”來遷移其他索引。這會將資金遷移到相同的配置文件。
 
-#### The balance that is shown is less than the balance I have on my Ledger. What can I do?
+#### 顯示的餘額小於我帳本上的餘額。我能做什麼？
 
-Firefly provides a "check again" option to check more addresses for balance. If the balance is 0 and cannot be found by checking multiple times again, you likely selected the wrong account index.
+Firefly 提供了一個“再次檢查”選項來檢查更多地址的餘額。如果餘額為0，多次查看都找不到，可能是你選錯了帳戶索引。
 
-#### Why does it say my "Funds are at risk" during migration?
+#### 為什麼在遷移過程中顯示“我的資金有風險”？
 
-It was a risk to send funds from the same address more than once in the old legacy network. If you see this message, Firefly will guide you through a process to help secure those addresses before migration. You can read more about spent addresses here.
+在舊的遺留網絡中多次從同一個地址發送資金是有風險的。如果您看到此消息，Firefly 將指導您完成遷移前幫助保護這些地址的過程。您可以在此處閱讀有關已用地址的更多信息。
 
-#### What is bundle mining?
+####什麼是捆綁挖礦？
 
-If you have spent addresses, it means you accidentally received funds to an address that was already spent from. These funds are not safe to send again due to the Winternitz type one-time signature scheme (see below under "Spent Addresses" for more details).
+如果您已經使用了地址，這意味著您意外收到了一個已經使用過的地址的資金。由於 Winternitz 類型的一次性簽名方案，這些資金再次發送是不安全的（有關更多詳細信息，請參見下文“已用地址”部分）。
 
-To secure your spent addresses during the migration, Firefly will try to find a new bundle that reveals the least amount of additional private key parts compared to previous signs.
+為了在遷移期間保護您使用的地址，Firefly 將嘗試找到一個新的捆綁包，與以前的跡象相比，該捆綁包顯示的額外私鑰部分最少。
 
-This process will take 10 minutes per spent address and, upon completion, you will be presented with a risk calculation (very high, high, medium, low, very low). It is recommended that you repeat the process if it returns a bundle with medium risk or higher, particularly for significant sums of IOTA. You have the option to select which addresses you want to mine for and again which you want to rerun the process for.
+此過程將花費每個已用地址 10 分鐘，完成後，您將看到風險計算（非常高、高、中、低、非常低）。如果它返回具有中等或更高風險的捆綁包，建議您重複該過程，特別是對於大量 IOTA。您可以選擇要挖掘的地址以及要重新運行該過程的地址。
 
-## Spent Addresses
+## 花費地址
 
-#### What are spent addresses, and why are they dangerous?
+#### 什麼是已用地址，為什麼它們很危險？
 
-In the original IOTA network, IOTA used Winternitz One Time Signatures (W-OTS): think of these as, more or less, an authenticator and validator for a transaction. These keys and signatures are highly secure against malicious attacks for signing transactions. But, on the downside, by signing a transaction, W-OTS reveals parts of a private key for the specific address tokens are being spent from.
+在最初的 IOTA 網絡中，IOTA 使用 Winternitz One Time Signatures (W-OTS)：或多或少地將這些視為交易的身份驗證器和驗證器。這些密鑰和簽名對於簽署交易的惡意攻擊非常安全。但是，不利的一面是，通過簽署交易，W-OTS 揭示了用於特定地址令牌的私鑰的部分內容。
 
-With W-OTS, every time a signature is signed to spend tokens from a particular address, any remaining tokens need to be moved onto a new address to prevent malicious actors from brute-forcing (trial-and-error guessing) the remaining parts of the private key for the address. That's the main reason why this signature scheme is considered to be a "one-time signature".
+使用 W-OTS，每次簽署簽名以使用特定地址的代幣時，都需要將任何剩餘的代幣移動到新地址，以防止惡意行為者暴力破解（試錯猜測）剩餘部分地址的私鑰。這就是為什麼這種簽名方案被認為是“一次性簽名”的主要原因。
 
-So after the Chrysalis update, we are using the Ed25519, based on the EdDSA scheme instead of W-OTS. The advantage is that the new scheme addresses all of the issues that W-OTS originally had, where Ed25519 verifies both single-signature and batch verification (taking care of the remaining tokens) very quickly and faster key generation and smaller signatures (very secure).
+所以在 Chrysalis 更新之後，我們使用的是 Ed25519，基於 EdDSA 方案而不是 W-OTS。優點是新方案解決了 W-OTS 最初存在的所有問題，其中 Ed25519 驗證單簽名和批量驗證（處理剩餘的令牌）非常快速和更快的密鑰生成和更小的簽名（非常安全）。
 
-#### Why is it not possible to migrate some of my tokens?
+#### 為什麼無法遷移我的某些代幣？
 
-If you have lots of small amounts (<1Mi) spread across many addresses, it may not be possible to migrate these as there is a minimum requirement of 1Mi for a successful migration due to our dust protection. In this case, it is not possible to migrate a seed with less than 1Mi. It is recommended you consolidate your funds in Trinity first by simply sending your entire balance to yourself.
+如果您有很多少量 (<1Mi) 分佈在許多地址中，則可能無法遷移這些，因為由於我們的防塵保護，成功遷移的最低要求為 1Mi。在這種情況下，不可能遷移小於 1Mi 的種子。建議您先將您的全部餘額發送給自己，從而將您的資金合併到 Trinity。
 
-#### Why does Firefly keep telling me the same risk rating?
+#### 為什麼螢火蟲總是告訴我同樣的風險等級？
 
-Firefly will conduct bundle mining in rare cases because of your spent address(es). When attempting to proceed with the migration, Firefly will spend a few minutes trying to find a safe bundle for the address(es), so you can migrate tokens safely.
+Firefly 會在極少數情況下因為您的地址已用完而進行捆綁挖礦。在嘗試繼續遷移時，Firefly 將花費幾分鐘時間嘗試為地址找到安全的捆綁包，以便您可以安全地遷移代幣。
 
-Once the security check completes, you can choose to rerun the process (which may lower your risk level) or continue the migration process once you feel satisfied.
+安全檢查完成後，您可以選擇重新運行該過程（這可能會降低您的風險級別）或在您感到滿意後繼續遷移過程。
 
-However, in some cases, it is difficult to improve the bundle's security. You may rerun the process as many times as you like, but some spent addresses are very difficult to lower the risk. You can keep trying or migrate anyway and accept the risk involved.
+但是，在某些情況下，很難提高捆綁包的安全性。您可以根據需要多次重新運行該過程，但某些已用過的地址很難降低風險。無論如何，您都可以繼續嘗試或遷移並接受所涉及的風險。
