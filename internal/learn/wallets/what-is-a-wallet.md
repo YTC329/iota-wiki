@@ -4,43 +4,43 @@ description: A wallet helps you to securely store and handle your Tokens. We
   describe the different options available.
 ---
 
-# What is a Wallet?
+# 什麼是錢包？
 
-A wallet is a tool that gives you access to your IOTA tokens. One very important fact that you need to understand from the beginning is **your IOTA tokens are never stored INSIDE a wallet**.
+錢包是一種工具，可讓您訪問您的 IOTA 代幣。 您需要從一開始就了解的一個非常重要的事實是**您的 IOTA 代幣永遠不會存儲在錢包中**。
 
-This is a common misunderstanding. All your IOTA tokens only exist in the Tangle network and cannot leave this network. So you do not physically “store” them “inside” anything.
+這是一個常見的誤解。 你所有的 IOTA 代幣只存在於 Tangle 網絡中，不能離開這個網絡。 因此，您不會在物理上將它們“存儲”在任何東西“內部”。
 
-A wallet is a tool to access, transfer and manipulate your tokens on the IOTA network. It gives you a convenient solution to store your secret keys and use them in the network to control your tokens.
+錢包是在 IOTA 網絡上訪問、轉移和操作您的代幣的工具。 它為您提供了一個方便的解決方案來存儲您的密鑰並在網絡中使用它們來控制您的代幣。
 
-The wallet knows the private key and the public key of your **seed**. Armed with these two points of cryptographic information, a wallet can access the addresses of all your tokens on the network and has full control over all functions of the ledger. The wallet takes care of securely storing this important information for you. But if you lose access to the wallet, you lose access to this information, so it is **essential** that you always have proper backups of these secrets stored in a safe location.
+錢包知道你的**種子**的私鑰和公鑰。 有了這兩點加密信息，錢包就可以訪問網絡上所有代幣的地址，並完全控制賬本的所有功能。 錢包負責為您安全地存儲這些重要信息。 但是，如果您無法訪問錢包，您將無法訪問此信息，因此**重要**您始終將這些秘密的適當備份存儲在安全位置。
 
-Think of a wallet more like a browser that knows exactly the place where your tokens sit in the huge IOTA network and that makes it possible for you to control them. But again, never forget: the tokens are always and only on the Tangle and never in your wallet. In crypto, we divide wallets into two categories:
+把錢包想像成一個瀏覽器，它可以準確地知道你的代幣在巨大的 IOTA 網絡中的位置，這使你可以控制它們。 但同樣，永遠不要忘記：代幣始終且僅在 Tangle 上，永遠不會在您的錢包中。 在加密貨幣中，我們將錢包分為兩類：
 
-- Software wallets
-- Hardware wallets
+- 軟體錢包
+- 硬體錢包
 
-## Software Wallets
+## 軟體錢包
 
-A software wallet is a computer program that is executed in the operating system of your device (a computer or smartphone). It has no representation in a physical device and the program code is not written (or "hard-coded") in a computer chip. Software wallets are user-friendly and therefore a very popular way to handle your tokens. They usually need a short setup process where you enter your secret seed once – and then never need to type this complicated list of letters or characters again. You log in to the software wallet with a carefully chosen password and gain access to your tokens. Now you can easily send and receive tokens.
+軟體錢包是在您的設備（計算機或智能手機）的操作系統中執行的計算機程序。它在物理設備中沒有表示，並且程序代碼沒有寫入（或“硬編碼”）在計算機芯片中。軟件錢包是用戶友好的，因此是處理代幣的一種非常流行的方式。他們通常需要一個簡短的設置過程，您可以在其中輸入一次秘密種子 - 然後再也不需要輸入這個複雜的字母或字符列表。您使用精心選擇的密碼登錄軟件錢包並獲得對您的代幣的訪問權限。現在您可以輕鬆發送和接收令牌。
 
-But as software wallets are part of your operating system, the security of a software wallet can always be only as good as the security of the entire operating system. So you need to make sure that your operating system is free of malicious software, otherwise it will be easy for an attacker to get access your secret keys and your tokens. If you use a software wallet to handle your IOTA tokens, always have an up-to-date system, run quality antivirus and anti-malware programs, and follow best practices for cybersecurity.
+但是由於軟體錢包是您操作系統的一部分，因此軟體錢包的安全性始終只能與整個操作系統的安全性一樣好。因此，您需要確保您的操作系統沒有惡意軟件，否則攻擊者很容易獲得您的密鑰和令牌。如果您使用軟件錢包來處理您的 IOTA 代幣，請始終擁有最新的系統，運行優質的防病毒和反惡意軟件程序，並遵循網絡安全的最佳實踐。
 
-The IOTA Foundation has developed a software wallet that follows the highest standards to keep your secrets safe. Read about the Firefly wallet here: [**Firefly Wallet**](/learn/wallets/firefly-wallet)
+IOTA 基金會開發了一款遵循最高標準的軟件錢包，以確保您的秘密安全。 在此處閱讀有關螢火蟲錢包的信息：[**螢火蟲錢包**](/learn/wallets/firefly-wallet)
 
-And download the Firefly wallet at the [**Firefly official website**](https://firefly.iota.org/)
+並在[**螢火蟲官網**](https://firefly.iota.org/)下載Firefly錢包
 
-## Hardware Wallets
+## 硬體錢包
 
-Hardware wallets are physical devices that are solely constructed to handle the secret information (seeds and private keys) of your tokens. They use cryptographic techniques and software coded into the chips of the device to hide these secrets from the outside world. The big advantage of these devices is that they are not part of your normal computer operating system. Nor are they even part of the physical hardware of the devices that you use for your normal daily use, like browsing the internet or using different kinds of software. This makes them an encapsulated safe vault whose only purpose is to protect your crypto secrets.
+硬體錢包是專門用於處理代幣的秘密信息（種子和私鑰）的物理設備。他們使用加密技術和編碼到設備芯片中的軟件來向外界隱藏這些秘密。這些設備的最大優勢在於它們不是您正常計算機操作系統的一部分。它們甚至也不是您日常使用的設備物理硬件的一部分，例如瀏覽互聯網或使用不同類型的軟件。這使它們成為一個封裝的安全保險庫，其唯一目的是保護您的加密機密。
 
-Only when you want to do something with your tokens do you need to establish a connection between this hardware wallet and the IOTA network where your tokens are. Usually, this connection is established by a software wallet that runs on your computer. For this purpose, you need to connect the hardware wallet to your computer (via cable or USB). This connection is extremely well protected and never transfers secret information between the hardware and software wallets. The user of the hardware wallet establishes a connection to the software wallet, and the software wallet establishes the connection to the IOTA network.
+只有當你想用你的代幣做某事時，你才需要在這個硬件錢包和你的代幣所在的 IOTA 網絡之間建立連接。通常，此連接是由在您的計算機上運行的軟件錢包建立的。為此，您需要將硬件錢包連接到您的計算機（通過電纜或 USB）。這種連接受到非常好的保護，並且永遠不會在硬件和軟件錢包之間傳輸秘密信息。硬件錢包的用戶與軟件錢包建立連接，軟件錢包與IOTA網絡建立連接。
 
-Through sophisticated cryptographic concepts, the user can now interact with the IOTA network, without the possibility of malicious software stored on the user's computer accessing the secrets that are stored on the hardware wallet. This adds a second wall of security that keeps the secrets outside the reach of the user's potentially infected computer.
+通過複雜的密碼學概念，用戶現在可以與 IOTA 網絡進行交互，而不會讓存儲在用戶計算機上的惡意軟件訪問存儲在硬件錢包上的秘密。這增加了第二道安全牆，使用戶的潛在受感染計算機無法觸及機密。
 
-A hardware wallet is therefore the most secure way to keep your secrets safe, but it also adds an extra layer of complexity to the use of your crypto, on top of what a software wallet provides.
+因此，硬件錢包是保護您的秘密安全的最安全方式，但除了軟件錢包提供的功能之外，它還為您的加密貨幣的使用增加了一層額外的複雜性。
 
-IOTA currently supports the use of the Ledger Nano hardware wallet. Read how to use it [**here.**](/learn/wallets/firefly-wallet#user-guide-for-users-of-a-ledger-nano-x-or-ledger-nano-s-device)
+IOTA 目前支持使用 Ledger Nano 硬件錢包。 閱讀如何使用它 [**這裡**](/learn/wallets/firefly-wallet#user-guide-for-users-of-a-ledger-nano-x-or-ledger-nano-s-device )
 
-Only purchase a Ledger directly from the official store on the official website: [**Ledger Hardware Wallets**](https://www.ledger.com/)
+只能直接從官方網站上的官方商店購買 Ledger：[**Ledger 硬體錢包**](https://www.ledger.com/)
 
 ---
