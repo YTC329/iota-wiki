@@ -4,20 +4,20 @@ title: Buying IOTA
 description: Where and how to buy the IOTA Cryptocurrency.
 ---
 
-# Buying IOTA
+# 購買 IOTA
 
-IOTA is listed on most major cryptocurrency exchanges.
+IOTA 在大多數主要的加密貨幣交易所上市。
 
-## Buying IOTA in the United States
+## 在美國購買 IOTA
 
 - [**Binance.US**](https://www.binance.us/en/home)
 - [**Bittrex**](https://global.bittrex.com/)
 - [**Gate.io**](https://www.gate.io/)
 
-## Buying IOTA everywhere else
+## 在其他任何地方購買 IOTA
 
-- [**Binance**](https://www.binance.com/en)
-- [**Bitfinex**](https://www.bitfinex.com/)
+- [**Binance (幣安交易所)**](https://www.binance.com/en)
+- [**Bitfinex (綠葉交易所)**](https://www.bitfinex.com/)
 - [**Bittrex**](https://global.bittrex.com/)
 - [**Gate.io**](https://www.gate.io/)
 - [**Liquid**](https://www.liquid.com/)
