@@ -3,42 +3,41 @@ title: Non-fungile Token (NFTs)
 description: This article explains the different types of NFTs on IOTA.
 ---
 
-## What is a NFT?
+## 什麼是 NFT？
 
-Ethereum was the first blockchain to support NFTs with its ERC-721 standard. The difference to normal tokens is that the NFT is unique and clearly verifiable, and can be used to prove ownership of any digital good.
+以太坊是第一個通過 ERC-721 標準支持 NFT 的區塊鏈。與普通代幣的不同之處在於，NFT 是獨一無二的，並且可以清楚地驗證，並且可以用來證明任何數字商品的所有權。
 
-There are many use cases for NFTs, the most common use case is to link an image to it which becomes unique digital art which can be sold on open NFT marketplaces.
+NFT 有很多用例，最常見的用例是將圖像鏈接到它，這成為獨特的數字藝術，可以在開放的 NFT 市場上出售。
 
-Other use cases would be to use NFTs as assets in games, for event tickets, for Decentralized Finance (DeFi), for voting in decentralized autonomous organizations (DAOs) or for any objects in the Metaverse.
+其他用例是將 NFT 用作遊戲中的資產、活動門票、去中心化金融 (DeFi)、去中心化自治組織 (DAO) 中的投票或元界中的任何對象。
 
-## Different NFT Types on IOTA
+## IOTA 上的不同 NFT 類型
 
-![tokenized-assets](/img/learn/layer2-tokenized-assets.png)
+![代幣化資產](/img/learn/layer2-tokenized-assets.png)
 
-### Digital Native Assets
+### 數字原生資產
 
-Layer 1 Assets also known as "Digital Native Assets". With the [IOTA tokenization framework](https://blog.iota.org/tokenization-on-the-tangle-iota-digital-assets-framework/), you can create NFTs on L1 using the NFT output type. Layer 1 NFTs can be transferred on the whole layer without any fees and enable you to transfer NFTs between different smart contract chains.
+第 1 層資產也稱為“數字原生資產”。借助 [IOTA 代幣化框架](https://blog.iota.org/tokenization-on-the-tangle-iota-digital-assets-framework/)，您可以使用 NFT 輸出類型在 L1 上創建 NFT。第 1 層 NFT 可以在整個層上轉移，無需任何費用，使您能夠在不同的智能合約鏈之間轉移 NFT。
 
-### Layer 2 Assets
+### 第 2 層資產
 
-Layer 2 Assets are created within Smart Contracts and can be minted out of thin air. That means, you don't need any coins to mint new NFTs.
+第 2 層資產是在智能合約中創建的，可以憑空鑄造。這意味著，你不需要任何硬幣來鑄造新的 NFT。
 
-- For the Wasm VM, there are ERC721 Standards implemented in [Rust, Go and Typescript](https://github.com/iotaledger/wasp/tree/develop/contracts/wasm/erc721).
-- EVM Assets (Ethereum standards like ERC721 or ERC1155) can be used in the IOTA Smart Contract EVM Chain. You can use the Open Source library from [OpenZeppelin Smart Contracts](https://github.com/OpenZeppelin/openzeppelin-contracts).
+- 對於 Wasm VM，在 [Rust、Go 和 Typescript](https://github.com/iotaledger/wasp/tree/develop/contracts/wasm/erc721) 中實現了 ERC721 標準。
+- EVM 資產（以太坊標準，如 ERC721 或 ERC1155）可用於 IOTA 智能合約 EVM 鏈。您可以使用 [OpenZeppelin Smart Contracts](https://github.com/OpenZeppelin/openzeppelin-contracts) 中的開源庫。
 
-## NFT Marketplaces
+## NFT 市場
 
-The first IOTA NFT marketplace, was developed by the IOTA community and launched in July 2021 on the IOTA 2.0 DevNet. The marketplace is a feeless alternative to the expensive and energy-wasting approaches taken by other networks.
-
-Their tests phase has ended. For the next steps, they implement Smart Contracts and integrate Browser Wallets to make the NFT trading secure and accessible.
+第一個 IOTA NFT 市場由 IOTA 社區開發，並於 2021 年 7 月在 IOTA 2.0 DevNet 上推出。與其他網絡採用的昂貴且浪費能源的方法相比，市場是一種毫無意義的替代方案。
+他們的測試階段已經結束。在接下來的步驟中，他們實施智能合約並集成瀏覽器錢包，以使 NFT 交易安全且可訪問。
 
 - [nftiota.org](https://nftiota.org/)
 
-## NFT Projects
+## NFT 項目
 
-The community also creates really amazing artworks and already dropping them on the Smart Contract testnet. Please note - all these NFTs are on the testnet, and be careful that some NFT projects might do new drops when the mainnet launches.
+社區還創造了非常棒的藝術品，並已經將它們放到了智能合約測試網上。請注意 - 所有這些 NFT 都在測試網上，請注意一些 NFT 項目可能會在主網啟動時進行新的投放。
 
-Here is a list of community projects. Please feel free to add yours!
+這是社區項目的列表。請隨時添加您的！
 
 - [iota-nft.art](https://iota-nft.art/)
 - [iotabots.io](https://iotabots.io/)
