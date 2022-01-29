@@ -4,282 +4,281 @@ description: The IOTA Firefly Wallet sets a new standard for Software Wallets in
   DLT. Learn everything here.
 ---
 
-# Firefly Wallet
+# 螢火蟲錢包
 
-## Table of contents
+## 目錄
 
-- [General Overview and Introduction](#general-overview-and-introduction)
-- [Firefly Token Migration](#firefly-token-migration)
-- Firefly User Guide
-  - [User guide for standard users](#user-guide-for-standard-users)
-  - [User Guide for users of a Ledger Nano X or Ledger Nano S device](#user-guide-for-users-of-a-ledger-nano-x-or-ledger-nano-s-device)
-- Firefly FAQ
-  - [Setup and installation](#setup-and-installation)
-  - [Backups and recovery](#backups-and-recovery)
-  - [Profiles and wallets](#profiles-and-wallets)
-  - [Transactions](#transactions)
-  - [Settings](#settings)
-  - [Troubleshooting](#troubleshooting)
-  - [Migration](#migration)
-  - [Spent Addresses](#spent-addresses)
+- [一般概述和介紹](#general-overview-and-introduction)
+- [螢火蟲代幣遷移](#firefly-token-migration)
+- 螢火蟲用戶指南
+  - [標準用戶的用戶指南](#user-guide-for-standard-users)
+  - [Ledger Nano X 或 Ledger Nano S 設備用戶的用戶指南](#user-guide-for-users-of-a-ledger-nano-x-or-ledger-nano-s-device)
+- 螢火蟲 FAQ
+  - [設置和安裝](#setup-and-installation)
+  - [備份和恢復](#backups-and-recovery)
+  - [個人資料和錢包](#profiles-and-wallets)
+  - [交易](#transactions)
+  - [設置](#settings)
+  - [故障排除](#troubleshooting)
+  - [遷移](#migration)
+  - [已用地址](#spent-addresses)
 
-## General Overview and Introduction
+## 一般概述和介紹
 
-Firefly is the secure entry point to the IOTA ecosystem.
+螢火蟲是 IOTA 生態系統的安全入口點。
 
-It is built with a bright future in mind. It will evolve into a tool that offers much more than being just a software wallet for your IOTA tokens. Firefly offers a modular design that makes it easy to add innovative new features later on. IOTA’s new wallet guides you through the complexities of crypto, protected and with ease while using cutting-edge technology to secure your tokens.
+它是在考慮到光明的未來的情況下建造的。它將演變成一種工具，提供的不僅僅是 IOTA 代幣的軟件錢包。 螢火蟲提供模塊化設計，便於以後添加創新的新功能。 IOTA 的新錢包將引導您輕鬆應對加密的複雜性，同時使用尖端技術保護您的代幣。
 
-Some of the most important features are:
+一些最重要的功能是：
 
-- _Written in Rust_: Rust offers security from the ground up – while maintaining speed, low memory usage and scalability. This allows us to build apps with better performance and higher security.
-- _Modular design_: Firefly separates different functionalities – like seed storage, handling transactions and cryptography – in module crates. A module crate groups together related functions so that the functionality is easy to share between multiple projects that aim to use the same feature.
-- _Secured with Stronghold_: Sensitive actions like address generation and transaction signing take place in isolated application memory built upon the IOTA Stronghold library, keeping the seed away from potential attackers.
-- _Crypto.rs_: Crypto.rs combines all cryptographic algorithms used by many of the projects at the IOTA Foundation. It reduces the risk of using unsafe crypto implementations, making it easier to audit, resulting in verifiably safer code.
+- _用 Rust 編寫_：Rust 從頭開始提供安全性——同時保持速度、低內存使用和可擴展性。這使我們能夠構建具有更好性能和更高安全性的應用程序。
+- _模塊化設計_：螢火蟲在模塊箱中分離不同的功能——如種子存儲、處理交易和密碼學。模塊箱將相關功能組合在一起，以便在旨在使用相同功能的多個項目之間輕鬆共享功能。
+- _用 Stronghold 保護_：地址生成和交易簽名等敏感操作發生在 IOTA Stronghold 庫上構建的隔離應用程序內存中，使種子遠離潛在的攻擊者。
+- _Crypto.rs_：Crypto.rs 結合了 IOTA 基金會許多項目使用的所有加密算法。它降低了使用不安全加密實現的風險，使其更容易審計，從而產生可驗證的更安全的代碼。
 
-Find more information on the official website and download the Firefly wallet exclusively from:
+在官方網站上查找更多信息，並從以下網址獨家下載螢火蟲錢包：
 
-- [**Firefly**](https://firefly.iota.org/)**:** official Website
-- [**Firefly Github Releases**](https://github.com/iotaledger/firefly/releases): official Firefly GitHub Repo with the latest release version
+- [**螢火蟲**](https://firefly.iota.org/)**:** 官方網站
+- [**Firefly Github 發布**](https://github.com/iotaledger/firefly/releases): 帶有最新發布版本的官方 Firefly GitHub 存儲庫
+- 
+## 螢火蟲代幣遷移
 
-## Firefly Token Migration
+隨著新的 IOTA 1.5 Chrysalis 主網於 2021 年 4 月 28 日結束，每個 IOTA 持有者都必須將其全部資金從舊的 IOTA 1.0 網絡遷移到新的、改進的和先進的 1.5 網絡。為了使這個過程對用戶友好且安全，IOTA 基金會在 Firefly 錢包中集成了一個遷移工具，該工具負責整個過程並自動將您的資金從舊網絡轉移到新網絡。
 
-With the launch of the new IOTA 1.5 Chrysalis Mainnet end of 28 April 2021, every IOTA holder must migrate their entire funds from the old IOTA 1.0 network to the new, improved and advanced 1.5 network. To make this process user-friendly and safe, the IOTA Foundation has integrated a migration tool into the Firefly wallet that takes care of the whole process and automatically moves your funds from the old into the new network.
+將代幣移動到新網絡唯一需要做的就是你當前的 IOTA 1.0 網絡種子，表示為 81 個字符的組合，或者你從 Trinity 錢包和密碼備份的“.kdbx 種子庫文件”屬於該文件或您的 Ledger Nano 設備。在 Firefly 錢包遷移過程中輸入此信息後，將開始全自動遷移，您的所有資金都將安全地轉移到新網絡中。完成後，您將可以通過 Firefly 訪問它們。在此處閱讀有關該過程的所有信息：
 
-The only thing you need to move your tokens to the new network is your current IOTA 1.0 network seed, represented as a combination of 81 characters, or a `.kdbx seed vault file` that you have backed up from the Trinity wallet and the password that belongs to the file, or your Ledger Nano device. With this information entered in the Firefly Wallet Migration Process, a fully automated migration will start and all your funds will be moved securely into the new network. Upon completion, you will have access to them through Firefly. Read everything about the process here:
+- [**蛹遷移**](https://blog.iota.org/the-chrysalis-token-migration-starts-now/)**:** 蛹網絡遷移過程
+- [**螢火蟲遷移過程**](https://blog.iota.org/firefly-token-migration/): 解釋了整個遷移過程（針對非 Ledger 用戶）
+- [**Ledger Nano 遷移指南**](https://blog.iota.org/firefly-token-migration-guide-for-ledger-users/): 為 Ledger 用戶解釋了整個遷移過程
+- [**遷移安全性**](https://blog.iota.org/security-during-token-migration/): 安全遷移過程的重要建議
 
-- [**Chrysalis Migration**](https://blog.iota.org/the-chrysalis-token-migration-starts-now/)**:** The Chrysalis network migration process
-- [**Firefly Migration Process**](https://blog.iota.org/firefly-token-migration/): The whole migration process explained (for non-Ledger users)
-- [**Ledger Nano Migration Guide**](https://blog.iota.org/firefly-token-migration-guide-for-ledger-users/): The whole migration process explained for Ledger users
-- [**Migration Security**](https://blog.iota.org/security-during-token-migration/): Important advice for a safe migration process
+## 有用的鏈接
 
-## Useful Links
-
-- [**Firefly Discord Channel**](https://discord.com/channels/397872799483428865/748265907351978115): Discuss the Firefly wallet, ask questions and engage with the IOTA community on Discord
-- [**Firefly GitHub**](https://github.com/iotaledger/firefly): Firefly codebase and development repository
+- [**螢火蟲 Discord 頻道**](https://discord.com/channels/397872799483428865/748265907351978115): 在 Discord 上討論螢火蟲錢包、提出問題並與 IOTA 社區互動
+- [**螢火蟲 GitHub**](https://github.com/iotaledger/firefly): 螢火蟲代碼庫和開發存儲庫
 
 ---
 
-## **Firefly User Guide**
+## **螢火蟲用戶指南**
 
-## User guide for standard users
+## 標準用戶的用戶指南
 
-### Account Structure
+### 帳戶結構
 
-Firefly's basic account-handling logic works as follows:
+螢火蟲的基本帳戶處理邏輯如下：
 
-- One Firefly **profile** is always the representation of one **IOTA seed**
-- Every Firefly **profile** can host an unlimited amount of **wallets,** which can be seen as sub-accounts under the one **profile seed**.
+- 一個螢火蟲 **配置文件** 始終代表一個 **IOTA 種子**
+- 每個 Firefly **配置文件** 可以託管無限數量的 **錢包，** 可以看作是一個 **配置文件種子** 下的子賬戶。
 
-### Profile Setup
+### 配置文件設置
 
-Every **profile** receives a unique IOTA Seed consisting of a **24-word mnemonic phrase** created with the `BIP39 Standard`. During the profile creation, these 24 words will be shown to the user **only once** and the user must make sure to back up these 24 words. We highly recommend creating a paper wallet as a physical backup for these words. Losing the words will potentially result in losing access to the profile and the funds connected with the seed. To make sure that the user has created a backup of the 24 words, a check is done during setup, which requires adding all the 24 words in the correct order by the user.
+每個 **配置文件** 都會收到一個唯一的 IOTA Seed，其中包含使用“BIP39 標準”創建的 **24 字助記詞**。在配置文件創建期間，這 24 個單詞將向用戶顯示**一次**，用戶必須確保備份這 24 個單詞。我們強烈建議創建一個紙質錢包作為這些詞的物理備份。丟失單詞可能會導致無法訪問個人資料和與種子相關的資金。為了確保用戶已經創建了 24 個單詞的備份，在設置過程中會進行檢查，這需要用戶以正確的順序添加所有 24 個單詞。
 
-After the user has received the 24 seed words the user can also create a **Stronghold file** as a digital backup of the profile. This file also contains the securely encrypted seed and setup information for the profile. We strongly recommend storing this file in several independent locations (such as a USB stick or Cloud storage). Should the 24 words somehow be lost, it will be possible to restore a profile with this file. To use the file, the user has to create a secure password that encrypts the Stronghold file. Only in combination with this password will the Stronghold file restore the profile. It is therefore essential that the user also securely store the password to this Stronghold file.
+在用戶收到 24 個種子詞後，用戶還可以創建一個 **要塞文件** 作為配置文件的數字備份。此文件還包含配置文件的安全加密種子和設置信息。我們強烈建議將此文件存儲在幾個獨立的位置（例如 U 盤或云存儲）。如果 24 個單詞不知何故丟失，則可以使用此文件恢復配置文件。要使用該文件，用戶必須創建一個加密要塞文件的安全密碼。只有結合此密碼，要塞文件才能恢復配置文件。因此，用戶還必須將密碼安全地存儲到此要塞文件中。
 
-Next, the user creates a PIN code as an easy access method to the Firefly wallet interface. This PIN code is required to enter the profile dashboard but does not grant access to functions that handle or move the user's funds or give access to the security settings of the wallet. For these actions that require a higher level of security, the user needs to enter the Stronghold password. Only this password gives access to the full functionality of the wallet.
+接下來，用戶創建一個 PIN 碼作為訪問螢火蟲錢包界面的簡單方法。進入個人資料儀表板需要此 PIN 碼，但不能訪問處理或移動用戶資金或訪問錢包安全設置的功能。對於這些需要更高安全級別的操作，用戶需要輸入要塞密碼。只有這個密碼才能訪問錢包的全部功能。
 
-If different users aim to use the same Firefly wallet app, or if you have IOTA tokens on multiple seeds, you need to create a new profile for every seed/every user.
+如果不同的用戶打算使用同一個螢火蟲錢包應用程序，或者如果您在多個種子上擁有 IOTA 代幣，您需要為每個種子/每個用戶創建一個新的配置文件。
 
-**Key takeaways:**
+**關鍵要點:**
 
-- **Securely back up the 24-word mnemonic phrase – it is your IOTA seed!**
-- **Securely store your Stronghold backup file and the Stronghold password!**
-- **Store it in multiple independent locations, both digitally and physically!**
+- **安全備份 24 個單詞的助記詞——它是您的 IOTA 種子！**
+- **安全地存儲您的要塞備份文件和要塞密碼！**
+- **以數字和物理方式將其存儲在多個獨立位置！**
 
-### Firefly Dashboard
+### 螢火蟲儀表板
 
-![dashboard](/img/learn/firefly/dashboard.png)
+![儀表板](/img/learn/firefly/dashboard.png)
 
-The Firefly dashboard is the main overview of a user profile. Easily accessible information on the spot and the most common functions – "send" and "receive" – ordered in a clear layout. Here, users are shown the total profile balance, the different wallets that belong to the profile, and a list of the latest transactions. IOTA price or profile value is shown in a handy chart, and the basic security info of the profile is displayed.
+螢火蟲儀表板是用戶配置文件的主要概覽。現場易於訪問的信息和最常見的功能——“發送”和“接收”——以清晰的佈局排列。在這裡，用戶可以看到個人資料總餘額、屬於個人資料的不同錢包以及最新交易列表。 IOTA 價格或配置文件價值顯示在一個方便的圖表中，並顯示配置文件的基本安全信息。
 
-## Wallets
+## 錢包
 
-Wallets are sub-accounts to a seed (profile). It may be a convenient way to have several of them for different occasions. Users could have a "long-term hold" and a "spending" wallet, or a wallet where they receive payments, another one in which only donations are received, etc. Users are free to set them up as they wish. To create a new wallet, simply use the "+" sign in the `My Wallets` section of the dashboard. Assign a name for the wallet, confirm the creation with your Stronghold password, and the wallet is all set to receive funds.
+錢包是種子（配置文件）的子帳戶。在不同的場合使用其中的幾個可能是一種方便的方法。用戶可以有一個“長期持有”和一個“支出”錢包，或者一個他們接收付款的錢包，另一個只接收捐款的錢包，等等。用戶可以根據自己的意願自由設置。要創建新錢包，只需使用儀表板“我的錢包”部分中的“+”號即可。為錢包指定一個名稱，使用您的 Stronghold 密碼確認創建，錢包已準備好接收資金。
 
-Wallets contain a collection of addresses and those addresses are grouped under this wallet to help users keep their addresses organized.
+錢包包含一組地址，這些地址被分組在這個錢包下，以幫助用戶保持他們的地址井井有條。
 
-It is important to mention here that users can only set up further wallets if the first wallet already contains funds. If users want to set up five different wallets, they need a small amount of IOTA in every newly created wallet before another one can be created.
+重要的是這裡要提到的是，如果第一個錢包已經包含資金，用戶只能設置更多的錢包。如果用戶想要設置五個不同的錢包，他們需要在每個新創建的錢包中添加少量 IOTA，然後才能創建另一個錢包。
 
-### Wallet Detail View
+### 錢包詳情視圖
 
-![wallet detail view](/img/learn/firefly/wallet_detail_view.png)
+![錢包詳情視圖](/img/learn/firefly/wallet_detail_view.png)
 
-A click of the mouse on one of the wallets in the dashboard overview opens the Wallet Detail Screen. Here users see the balance contained in this specific wallet and have the option to send and receive transactions.
+在儀表板概覽中的一個錢包上單擊鼠標可打開錢包詳細信息屏幕。在這裡，用戶可以看到此特定錢包中包含的餘額，並可以選擇發送和接收交易。
 
-Next to the send and receive section, an overview of all the transactions related to this specific wallet is shown. Small icons indicate if a send or receive transaction has been completed internally (to another wallet of the same profile) or externally.
+在發送和接收部分旁邊，顯示了與此特定錢包相關的所有交易的概述。小圖標指示發送或接收交易是在內部（到相同配置文件的另一個錢包）還是在外部完成。
 
-Also, you have will find **three small dots** next to the wallet balance.
+此外，您會在錢包餘額旁邊找到**三個小點**。
 
-Clicking on those dots opens a pop-up menu.
+單擊這些點會打開一個彈出菜單。
 
-In this pop-up menu you can enter the following functions:
+在此彈出菜單中，您可以輸入以下功能：
 
-**Customize Wallet**
+**自定義錢包**
 
-- Gives the possibility to change the name of wallet.
+- 提供更改錢包名稱的可能性。
 
-**View Address History**
+**查看地址歷史記錄**
 
 - A list of all addresses that have been used by this wallet and the balance that sits currently on this address. You can copy this list and paste it into your documents.
 
 **Hide Wallet**
 
-- Empty wallets can be hidden to keep your main wallet overview organized. If a wallet still contains funds, you will not be able to hide it by clicking this option but will be offered to transfer the funds to another wallet and hide the wallet afterward. A hidden wallet can be shown again by enabling the function "show hidden wallets" in the advanced account settings.
+- 此錢包已使用的所有地址的列表以及當前位於此地址上的餘額。您可以復制此列表並將其粘貼到您的文檔中。
 
-#### Transaction detail view.
+#### 交易詳情視圖。
 
-![transaction details view](/img/learn/firefly/transaction_details_view.png)
+![交易詳情視圖](/img/learn/firefly/transaction_details_view.png)
 
-The following information about the transaction is displayed:
+顯示有關交易的以下信息：
 
-- A transaction flow that indicates: **from where > token amount > to where,** followed by:
+- 一個交易流，表明：**從哪裡 > 代幣數量 > 到哪裡，** 後跟：
 
-**Status**
+**狀態**
 
-- Confirmed or pending status of the message
+- 訊息的已確認或待處理狀態
 
-**Date**
+**日期**
 
-- Date and time when the transaction was issued or received (in local System time)
+- 交易發出或接收的日期和時間（本地系統時間）
 
-**Message ID**
+**訊息 ID**
 
-- The unique identifier of this specific message (every transaction in IOTA is a message) in the IOTA Ledger.
+- 此特定訊息（IOTA 中的每筆交易都是一條訊息）在 IOTA 帳本中的唯一標識符。
 
-**Send Address**
+**發送地址**
 
-- The address from where the transaction was initiated
+- 發起交易的地址
 
-**Receive Address**
+**接收地址**
 
-- The address on which the tokens of this transaction have arrived. Several different receive addresses may be shown in this view. The addresses belonging to you are highlighted with the name of your wallet in brackets, other addresses that are shown without brackets do not belong to you. These are normally the addresses of the sender. To these addresses, the remaining funds that have not been used from the sender's address are transferred. This is related to the UTXO (unspent transaction output) Account model in IOTA.
-- If a transaction is issued from a UTXO output (an address holding funds) that does not consume all funds that are part of this output, one transaction moves the funds that are planned to send away from the address, and a second transaction moves the rest of the unused funds from this UTXO to a new UTXO output. Both these transactions are part of the message and therefore shown in the Transaction detail. Read more about the UTXO Account model [here](/IOTA-2.0-Research-Specifications/5.1UTXO/).
+- 該交易的代幣到達的地址。此視圖中可能會顯示幾個不同的接收地址。屬於您的地址以括號中的錢包名稱突出顯示，其他不帶括號的地址不屬於您。這些通常是發件人的地址。將發送者地址中未使用的剩餘資金轉移到這些地址。這與 IOTA 中的 UTXO（未使用的交易輸出）帳戶模型有關。
+- 如果一筆交易是從一個 UTXO 輸出（持有資金的地址）發出的，該輸出不消耗作為該輸出一部分的所有資金，則一筆交易將計劃發送的資金從該地址移走，第二筆交易將其餘的資金移走將未使用的資金從這個 UTXO 轉移到一個新的 UTXO 輸出。這兩個事務都是訊息的一部分，因此顯示在事務詳細信息中。閱讀更多關於 UTXO 賬戶模型的信息 [這裡](/IOTA-2.0-Research-Specifications/5.1UTXO/)。
 
-**Amount**
+**數量**
 
-- Amount of IOTA sent and current value in the chosen profile currency
+- 以所選配置文件貨幣發送的 IOTA 數量和當前價值
 
-**Two different charts**
+**兩個不同的圖表**
 
-- **Wallet value** and **wallet activity** also provide a graphic overview of the activities in this wallet.
+- **錢包價值**和**錢包活動**還提供此錢包中活動的圖形概覽。
 
-### Send and Receive Transactions
+### 發送和接收交易
 
-- The send and receive functions are available in the main wallet's dashboard, and also in every wallet detail view.
+- 發送和接收功能可在主錢包的儀表板中使用，也可在每個錢包詳細信息視圖中使用。
 
-**Receive**
+**接收**
 
-- Click on the "Receive" button to open the Receive Funds dialogue. Using a dropdown menu, the user can choose in which of the wallets the incoming funds should be received. The receive address of the selected wallet is displayed as a QR code and as a written address. The button `Copy Address` copies the displayed receive address into the user's clipboard for convenient pasting into other applications or documents. **The receive address of a user will change every time funds have been received and spent again from that address. The wallet creates automatically a fresh address for the next receive attempt.**
-- If a user has received but not yet spent funds from that receiving address, the user can manually decide to generate a fresh receive address using the refresh button above the QR code. This function is an essential privacy feature that is a standard approach in crypto to reduce the traceability of your balances
+- 點擊“接收”按鈕打開接收資金對話框。使用下拉菜單，用戶可以選擇應在哪個錢包中接收傳入資金。所選錢包的接收地址顯示為二維碼和書面地址。 “複製地址”按鈕將顯示的接收地址複製到用戶的剪貼板中，以便於粘貼到其他應用程序或文檔中。 **每次從該地址接收和再次使用資金時，用戶的接收地址都會改變。錢包會自動為下一次接收嘗試創建一個新地址。**
+- 如果用戶已從該收款地址收到但尚未花費資金，用戶可以使用二維碼上方的刷新按鈕手動決定生成新的收款地址。此功能是一項重要的隱私功能，是加密貨幣中減少餘額可追溯性的標準方法。
 
-**Send**
+**發送**
 
-- The send function has two essential features. The first is **send payment**, which is a standard IOTA transaction where you type or copy in a full IOTA receive address in the form of `iotaxjdjfkfkldldd.......`. The user now defines the wallet from where the tokens should be sent in a dropdown menu and the number of tokens to be sent. While defining the amount, a user may choose **max**, the second essential feature, which will send all the tokens contained in the chosen wallet or specify the exact amount with manual input. A dropdown button provides the option to switch the amount between different unit sizes (Mi, Gi, and so on). **Make sure that you are entering the token amount in the correct unit size.**
-- To initiate the transaction, the user has to enter the stronghold password which confirms and signs the transaction. After this, the following steps are performed by the wallet to deliver the transaction to the recipient:
-- **Syncing wallet**: establishing the connection to the IOTA Ledger,
-- **Performing PoW:** a tiny amount of proof of work is performed by the device of the user,
-- **Broadcasting transaction:** sending the signed transaction to the connected node,
-- **Transfer complete:** confirmation that the transaction is accepted and included in the Ledger.
+- 發送功能有兩個基本特徵。第一個是**發送付款**，這是一個標準的 IOTA 交易，您可以在其中輸入或複製完整的 IOTA 接收地址，格式為“iotaxjdjfkfkldldd.......”。用戶現在在下拉菜單中定義應從哪裡發送代幣的錢包以及要發送的代幣數量。在定義金額時，用戶可以選擇**max**，這是第二個基本功能，它將發送所選錢包中包含的所有代幣或通過手動輸入指定確切的金額。下拉按鈕提供了在不同單位大小（Mi、Gi 等）之間切換數量的選項。 **確保您以正確的單位大小輸入代幣數量。**
+- 要啟動交易，用戶必須輸入確認和簽署交易的要塞密碼。在此之後，錢包將執行以下步驟以將交易交付給收件人：
+- **同步錢包**：建立與 IOTA Ledger 的連接，
+- **執行 PoW：** 少量工作證明由用戶的設備執行，
+- **廣播交易：**將簽名的交易發送到連接的節點，
+- **轉帳完成：**確認交易被接受並包含在分類帳中。
 
-This whole process happens in just a few seconds.
+整個過程只需幾秒鐘。
 
-If you send and receive funds, they will always be organized under the wallet that you used to send or receive, so it is easier to keep track if you have a lot of transactions going on.
+如果您發送和接收資金，它們將始終組織在您用於發送或接收的錢包下，因此如果您有大量交易進行，則更容易跟踪。
 
-## User Guide for Users of a Ledger Nano X or Ledger Nano S Device
+## Ledger Nano X 或 Ledger Nano S 設備用戶用戶指南
 
-Firefly is available on Windows, Mac and Linux and now supports Ledger Nano X and Ledger Nano S via USB connection. The Ledger Nano integration is straightforward and similar to using Firefly with a non-Ledger profile. This guide serves as an additional resource to help you understand how you can use your ledger to secure your tokens with Firefly and what you need to be aware of when you perform certain actions while using the wallet.
+螢火蟲可在 Windows、Mac 和 Linux 上使用，現在通過 USB 連接支持 Ledger Nano X 和 Ledger Nano S。 Ledger Nano 集成很簡單，類似於將螢火蟲與非 Ledger 配置文件一起使用。本指南可作為附加資源，幫助您了解如何使用帳本通過 Firefly 保護您的代幣，以及在使用錢包時執行某些操作時需要注意的事項。
 
-### What is a Ledger Nano?
+### 什麼是 Ledger Nano？
 
-[Ledger Nano](https://www.ledger.com/) is a hardware device that connects to your computer via USB (other models are available with bluetooth support but this is not currently supported in Firefly). When you set up your Ledger Nano, you are instructed to safely store a recovery phrase. This recovery phrase is used by the device to sign transactions and generate addresses. It is not possible to extract the recovery phrase (or private keys generated from it) from the Ledger device. So it is important to store your recovery phrase safely. The hardware device creates a boundary between your computer and the private keys needed to access your funds. It provides a level of security that is simply not possible with software alone.
+[Ledger Nano](https://www.ledger.com/) 是一種硬件設備，通過 USB 連接到您的計算機（其他型號支持藍牙，但目前螢火蟲不支持）。設置 Ledger Nano 時，系統會指示您安全地存儲恢復短語。設備使用此恢復短語來簽署交易並生成地址。無法從 Ledger 設備中提取恢復短語（或從中生成的私鑰）。因此，安全地存儲您的恢復短語非常重要。硬件設備在您的計算機和訪問您的資金所需的私鑰之間創建了一個邊界。它提供了僅靠軟件根本無法實現的安全級別。
 
-### Before you start, make sure:
+### 在開始之前，請確保：
 
-- 1.) You have [initialized](https://support.ledgerwallet.com/hc/en-us/articles/360000613793) your Ledger device.
-- 2.) The latest firmware is [installed](https://support.ledgerwallet.com/hc/en-us/articles/360002731113).
-- 3.) Ledger Live is [installed and ready to use](https://www.ledger.com/ledger-live/download).
-- 4.) You have installed the latest version of Firefly
+- 1.) 您已經 [初始化](https://support.ledgerwallet.com/hc/en-us/articles/360000613793) 您的 Ledger 設備。
+- 2.) [已安裝]最新固件(https://support.ledgerwallet.com/hc/en-us/articles/360002731113)。
+- 3.) Ledger Live [已安裝並可以使用](https://www.ledger.com/ledger-live/download)。
+- 4.) 您已安裝最新版本的 Firefly
 
-### Install the IOTA app on your ledger device
+### 在您的帳本設備上安裝 IOTA 應用程序
 
-- 1.) Open the Manager tab in Ledger Live.
-- 2.) Connect and unlock your Ledger device.
-- 3.) Follow the onscreen instructions and allow Ledger Manager.
-- 4.) Find and install IOTA (MIOTA) in the app catalog.
+- 1.) 在 Ledger Live 中打開管理器選項卡。
+- 2.) 連接並解鎖您的 Ledger 設備。
+- 3.) 按照屏幕上的說明操作並允許 Ledger Manager。
+- 4.) 在應用程序目錄中找到並安裝 IOTA (MIOTA)。
+- 
+### 如何使用螢火蟲設置 Ledger Nano
 
-### How to set up a Ledger Nano with Firefly
+注意：如果您是現有的 IOTA 用戶，並且在 2021 年 4 月 28 日蛹網絡升級之前使用 Ledger 保護了 IOTA，您需要將您的代幣遷移到新網絡，然後才能開始使用螢火蟲。有一個全面的書面指南和視頻指南可幫助您完成遷移過程。
 
-Note: If you are an existing IOTA user and secured IOTA with a Ledger before the Chrysalis network upgrade on 28 April 2021, you will need to migrate your tokens over to the new network before you can begin using Firefly. There is a comprehensive written guide and a video guide to help you through the migration process.
+### 創建新的分類帳配置文件
 
-### Creating a new Ledger profile
+在螢火蟲中創建新的 Ledger 配置文件既快速又簡單。下載螢火蟲後，打開應用程序並按照設置說明進行操作。您首先需要查看並接受條款和條件，設置主題（深色或淺色），然後選擇個人資料名稱。選擇“創建新錢包”。
 
-Creating a new Ledger profile in Firefly is quick and simple. Once you have downloaded Firefly, open the app and follow the setup instructions. You first need to review and accept the terms and conditions, set a theme (dark or light), and choose a profile name. Select "Create a new wallet".
+![設置錢包分類帳](/img/learn/firefly/setup_a_wallet_ledger.png)
 
-![setup a wallet ledger](/img/learn/firefly/setup_a_wallet_ledger.png)
+按“我想要一個硬件錢包”開始 Ledger 配置文件設置過程。
 
-Press "I want a hardware wallet" to begin the Ledger profile setup process.
+![創建一個錢包分類帳](/img/learn/firefly/create_a_wallet_ledger.png)
 
-![create a wallet ledger](/img/learn/firefly/create_a_wallet_ledger.png)
+在下一頁上，您將被要求設置 PIN 碼。此 PIN 用於登錄您的錢包並阻止其他人登錄和查看您的餘額交易歷史記錄。選擇一個只有您知道的 PIN。在下一頁重新輸入您的 PIN 碼以確認。
 
-On the next page, you will be asked to set a PIN code. This PIN is used to log in to your wallet and blocks other people from logging in and viewing your balance transaction history. Choose a PIN that only you know. Re-enter your PIN on the next page to confirm.
+![設定 pin ledger](/img/learn/firefly/set_pin_ledger.png)
 
-![set pin ledger](/img/learn/firefly/set_pin_ledger.png)
+現在，螢火蟲將檢查您的 Ledger Nano 是否已連接。確保 IOTA 應用程序在您的設備上打開並且 Ledger Live 已關閉。如果您遇到連接問題，請遵循螢火蟲中的“如果您的 Ledger 未連接時的提示”指南。
 
-Now, Firefly will check that your Ledger Nano is connected. Make sure the IOTA app is open on your device and that Ledger Live is closed. If you have connection problems follow the "Tips if your Ledger isn't connecting" guide in Firefly.
+![連接 Ledger 帳本](/img/learn/firefly/connect_ledger.png)
 
-![connect ledger ledger](/img/learn/firefly/connect_ledger.png)
+點擊“繼續”，這就是它的全部內容。真的就是這麼簡單。您現在可以進入儀表板並開始探索螢火蟲。
 
-Hit "Continue", and that's all there is to it. It really is that simple. You can now enter the dashboard and begin exploring Firefly.
+![設置完整 ledger](/img/learn/firefly/setup_complete_ledger.png)
 
-![setup complete ledger](/img/learn/firefly/setup_complete_ledger.png)
+### 接收代幣
 
-### Receiving tokens
+如果您想將資金接收到您的新分類帳配置文件中，您可以按儀表板上的“接收”按鈕。
 
-If you would like to receive funds to your new Ledger profile you can press the "Receive" button on the dashboard.
+![生成地址 ledger](/img/learn/firefly/generate_address_ledger.png)
 
-![generate address ledger](/img/learn/firefly/generate_address_ledger.png)
+在此頁面上，您可以選擇“生成地址”，螢火蟲將提示您確認地址與您的 Ledger 設備上顯示的地址匹配。
 
-On this page you can select "Generate address" and Firefly will prompt you to confirm the address matches the one displayed on your Ledger device.
+![確認接收地址 ledger](/img/learn/firefly/confirm_receive_address_ledger.png)
 
-![confirm receive address ledger](/img/learn/firefly/confirm_receive_address_ledger.png)
+滾動瀏覽 Ledger 設備上的地址。當您的 Ledger 顯示“Ok”時，按兩個按鈕確認它匹配。
 
-Scroll through the address on your Ledger device. Confirm it matches by pressing both buttons when your Ledger reads "Ok".
+注意：這是一項安全檢查，可確保您連接到 Firefly 的官方安全版本。它確保沒有惡意軟件可以更改您收到的地址，並且它與您的 Ledger 生成的地址相匹配。
 
-Note: This is a security check to ensure that you are connected to the official, secure version of Firefly. It ensures that no malicious software can alter the address you receive to and that it matches the one generated by your Ledger.
+![顯示 ledger 地址](/img/learn/firefly/display_ledger_address.png)![okay ledger 顯示](/img/learn/firefly/okay_ledger_display.png)
 
-![display ledger address](/img/learn/firefly/display_ledger_address.png)![okay ledger display](/img/learn/firefly/okay_ledger_display.png)
+您現在可以復制地址並將其分享給您希望從中接收代幣的朋友或交易所。始終確保地址與分類帳設備上顯示的地址相同。
 
-You can now copy the address and share it with a friend or exchange from which you wish to receive tokens. Always make sure the address is the same as the one displayed on your ledger device.
+![查看錢包 ledger](/img/learn/firefly/wallet_view_ledger.png)
 
-![wallet view ledger](/img/learn/firefly/wallet_view_ledger.png)
+### 發送代幣
 
-### Sending tokens
+一旦您收到某個地址的代幣，您的餘額將更新，您將能夠在交易歷史記錄中查看交易。要發送這些代幣，請按儀表板上的“發送”按鈕。在這裡您可以填寫您要發送的地址，輸入金額，然後點擊“發送”。
 
-Once you have received tokens to an address, your balance will update and you will be able to view the transaction in the transaction history. To send these tokens, press the "Send" button from the dashboard. Here you can fill in the address you want to send to, enter an amount, and hit "Send".
+![傳送支付 ledger](/img/learn/firefly/send_payment_ledger.png)
 
-![send payment ledger](/img/learn/firefly/send_payment_ledger.png)
+然後，您需要確認完整的交易詳情與您的 Ledger 設備上顯示的內容相符。在某些情況下，如果您沒有發送地址上的總餘額，您還需要批准“剩餘地址”。滾動瀏覽您的分類帳上的交易詳情。當您的 Ledger 顯示“Accept”時，按兩個按鈕確認詳細信息匹配。如果它們不匹配，請按“拒絕”。
 
-You will then need to confirm that the full transaction details match what is displayed on your Ledger device. In some cases, where you are not sending the total balance on your address, you will also need to approve a "Remainder address". Scroll through the transaction details on your Ledger. Confirm the details match by pressing both buttons when your Ledger reads "Accept". If they do not match press "Deny".
+注意：與生成地址一樣，這是一項安全檢查，可確保您連接到 Firefly 的官方安全版本。它確保沒有惡意軟件可以更改您的交易內容，並確保您將正確的金額發送到正確的地址。
 
-Note: As with generating addresses, this is a security check to ensure that you are connected to the official, secure version of Firefly. It ensures that no malicious software can alter the contents of your transaction and ensures you are sending the right amount to the correct address.
+![確認剩餘地址 ledger](/img/learn/firefly/confirm_remainder_address_ledger.png)![確認交易 ledger](/img/learn/firefly/confirm_transaction_ledger.png)![顯示數量 ledger](/img/learn/firefly/dispaly_amount_ledger.png)![顯示接受 ledger](/img/learn/firefly/display_accept_ledger.png)
 
-![confirm remainder address ledger](/img/learn/firefly/confirm_remainder_address_ledger.png)![confirm transaction ledger](/img/learn/firefly/confirm_transaction_ledger.png)![dispaly amount ledger](/img/learn/firefly/dispaly_amount_ledger.png)![display accept ledger](/img/learn/firefly/display_accept_ledger.png)
+### 創建錢包並發送內部轉帳
 
-### Creating wallets and sending internal transfers
+螢火蟲可以將您的代幣組織到您個人資料中的不同錢包中。這些代幣彼此分開。從技術上講，它們存儲在您分類帳上不同子帳戶上生成的地址上。按儀表板中的“創建”並選擇一個名稱以添加另一個錢包。
 
-Firefly makes it possible to organize your tokens into different wallets within your profile. These tokens are kept separate from one another. Technically speaking, they are stored on addresses generated on different sub-accounts on your Ledger. Press "Create" from the dashboard and choose a name to add another wallet.
+![查看多個錢包 ledger](/img/learn/firefly/multiple_wallet_view_ledger.png)
 
-![multiple wallet view ledger](/img/learn/firefly/multiple_wallet_view_ledger.png)
+使用多個錢包，您可以在它們之間發送並拆分您的代幣以按照您的喜好組織它們。您可以從發送視圖中選擇“內部轉帳”，然後選擇您要發送到的錢包。
 
-With multiple wallets, you can then send between them and split your tokens up to organize them however you like. You can select "Internal Transfer" from the Send view and select which wallet you would like to send to.
+注意：您最近創建的錢包必須先收到資金（即不能為空），然後才能創建新錢包。如果您需要在新設備上恢復 Ledger 配置文件，這可以確保您的錢包可以更順利地恢復。
 
-Note: Your most recently created wallet must receive funds (i.e. not be empty) before you can create a new one. This ensures that your wallets can be more smoothly recovered if you need to restore your Ledger profile on a new device.
+![選擇從錢包發送 ledger](/img/learn/firefly/choose_send_from_wallet_ledger.png)
 
-![choose send from wallet ledger](/img/learn/firefly/choose_send_from_wallet_ledger.png)
-
-### Restoring an existing Ledger profile
-
-If you need to restore an existing Firefly profile with a new device, or you somehow lose access to Firefly, you can plug in your Ledger and restore an existing profile in a few simple steps. To do so, select "Migrate or restore a wallet" in setup and then "I have a Firefly Ledger backup".
+### 恢復現有的分類帳配置文件
+如果您需要使用新設備恢復現有的螢火蟲配置文件，或者您以某種方式無法訪問螢火蟲，您可以通過幾個簡單的步驟插入 Ledger 並恢復現有的配置文件。為此，請在設置中選擇“遷移或恢復錢包”，然後選擇“我有 Firefly Ledger 備份”。
 
 ![setup a wallet1 ledger](/img/learn/firefly/setup_a_wallet_ledger.png)![create a wallet1 ledger](/img/learn/firefly/create_a_wallet_ledger.png)
 
