@@ -8,68 +8,68 @@ keywords:
   - Legacy
 ---
 
-# The Evolution of Dust Protection on IOTA
+# IOTA防塵的演變
 
-This short note attempts to explain how dust protection has evolved with the needs of the IOTA network.
+這篇簡短的說明試圖解釋防塵保護是如何隨著 IOTA 網絡的需求而發展的。
 
 ## IOTA 1.0
 
-An account-based ledger.
-Each address has a balance of tokens.
+基於帳戶的分類帳。
+每個地址都有一個代幣餘額。
 
-There is no dust protection.
-Therefore addresses could hold any amount, down to 1 IOTA, and transactions could be as small as 1 IOTA.
+沒有防塵保護。
+因此，地址可以持有任何數量，低至 1 個 IOTA，交易可以小至 1 個 IOTA。
 
-The ledger state was therefore likely to bloat.
+因此，帳本狀態可能會膨脹。
 
 ## IOTA 1.5
 
-IOTA switches to a UTXO-based ledger.
-Each address can now hold multiple [UTXOs](/learn/about-iota/messages#utxo), each with its own balance. For a more extensive description of UTXOs check [this](https://medium.com/bitbees/what-the-heck-is-utxo-ca68f2651819) medium article.
-The address balance is calculated as the total of the UTXO balances on that address.
+IOTA 切換到基於 UTXO 的分類帳。
+每個地址現在可以保存多個 [UTXO](/learn/about-iota/messages#utxo)，每個都有自己的平衡。有關 UTXO 的更廣泛描述，請查看[此文章](https://medium.com/bitbees/what-the-heck-is-utxo-ca68f2651819)。
+地址餘額計算為該地址上 UTXO 餘額的總和。
 
-Recognising the risk of ledger bloat, a dust protection mechanism is introduced.
-When thinking about dust we now have to think about UTXOs rather than addresses. This is really tricky as we will see.
+認識到帳本膨脹的風險，引入了防塵機制。
+在考慮灰塵時，我們現在必須考慮 UTXO 而不是地址。正如我們將看到的，這真的很棘手。
 
-The basic rule of IOTA 1.5 dust protection is that "UTXOs cannot hold under 1 million IOTA (1 Mi)".
-Try to remember this very important rule as it makes sending amounts under 1 Mi very tricky!
+IOTA 1.5 防塵的基本規則是“UTXO 不能低於 100 萬 IOTA (1 Mi)”。
+試著記住這個非常重要的規則，因為它使得發送低於 1 Mi 的金額非常棘手！
 
-To understand why this is tricky, let's look at an example where I try to send 10i to an address that already contains 5 Mi. You may assume that you could add 10i to that 5 Mi, so that you have a total of 5.00001 Mi, which respects the basic dust protection rule.
-But no!
+要理解為什麼這很棘手，讓我們看一個示例，我嘗試將 10i 發送到已經包含 5 Mi 的地址。您可以假設您可以將 10i 添加到該 5 Mi，因此您總共有 5.00001 Mi，這符合基本的防塵規則。
+但不是！
 
-Each UTXO is actually a self-contained pot, which only contains the output from a transaction. And in this case that pot would only contain the 10i you sent (ie the output of that transaction). So, as the UTXO only contains 10i, you have broken the dust protection rule.
-(You may need to re-read that a few times to understand it properly)
+每個 UTXO 實際上是一個獨立的罐子，它只包含一個交易的輸出。在這種情況下，那個罐子將只包含您發送的 10i（即該交易的輸出）。因此，由於 UTXO 僅包含 10i，因此您違反了防塵規則。
+（您可能需要重新閱讀幾次才能正確理解它）
 
-To overcome this problem, a special UTXO called a "dust allowance output" was introduced. Users could now lock 1- 10 Mi on a dust allowance output, and could then receive up to 10 dust UTXOs per Mi deposited, on the associated address.
-eg I create a dust allowance output with 2 Mi locked on Address A. You can now send up to 20 dust transactions (a dust transaction is anything under 1 Mi) to Address A.
-Users can also sweep the dust UTXOs - this means combining multiple dust UTXOs into a single UTXO (eg 1i + 1i + 1i -> 3i on 1 UTXO). This frees up spare UTXOs on your dust-enabled address.
+為了克服這個問題，引入了一種稱為“灰塵餘量輸出”的特殊 UTXO。用戶現在可以將 1-10 Mi 鎖定在一個粉塵配額輸出上，然後在相關地址上每個存儲的 Mi 最多可以接收 10 個粉塵 UTXO。
+例如，我在地址 A 上創建了一個 2 Mi 鎖定的灰塵允許輸出。您現在可以向地址 A 發送多達 20 個灰塵交易（灰塵交易是 1 Mi 以下的任何東西）。
+用戶還可以掃描灰塵 UTXO——這意味著將多個灰塵 UTXO 組合成一個 UTXO（例如 1i + 1i + 1i -> 3i on 1 UTXO）。
 
-This was a reasonable interim solution, but unfortunately it is not compatible with IOTA 2.0, as it requires total ordering of the Tangle (to determine if the transaction is valid, and that the dust protection rules are fulfilled). IOTA 2.0 does not have total ordering.
+這是一個合理的臨時解決方案，但不幸的是它與 IOTA 2.0 不兼容，因為它需要對糾纏進行總排序（以確定交易是否有效，以及是否滿足防塵規則）。 IOTA 2.0 沒有總排序。
 
-## New Tokenisation Framework
+## 新的標記化框架
 
-Various new UTXO types are introduced, which can add different amounts of data to the ledger (eg for NFTs, native assets, aliases), without requiring any IOTA by themselves. Therefore there is a very high risk of ledger bloat.
-The 1.5 dust protection is also not ready for IOTA 2.0. Therefore a new dust protection scheme is proposed, which deals with both issues.
+引入了各種新的 UTXO 類型，它們可以向賬本中添加不同數量的數據（例如，用於 NFT、原生資產、別名），而無需任何 IOTA。因此，帳本膨脹的風險非常高。
+1.5 的防塵保護也沒有為 IOTA 2.0 做好準備。因此，提出了一種新的防塵方案，可以解決這兩個問題。
 
-The rules of the new dust protection are:
+新的防塵保護規則是：
 
-1. Any UTXO must contain a minimum deposit (for the sake of simplicity, let's make this 1 Mi for our examples).
-2. The amount of data any UTXO can hold is proportional to the amount of IOTA on that UTXO. The IOTA acts as a deposit to secure that data on the Tangle, and you can add more IOTA to add more data. The actual cost of IOTA per byte is currently being decided, and can change over time.
+1. 任何 UTXO 都必須包含最低存款（為了簡單起見，我們將這個 1 Mi 用於我們的示例）。
+2. 任何 UTXO 可以保存的數據量與該 UTXO 上的 IOTA 量成正比。 IOTA 充當保證金以保護 Tangle 上的數據，您可以添加更多 IOTA 以添加更多數據。 IOTA 每字節的實際成本目前正在確定中，並且會隨著時間而變化。
 
-To send amounts smaller than 1 Mi, or to send native assets, we introduce a new system of "conditional sending", which does not require total ordering of the Tangle (and is therefore ready for IOTA 2.0).
-Let's look at how this works if I want to send 10i to an address which already holds 5 Mi (assuming the minimum deposit is 1 Mi). As before I cannot just send 10i, because the UTXO will have a value of 10i (well below the minimal amount of 1 Mi).
-I cannot use a special dust-UTXO as in 1.5, because these need total ordering of the Tangle.
-Instead I use "conditional sending":
+為了發送小於 1 Mi 的金額，或者發送原生資產，我們引入了一個新的“條件發送”系統，它不需要糾纏的總排序（因此為 IOTA 2.0 做好了準備）。
+如果我想將 10i 發送到已經擁有 5 Mi 的地址（假設最低存款為 1 Mi），讓我們看看這是如何工作的。和以前一樣，我不能只發送 10i，因為 UTXO 的值為 10i（遠低於 1 Mi 的最小值）。
+我不能像 1.5 那樣使用特殊的灰塵 UTXO，因為這些需要糾纏的總排序。
+相反，我使用“條件發送”：
 
-1. I send the 10i together with the minimal deposit amount (1 Mi) - a total of 1.00001 Mi (which meets the dust protection criteria) - to the target address.
-2. This is however a special type of transaction which needs a further step to complete. It has to be "claimed" by the recipient. 2 things can therefore happen to this transaction:
-   a) The 10i is claimed by the recipient - the 10i is transferred together with the recipient's own minimal deposit to a new valid UTXO. The recipient needs their own 1 Mi deposit to claim the 10i. At the same time the sender's 1 Mi deposit is returned to the sender.
-   b) The 10i is not claimed in a reasonable time period (set by the sender), and the total amount of 1.00001 Mi can now be reclaimed or spent by the sender (the mechanism is a bit more complex but this is the simplest way of describing it).
+1. 我將 10i 連同最低存款金額 (1 Mi) - 總共 1.00001 Mi（符合防塵標準） - 發送到目標地址。
+2. 然而，這是一種特殊類型的交易，需要進一步的步驟才能完成。它必須由收件人“認領”。因此，此交易可能會發生 2 件事：
+   a) 10i 由接收者認領 - 10i 與接收者自己的最低存款一起轉移到一個新的有效 UTXO。收件人需要自己的 1 Mi 存款才能領取 10i。同時將寄件人的 1 Mi 押金退還給寄件人。
+   b) 10i 沒有在合理的時間段內（由發送者設置）被索取，並且 1.00001 Mi 的總量現在可以被發送者回收或花費（機制有點複雜，但這是描述它的最簡單的方式）。
 
-#### Bonus
+#### 額外獎勵
 
-This conditional sending can also be used as a safety net to prevent sending to the wrong address. It is a common problem in crypto that funds are sometimes transferred to the incorrect address due to mistyping of the address - often this address has no owner and the tokens are lost forever! If this were to happen in a conditional send however, then the tokens are very unlikely to be claimed in the set time period, and the total amount can be claimed by the sender. A very useful feature!
+這種有條件的發送也可以用作安全網，以防止發送到錯誤的地址。加密貨幣中的一個常見問題是，由於地址輸入錯誤，資金有時會轉移到不正確的地址 - 通常這個地址沒有所有者並且代幣永遠丟失！但是，如果這發生在有條件的發送中，那麼代幣不太可能在設定的時間段內被索取，並且總金額可以由發送者索取。一個非常有用的功能！
 
-#### Final note
+#### 最後說明
 
-We are also looking at other mechanisms for microtransactions which make the process simpler, while still respecting the dust protection rules. We hope to share more with you soon.
+我們還在研究其他微交易機制，使流程更簡單，同時仍然遵守防塵規則。我們希望盡快與您分享更多內容。
